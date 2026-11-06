@@ -173,7 +173,26 @@ def parse_vanguard(raw_html: str, fund: dict) -> dict:
     return {"nav": to_number(nav), "change_pct": to_number(pct), "nav_date": to_date(when)}
 
 
-PARSERS = {"finanzen": parse_finanzen, "ishares": parse_ishares, "vanguard": parse_vanguard}
+def parse_ft(raw_html: str, fund: dict) -> dict:
+    """Financial Times fund tearsheets (markets.ft.com/data/funds/tearsheet/summary?s=ISIN:CCY).
+
+    The quote bar reads like:  Price (USD) 166.82  Today's Change 0.58 / 0.35%  ...  as of Nov 04 2026
+    """
+    text = page_text(raw_html)
+    m = re.search(r"Price \((\w{3})\)\s*([\d,]+\.\d+)", text)
+    if not m:
+        raise ValueError("price not found on the FT page")
+    ccy, nav = m.groups()
+    if ccy != fund["currency"]:
+        raise ValueError(f"page currency {ccy} is not the fund's {fund['currency']}")
+    c = re.search(r"Today.s Change\s*([+\-\u2212]?[\d.,]+)\s*/\s*([+\-\u2212]?[\d.,]+)%", text)
+    d = re.search(r"as of ([A-Z][a-z]{2} \d{1,2},? \d{4})", text)
+    if not d:
+        raise ValueError("price date not found on the FT page")
+    return {"nav": to_number(nav), "change_pct": to_number(c.group(2)) if c else None, "nav_date": to_date(d.group(1))}
+
+
+PARSERS = {"finanzen": parse_finanzen, "ishares": parse_ishares, "vanguard": parse_vanguard, "ft": parse_ft}
 
 
 # ---------------------------------------------------------------- main

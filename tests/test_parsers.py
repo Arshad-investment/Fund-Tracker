@@ -23,6 +23,8 @@ ISHARES = """<table><tr><th>Investor Class</th><th>Currency</th><th>NAV</th></tr
 ISHARES_DE = """<table><tr><td>Klasse D</td><td>USD</td><td>30.25</td><td>0.44</td><td>1.47</td>
 <td>20.Okt.2026</td><td>30.87</td><td>25.41</td><td>IE00BD0NCN62</td></tr></table>"""
 
+FT = """<div class="mod-tearsheet-overview__quote"><ul><li><span>Price (USD)</span><span>166.82</span></li><li><span>Today's Change</span><span>0.58 / 0.35%</span></li></ul><div class="mod-disclaimer">Data delayed at least 15 minutes, as of Nov 04 2026.</div></div>"""
+
 VANGUARD = """<div>Prices NAV Price (USD) <b>$200.93</b> USD Change +$0.53 0.27% As at Nov 05 2026 NAV 52-week high</div>"""
 
 
@@ -71,6 +73,11 @@ def test_ishares_german_month():
 def test_vanguard():
     r = up.parse_vanguard(VANGUARD, {"currency": "USD"})
     assert r == {"nav": 200.93, "change_pct": 0.27, "nav_date": "2026-11-05"}
+
+
+def test_ft():
+    r = up.parse_ft(FT, {"currency": "USD"})
+    assert r == {"nav": 166.82, "change_pct": 0.35, "nav_date": "2026-11-04"}
 
 
 def test_misread_guard():
