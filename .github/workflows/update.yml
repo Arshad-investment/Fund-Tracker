@@ -39,6 +39,11 @@ jobs:
           pip install requests
           python scripts/update_prices.py
 
+      - name: Fill a year of price history
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: python scripts/update_history.py
+
       - name: Save new prices to the repository
         if: github.event_name != 'push'
         run: |

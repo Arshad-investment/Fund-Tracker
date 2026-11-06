@@ -8,6 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 import update_prices as up  # noqa: E402
+import update_history as uh  # noqa: E402
 
 FIN_AT = """<html><nav><a>Nettoinventarwert</a></nav><div class="box"><h2>Nettoinventarwert (NAV)</h2>
 <table><tr><td>40&nbsp;316,97 JPY</td><td>-0,14 JPY</td><td>0,00 %</td></tr>
@@ -78,6 +79,13 @@ def test_vanguard():
 def test_ft():
     r = up.parse_ft(FT, {"currency": "USD"})
     assert r == {"nav": 166.82, "change_pct": 0.35, "nav_date": "2026-11-04"}
+
+
+def test_ft_history():
+    page = '<section data-mod-config="{&quot;inception&quot;:&quot;2006&quot;,&quot;xid&quot;:&quot;536357519&quot;}"></section>'
+    assert uh.find_xid(page) == "536357519"
+    answer = '{"html":"<tr><td><span class=\\"a\\">Thursday, November 05, 2026</span><span>Thu, Nov 05, 2026</span></td><td>117.19</td><td>117.19</td><td>117.19</td><td>117.19</td><td>----</td></tr><tr><td><span>Wednesday, November 04, 2026</span></td><td>113.05</td><td>113.05</td><td>113.05</td><td>113.05</td><td>----</td></tr>"}'
+    assert uh.parse_history(answer) == [("2026-11-05", 117.19), ("2026-11-04", 113.05)]
 
 
 def test_misread_guard():

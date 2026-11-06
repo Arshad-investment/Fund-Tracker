@@ -146,6 +146,12 @@ footer { font-size: .8rem; color: var(--muted); } footer a { color: inherit; }
 .rv-stats { display: flex; gap: 22px; margin: 10px 0; font-variant-numeric: tabular-nums; } .rv-stats b { display: block; }
 .rv-foot { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: .82rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; }
 @media (max-width: 560px) { .rv dl { grid-template-columns: 1fr; } .rv dl dd { margin-bottom: 8px; } }
+.hist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 12px; margin-top: 6px; }
+.hist-cell { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--panel-solid); }
+.hist-top { display: flex; justify-content: space-between; align-items: baseline; }
+.hist-l { font: 500 .72rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.hist-c { font-weight: 600; font-variant-numeric: tabular-nums; }
+.hist-h { font-size: .74rem; color: var(--muted); margin-top: 2px; }
 .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font: .72rem var(--mono); color: var(--muted); margin: -6px 0 12px; }
 .legend i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; box-shadow: 0 0 8px currentColor; }
 .linkbtn { font: inherit; font-size: .8rem; background: none; border: 0; padding: 0; color: inherit; text-decoration: underline; cursor: pointer; }
@@ -450,7 +456,24 @@ function drawDetail() {
     p([r.provider, r.isin, `${r.asset_class} – ${r.segment}`].filter(Boolean).join(" · "), "k"),
     p("Latest price", "k"), p(navLine));
   const hist = HISTORY.filter((h) => h.no === r.no).sort((a, b) => d3.ascending(a.date, b.date));
-  if (hist.length > 1) { box.append(p("Price history", "k")); const hb = el("div", "hist"); box.append(hb); sparkline(hb, hist, r.currency); }
+  box.append(p("Price history", "k"));
+  const grid = el("div", "hist-grid"); box.append(grid);
+  const lastDay = hist.length ? new Date(hist[hist.length - 1].date) : null;
+  const since = (days) => hist.filter((h) => lastDay && (lastDay - new Date(h.date)) / 864e5 <= days);
+  [["1 day", hist.slice(-2), "Latest price vs the one before (funds price once a day)"], ["1 month", since(31), "Last 31 days"], ["1 year", since(366), "Last 12 months"]].forEach(([label, pts, hint]) => {
+    const cell = el("div", "hist-cell"); grid.append(cell);
+    const top = el("div", "hist-top"); top.append(el("span", "hist-l", label));
+    if (pts.length > 1) {
+      const chg = (pts[pts.length - 1].nav / pts[0].nav - 1) * 100;
+      top.append(el("span", "hist-c " + sign(chg), fmtPct(chg)));
+      cell.append(top);
+      const hb = el("div", "hist"); cell.append(hb);
+      requestAnimationFrame(() => sparkline(hb, pts, r.currency, chg));
+      cell.append(el("div", "hist-h", `${fmtDate(pts[0].date)} → ${fmtDate(pts[pts.length - 1].date)} · ${hint}`));
+    } else {
+      cell.append(top, el("div", "hist-h", r.nav == null ? "No price history for this fund" : "Not enough history yet; it builds up with each daily update"));
+    }
+  });
   box.append(p("Returns", "k"), p(`YTD ${r.ytd_label} · 1 yr ${r.y1_label} · 5 yr p.a. ${r.y5_label} (as of ${r.returns_asof})`),
     p("What it holds", "k"), p(r.holdings),
     p("AI-crash exposure", "k"), p(`${r.ai_exposure}; estimated move ${fmtMid(r.ai_crash_mid)} (range ${fmtMid(r.ai_crash_lo)} to ${fmtMid(r.ai_crash_hi)})`),
@@ -461,17 +484,33 @@ function drawDetail() {
   if (r.source_url && /^https:\/\//.test(r.source_url)) { const a = el("a", "", "Price source"); a.href = r.source_url; a.target = "_blank"; a.rel = "noopener"; const w = p("", "k"); w.append(a); box.append(w); }
 }
 
-function sparkline(box, hist, ccy) {
-  const W = Math.min(520, box.clientWidth || 520), H = 90, m = { t: 8, r: 70, b: 18, l: 24 };
+let sparkSeq = 0;
+function sparkline(box, hist, ccy, chg) {
+  const W = Math.max(200, box.clientWidth || 300), H = 110, m = { t: 10, r: 8, b: 20, l: 8 };
+  const col = chg >= 0 ? "var(--c1)" : "var(--c5)", id = "sp" + (++sparkSeq);
   const x = d3.scaleUtc(d3.extent(hist, (d) => new Date(d.date)), [m.l, W - m.r]);
-  const y = d3.scaleLinear(d3.extent(hist, (d) => d.nav), [H - m.b, m.t]).nice();
-  const svg = d3.select(box).append("svg").attr("width", "100%").attr("viewBox", `0 0 ${W} ${H}`).style("max-width", W + "px");
-  svg.append("path").datum(hist).attr("fill", "none").attr("stroke", "var(--accent)").attr("stroke-width", 2).attr("stroke-linejoin", "round").attr("stroke-linecap", "round")
-    .attr("d", d3.line((d) => x(new Date(d.date)), (d) => y(d.nav)));
+  const [lo, hi] = d3.extent(hist, (d) => d.nav), pad = (hi - lo) * 0.12 || hi * 0.005;
+  const y = d3.scaleLinear([lo - pad, hi + pad], [H - m.b, m.t]);
+  const svg = d3.select(box).append("svg").attr("width", "100%").attr("viewBox", `0 0 ${W} ${H}`);
+  const gr = svg.append("defs").append("linearGradient").attr("id", id).attr("x1", 0).attr("x2", 0).attr("y1", 0).attr("y2", 1);
+  [[0, .32], [0.6, .08], [1, 0]].forEach(([o, a]) => gr.append("stop").attr("offset", o).style("stop-color", col).style("stop-opacity", a));
+  const px = (d) => x(new Date(d.date)), py = (d) => y(d.nav);
+  svg.append("path").datum(hist).attr("fill", `url(#${id})`).attr("d", d3.area(px, H - m.b, py));
+  svg.append("path").datum(hist).attr("fill", "none").attr("stroke", col).attr("stroke-width", 2).attr("stroke-linejoin", "round").attr("stroke-linecap", "round").attr("d", d3.line(px, py));
   const last = hist[hist.length - 1];
-  svg.append("text").attr("x", x(new Date(last.date)) + 6).attr("y", y(last.nav)).attr("dy", "0.35em").attr("font-size", 11).attr("fill", "var(--fg)").text(`${ccy} ${fmtNav(last.nav)}`);
-  svg.append("g").attr("transform", `translate(0,${H - m.b + 2})`).call(d3.axisBottom(x).tickValues(hist.length <= 5 ? hist.map((d) => new Date(d.date)) : x.ticks(4)).tickSize(0).tickFormat(d3.utcFormat("%-d %b")))
-    .attr("font-size", null).attr("font-family", null).call((g) => g.select(".domain").remove()).selectAll("text").attr("fill", "var(--muted)").attr("font-size", 10);
+  svg.append("circle").attr("cx", px(last)).attr("cy", py(last)).attr("r", 3.5).attr("fill", col).attr("stroke", "var(--panel-solid)").attr("stroke-width", 1.5);
+  const ticks = hist.length <= 3 ? hist.map((d) => new Date(d.date)) : [new Date(hist[0].date), new Date(last.date)];
+  svg.append("g").attr("transform", `translate(0,${H - m.b + 4})`).call(d3.axisBottom(x).tickValues(ticks).tickSize(0).tickFormat(d3.utcFormat(hist.length > 40 ? "%b %Y" : "%-d %b")))
+    .attr("font-size", null).attr("font-family", null).call((g) => g.select(".domain").remove())
+    .selectAll("text").attr("fill", "var(--muted)").attr("font-size", 10).attr("text-anchor", (d, i, n) => (i === 0 ? "start" : i === n.length - 1 ? "end" : "middle"));
+  // hover readout
+  const dot = svg.append("circle").attr("r", 3.5).attr("fill", col).style("display", "none");
+  const lab = svg.append("text").attr("font-size", 10.5).attr("fill", "var(--fg)").attr("y", m.t + 2).style("display", "none");
+  svg.on("mousemove", (ev) => {
+    const [mx] = d3.pointer(ev); const d = hist[d3.leastIndex(hist, (h) => Math.abs(px(h) - mx))];
+    dot.style("display", null).attr("cx", px(d)).attr("cy", py(d));
+    lab.style("display", null).text(`${fmtDate(d.date)} · ${ccy} ${fmtNav(d.nav)}`).attr("x", Math.min(Math.max(m.l, px(d) - 60), W - 150));
+  }).on("mouseleave", () => { dot.style("display", "none"); lab.style("display", "none"); });
 }
 
 document.querySelectorAll(".btn[data-g]").forEach((b) => b.addEventListener("click", () => {
