@@ -1,21 +1,21 @@
 {
- "updated_at": "2026-11-06T02:48:48Z",
+ "updated_at": "2026-11-06T02:51:12Z",
  "prices": {
   "1": {
-   "nav": 113.05,
-   "change_pct": 4.48,
-   "nav_date": "2026-11-04",
-   "source_url": "https://ycharts.com/mutual_funds/M:LU0252968424",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.at/fonds/blackrock-global-funds-world-gold-fund-d2-lu0252968424"
+   "nav": 117.19,
+   "change_pct": 3.66,
+   "nav_date": "2026-11-05",
+   "source_url": "https://www.blackrock.com/uk/individual/products/229333/blackrock-world-gold-d2-usd-fund?siteEntryPassthrough=true",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "2": {
    "nav": 15.46,
    "change_pct": 2.27,
    "nav_date": "2026-11-04",
    "source_url": "https://www.blackrock.com/uk/intermediaries/products/337972/ishares-developed-real-estate-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-06T02:48:48Z",
+   "checked_at": "2026-11-06T02:51:12Z",
    "ok": true,
    "error": null
   },
@@ -24,7 +24,7 @@
    "change_pct": 1.11,
    "nav_date": "2026-11-04",
    "source_url": "https://www.ishares.com/ch/privatkunden/de/produkte/344413/ishares-developed-world-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-06T02:48:48Z",
+   "checked_at": "2026-11-06T02:51:12Z",
    "ok": true,
    "error": null
   },
@@ -33,7 +33,7 @@
    "change_pct": 1.47,
    "nav_date": "2026-11-04",
    "source_url": "https://www.ishares.com/ch/privatkunden/de/produkte/344413/ishares-developed-world-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-06T02:48:48Z",
+   "checked_at": "2026-11-06T02:51:12Z",
    "ok": true,
    "error": null
   },
@@ -42,7 +42,7 @@
    "change_pct": 1.84,
    "nav_date": "2026-11-04",
    "source_url": "https://www.ishares.com/uk/professional/en/products/287056/ishares-europe-ex-uk-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-06T02:48:48Z",
+   "checked_at": "2026-11-06T02:51:12Z",
    "ok": true,
    "error": null
   },
@@ -51,7 +51,7 @@
    "change_pct": 1.55,
    "nav_date": "2026-11-04",
    "source_url": "https://www.ishares.com/ch/privatkunden/de/produkte/318951/ishares-north-america-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-06T02:48:48Z",
+   "checked_at": "2026-11-06T02:51:12Z",
    "ok": true,
    "error": null
   },
@@ -60,7 +60,7 @@
    "change_pct": 0.34,
    "nav_date": "2026-11-04",
    "source_url": "https://www.ishares.com/uk/professionals/en/products/307661/ishares-pacific-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-06T02:48:48Z",
+   "checked_at": "2026-11-06T02:51:12Z",
    "ok": true,
    "error": null
   },
@@ -69,160 +69,160 @@
    "change_pct": 1.84,
    "nav_date": "2026-11-04",
    "source_url": "https://www.ishares.com/uk/professionals/en/products/308415/ishares-uk-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-06T02:48:48Z",
+   "checked_at": "2026-11-06T02:51:12Z",
    "ok": true,
    "error": null
   },
   "9": {
-   "nav": 93.56,
-   "change_pct": -0.26,
-   "nav_date": "2026-11-03",
-   "source_url": "https://www.finanzen.at/fonds/ishares-global-government-bond-index-fund-lu-d2-lu1811364139",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.at/fonds/ishares-global-government-bond-index-fund-lu-d2-lu1811364139"
+   "nav": 94.02,
+   "change_pct": 0.26,
+   "nav_date": "2026-11-05",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU1811364139:USD",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "11": {
-   "nav": 9907.97,
-   "change_pct": 0.01,
-   "nav_date": "2026-10-30",
-   "source_url": "https://www.finanzen.at/fonds/goldman-sachs-yen-liquid-reserves-fund-institutional-ie00b1vr4y86",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.at/fonds/goldman-sachs-yen-liquid-reserves-fund-institutional-ie00b1vr4y86"
+   "nav": 9909.04,
+   "change_pct": 0.0,
+   "nav_date": "2026-11-05",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B1VR4Y86:JPY",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "12": {
-   "nav": 16.86,
-   "change_pct": -0.68,
-   "nav_date": "2026-11-03",
-   "source_url": "https://www.finanzen.ch/etp/structured-investments-gsquartix-modified-strategyonthebloombergcommodityindextotalreturn-ausd-lu0397155895",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.ch/etp/structured-investments-gsquartix-modified-strategyonthebloombergcommodityindextotalreturn-ausd-lu0397155895"
+   "nav": 16.55,
+   "change_pct": -1.83,
+   "nav_date": "2026-11-04",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0397155895:USD",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "13": {
-   "nav": 40.09,
-   "change_pct": 0.3,
-   "nav_date": "2026-11-03",
-   "source_url": "https://www.finanzen.ch/fonds/hsbc-islamic-funds-hsbc-islamic-global-equity-index-fund-ic-lu1569385302",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.ch/fonds/hsbc-islamic-funds-hsbc-islamic-global-equity-index-fund-ic-lu1569385302"
+   "nav": 40.66,
+   "change_pct": 1.42,
+   "nav_date": "2026-11-04",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU1569385302:USD",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "15": {
-   "nav": 107.89,
+   "nav": 107.9,
    "change_pct": 0.01,
-   "nav_date": "2026-11-04",
-   "source_url": "https://www.finanzen.ch/fonds/insight-liquidity-funds-plc-ilf-liquidity-fund-class-7-ie00b8fxxp57",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.ch/fonds/insight-liquidity-funds-plc-ilf-liquidity-fund-class-7-ie00b8fxxp57"
+   "nav_date": "2026-11-05",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B8FXXP57:EUR",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "16": {
-   "nav": 159.41,
-   "change_pct": -0.29,
-   "nav_date": "2026-11-03",
-   "source_url": "https://finanzen.net/fonds/historisch/fulcrum-fulcrum-diversified-absolute-return-fund-f-lu1551069724",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.at/fonds/fulcrum-fulcrum-diversified-absolute-return-fund-f-lu1551069724"
+   "nav": 159.31,
+   "change_pct": 0.0,
+   "nav_date": "2026-11-05",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU1551069724:USD",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "18": {
-   "nav": 1.66,
-   "change_pct": -0.37,
-   "nav_date": "2026-11-03",
-   "source_url": "https://www.finanzen.at/fonds/legal-general-icav-lg-diversified-fund-c-unh-ie00bd21pz19",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.at/fonds/legal-general-icav-lg-diversified-fund-c-unh-ie00bd21pz19"
+   "nav": 1.67,
+   "change_pct": 0.67,
+   "nav_date": "2026-11-04",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00BD21PZ19:EUR",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "19": {
-   "nav": 15.69,
-   "change_pct": 0.21,
-   "nav_date": "2026-11-03",
-   "source_url": "https://www.finanzen.ch/fonds/nt-world-climate-equity-feeder-fund-class-a-ie00bnc0d102",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.ch/fonds/nt-world-climate-equity-feeder-fund-class-a-ie00bnc0d102"
+   "nav": 15.96,
+   "change_pct": 1.73,
+   "nav_date": "2026-11-04",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00BNC0D102:USD",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "20": {
    "nav": 22.86,
    "change_pct": 0.48,
    "nav_date": "2026-11-04",
-   "source_url": "https://www.finanzen.at/fonds/pimco-gis-global-investment-grade-credit-fund-institutional-ie0034085260",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.at/fonds/pimco-gis-global-investment-grade-credit-fund-institutional-ie0034085260"
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE0034085260:USD",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "21": {
-   "nav": 19.06,
-   "change_pct": -0.21,
-   "nav_date": "2026-11-03",
-   "source_url": "https://www.finanzen.at/fonds/pimco-gis-global-investment-grade-credit-fund-institutional-ie0032876397",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.at/fonds/pimco-gis-global-investment-grade-credit-fund-institutional-ie0032876397"
+   "nav": 19.15,
+   "change_pct": 0.47,
+   "nav_date": "2026-11-04",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE0032876397:EUR",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "22": {
-   "nav": 271.88,
-   "change_pct": -1.13,
-   "nav_date": "2026-11-03",
-   "source_url": "https://www.finanzen.ch/fonds/robeco-qi-emerging-markets-active-equities-i-lu0858455784/nav",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.ch/fonds/robeco-qi-emerging-markets-active-equities-i-lu0858455784/nav"
+   "nav": 272.79,
+   "change_pct": 0.33,
+   "nav_date": "2026-11-04",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0858455784:USD",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "23": {
-   "nav": 160.28,
-   "change_pct": 0.28,
-   "nav_date": "2026-11-04",
-   "source_url": "https://www.finanzen.at/fonds/schroder-international-selection-fund-asian-local-currency-bond-c-lu0358730231",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.at/fonds/schroder-international-selection-fund-asian-local-currency-bond-c-lu0358730231"
+   "nav": 161.15,
+   "change_pct": 0.55,
+   "nav_date": "2026-11-05",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0358730231:USD",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "24": {
-   "nav": 43.89,
-   "change_pct": -1.82,
-   "nav_date": "2026-10-30",
-   "source_url": "https://www.finanzen.at/fonds/schroder-international-selection-fund-asian-opportunities-c-lu0106259988/BER",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.at/fonds/schroder-international-selection-fund-asian-opportunities-c-lu0106259988"
+   "nav": 43.86,
+   "change_pct": -1.42,
+   "nav_date": "2026-11-05",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0106259988:USD",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "25": {
-   "nav": 98.52,
-   "change_pct": 0.12,
-   "nav_date": "2026-11-02",
-   "source_url": "https://www.finanzen.ch/fonds/vanguard-global-bond-index-fund-ie00b18gc888",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.ch/fonds/vanguard-global-bond-index-fund-ie00b18gc888"
+   "nav": 98.93,
+   "change_pct": 0.22,
+   "nav_date": "2026-11-05",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B18GC888:EUR",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "26": {
-   "nav": 166.82,
-   "change_pct": 0.35,
-   "nav_date": "2026-11-04",
-   "source_url": "https://www.finanzen.at/fonds/vanguard-global-bond-index-fund-ie00b18gcb14",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.at/fonds/vanguard-global-bond-index-fund-ie00b18gcb14"
+   "nav": 167.21,
+   "change_pct": 0.23,
+   "nav_date": "2026-11-05",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B18GCB14:USD",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "27": {
-   "nav": 40316.97,
-   "change_pct": 0.0,
-   "nav_date": "2026-11-03",
-   "source_url": "https://www.finanzen.at/fonds/vanguard-japan-stock-index-fund-institutional-plus-ie00bgcc5f53",
-   "checked_at": "2026-11-06T02:48:48Z",
-   "ok": false,
-   "error": "finanzen: 403 Client Error: Forbidden for url: https://www.finanzen.at/fonds/vanguard-japan-stock-index-fund-institutional-plus-ie00bgcc5f53"
+   "nav": 40284.02,
+   "change_pct": 0.86,
+   "nav_date": "2026-11-05",
+   "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00BGCC5F53:JPY",
+   "checked_at": "2026-11-06T02:51:12Z",
+   "ok": true,
+   "error": null
   },
   "28": {
    "nav": 200.93,
    "change_pct": 0.27,
    "nav_date": "2026-11-05",
    "source_url": "https://www.vanguardsouthamerica.com/en/product/fund/fixed-income/9919/vanguard-us-government-bond-index-fund-usd-acc",
-   "checked_at": "2026-11-06T02:48:48Z",
+   "checked_at": "2026-11-06T02:51:12Z",
    "ok": true,
    "error": null
   }
