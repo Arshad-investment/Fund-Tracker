@@ -2983,7 +2983,7 @@
 "kind": "note",
 "runs": [
 {
-"text": "Dot = central estimate · line = plausible range · red dot = High or Very high overall risk"
+"text": "Line = plausible range, red for deep losses through to green for gains · dot = central estimate, coloured by overall risk: green Very low, teal Low, amber Moderate, orange High, red Very high"
 }
 ]
 }

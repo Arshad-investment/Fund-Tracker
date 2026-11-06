@@ -12,6 +12,7 @@
   --accent: #2563c9; --accent2: #0e9f8a; --bad: #c0362c; --ok: #12805c; --warn: #a15c00; --track: #d3dae3;
   --grid: rgba(20,40,70,.055); --glow: rgba(37,99,201,.13); --glow2: rgba(14,159,138,.09);
   --edge1: rgba(37,99,201,.35); --edge2: rgba(14,159,138,.18); --edge3: rgba(20,40,70,.08);
+  --c1: #16a34a; --c2: #0d9488; --c3: #d39e00; --c4: #ea7a1a; --c5: #dc2f4b;
   --mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
   --serif: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -21,7 +22,8 @@
   :root { --bg: #080c12; --panel: rgba(17,23,32,.74); --panel-solid: #111720; --fg: #e6ebf2; --muted: #8b96a6; --line: #222c3a;
           --accent: #5ea8ff; --accent2: #2dd4bf; --bad: #ff7b72; --ok: #4ade80; --warn: #f0b35a; --track: #2a3444;
           --grid: rgba(120,160,220,.055); --glow: rgba(70,140,255,.16); --glow2: rgba(45,212,191,.08);
-          --edge1: rgba(94,168,255,.45); --edge2: rgba(45,212,191,.22); --edge3: rgba(255,255,255,.05); }
+          --edge1: rgba(94,168,255,.45); --edge2: rgba(45,212,191,.22); --edge3: rgba(255,255,255,.05);
+          --c1: #4ade80; --c2: #2dd4bf; --c3: #ffd166; --c4: #ff9f43; --c5: #ff5c7a; }
 }
 * { box-sizing: border-box; }
 body { margin: 0; color: var(--fg); font: 15px/1.5 var(--sans); background-color: var(--bg);
@@ -144,6 +146,8 @@ footer { font-size: .8rem; color: var(--muted); } footer a { color: inherit; }
 .rv-stats { display: flex; gap: 22px; margin: 10px 0; font-variant-numeric: tabular-nums; } .rv-stats b { display: block; }
 .rv-foot { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: .82rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; }
 @media (max-width: 560px) { .rv dl { grid-template-columns: 1fr; } .rv dl dd { margin-bottom: 8px; } }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font: .72rem var(--mono); color: var(--muted); margin: -6px 0 12px; }
+.legend i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; box-shadow: 0 0 8px currentColor; }
 .linkbtn { font: inherit; font-size: .8rem; background: none; border: 0; padding: 0; color: inherit; text-decoration: underline; cursor: pointer; }
 </style>
 </head>
@@ -188,7 +192,8 @@ footer { font-size: .8rem; color: var(--muted); } footer a { color: inherit; }
     </section>
     <section class="card">
       <h2>Estimated move in an AI-led crash</h2>
-      <p class="note">Line: estimated range. Dot: central estimate, red where overall risk is High or Very high.</p>
+      <p class="note">Line: estimated range, coloured from deep loss (red) to gain (green). Dot: central estimate, coloured by overall risk.</p>
+      <div class="legend"><span><i style="background:var(--c1)"></i>Very low</span><span><i style="background:var(--c2)"></i>Low</span><span><i style="background:var(--c3)"></i>Moderate</span><span><i style="background:var(--c4)"></i>High</span><span><i style="background:var(--c5)"></i>Very high</span></div>
       <div class="chart" id="aicrash"></div>
     </section>
   </div>
@@ -325,6 +330,7 @@ function summary(p) {
   setText("s-checked", p.updated_at ? new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Manila", day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(p.updated_at)) : "—");
 }
 
+let gradSeq = 0;
 function hbar(box, rows, opts) {
   box.replaceChildren();
   const W = Math.max(280, box.clientWidth || 600), bh = 14, gap = 7, top = 6, bottom = 22;
@@ -362,8 +368,15 @@ function drawCharts() {
   hbar(document.getElementById("moves"), moves, {
     domain: (rs) => [Math.min(0, d3.min(rs, (r) => r.change_pct)), Math.max(0, d3.max(rs, (r) => r.change_pct))],
     mark: (g, x, y, bh) => {
-      g.append("rect").attr("x", (r) => x(Math.min(0, r.change_pct))).attr("y", (r, i) => y(i)).attr("rx", 2).attr("height", bh)
-        .attr("width", (r) => Math.max(1, Math.abs(x(r.change_pct) - x(0)))).attr("fill", (r) => (r.change_pct >= 0 ? "var(--accent)" : "var(--bad)"));
+      const id = "mv" + (++gradSeq);
+      const defs = d3.select(g.node().ownerSVGElement).insert("defs", ":first-child");
+      const lin = (name, xa, xb, stops) => { const lg = defs.append("linearGradient").attr("id", id + name).attr("gradientUnits", "userSpaceOnUse").attr("x1", xa).attr("x2", xb).attr("y1", 0).attr("y2", 0);
+        stops.forEach(([o, c]) => lg.append("stop").attr("offset", o).style("stop-color", c)); };
+      const [d0, d1] = x.domain();
+      lin("up", x(0), x(d1), [[0, "var(--accent)"], [0.55, "var(--accent2)"], [1, "var(--c1)"]]);
+      lin("dn", x(d0), x(0), [[0, "var(--c5)"], [1, "var(--c4)"]]);
+      g.append("rect").attr("x", (r) => x(Math.min(0, r.change_pct))).attr("y", (r, i) => y(i)).attr("rx", 3).attr("height", bh)
+        .attr("width", (r) => Math.max(1, Math.abs(x(r.change_pct) - x(0)))).attr("fill", (r) => `url(#${id}${r.change_pct >= 0 ? "up" : "dn"})`);
       g.append("text").attr("x", (r) => x(Math.max(0, r.change_pct)) + 4).attr("y", (r, i) => y(i) + bh / 2).attr("dy", "0.35em").text((r) => fmtPct(r.change_pct));
     },
     tip: (r) => [`${r.no} · ${r.provider}`, r.fund, `NAV ${r.currency} ${fmtNav(r.nav)} on ${fmtDate(r.nav_date)}`, `1 day ${fmtPct(r.change_pct)}`],
@@ -376,11 +389,20 @@ window.ftAiChart = (box, data) => {
   hbar(box, ai, {
     domain: (rs) => [Math.min(0, d3.min(rs, (r) => r.ai_crash_lo)), Math.max(5, d3.max(rs, (r) => r.ai_crash_hi))],
     mark: (g, x, y, bh) => {
+      // one heat gradient across the chart: deep losses red, through orange and amber, to teal and green for gains
+      const id = "ai" + (++gradSeq);
+      const [d0, d1] = x.domain(), at = (v) => Math.min(1, Math.max(0, (v - d0) / (d1 - d0)));
+      const lg = d3.select(g.node().ownerSVGElement).insert("defs", ":first-child").append("linearGradient").attr("id", id)
+        .attr("gradientUnits", "userSpaceOnUse").attr("x1", x(d0)).attr("x2", x(d1)).attr("y1", 0).attr("y2", 0);
+      [[-38, "var(--c5)"], [-25, "var(--c4)"], [-12, "var(--c3)"], [0, "var(--c2)"], [6, "var(--c1)"]].forEach(([v, c]) => lg.append("stop").attr("offset", at(v)).style("stop-color", c));
+      const riskColor = (r) => `var(--c${Math.min(5, Math.max(1, r.overall_score))})`;
       g.append("line").attr("x1", (r) => x(r.ai_crash_lo)).attr("x2", (r) => x(r.ai_crash_hi)).attr("y1", (r, i) => y(i) + bh / 2).attr("y2", (r, i) => y(i) + bh / 2)
-        .attr("stroke", "var(--track)").attr("stroke-width", 5).attr("stroke-linecap", "round");
-      g.append("circle").attr("cx", (r) => x(r.ai_crash_mid)).attr("cy", (r, i) => y(i) + bh / 2).attr("r", 4.5)
-        .attr("fill", (r) => (r.overall_score >= 4 ? "var(--bad)" : "var(--accent)"));
-      g.append("text").attr("x", (r) => x(Math.max(r.ai_crash_hi, 0)) + 6).attr("y", (r, i) => y(i) + bh / 2).attr("dy", "0.35em").text((r) => fmtMid(r.ai_crash_mid));
+        .attr("stroke", `url(#${id})`).attr("stroke-width", 6).attr("stroke-linecap", "round").attr("opacity", 0.8);
+      g.append("circle").attr("cx", (r) => x(r.ai_crash_mid)).attr("cy", (r, i) => y(i) + bh / 2).attr("r", 9).attr("fill", riskColor).attr("opacity", 0.22);
+      g.append("circle").attr("cx", (r) => x(r.ai_crash_mid)).attr("cy", (r, i) => y(i) + bh / 2).attr("r", 4.8)
+        .attr("fill", riskColor).attr("stroke", "var(--panel-solid)").attr("stroke-width", 1.5);
+      g.append("text").attr("x", (r) => x(Math.max(r.ai_crash_hi, 0)) + 8).attr("y", (r, i) => y(i) + bh / 2).attr("dy", "0.35em")
+        .style("fill", riskColor).style("font-weight", 600).text((r) => fmtMid(r.ai_crash_mid));
     },
     tip: (r) => [`${r.no} · ${r.ai_exposure} AI exposure`, r.fund, `Estimate ${fmtMid(r.ai_crash_mid)} (range ${fmtMid(r.ai_crash_lo)} to ${fmtMid(r.ai_crash_hi)})`, `Overall risk: ${r.overall_risk}`],
   });
