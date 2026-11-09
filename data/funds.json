@@ -1,0 +1,2049 @@
+{
+ "note": "Static fund details, review analysis and price sources. Edit by hand; the updater never changes this file.",
+ "funds": [
+  {
+   "no": 1,
+   "provider": "BlackRock",
+   "fund": "BGF World Gold D2 USD",
+   "asset_class": "Equity",
+   "segment": "Gold miners",
+   "currency": "USD",
+   "isin": "LU0252968424",
+   "note": "",
+   "group": "Multi-asset & alternatives",
+   "ytd_label": "≈ −4% (e)",
+   "ytd_pct": -4,
+   "y1_label": "+25.2%",
+   "y1_pct": 25.2,
+   "y5_label": "+25.4%",
+   "y5_pct": 25.4,
+   "returns_asof": "30 Sep; YTD to 26 Oct",
+   "holdings": "47 gold and silver mining companies, not physical gold. Top: Barrick 7.9%, Agnico Eagle 6.4%, Newmont 6.1%, AngloGold Ashanti 5.9%, Wheaton Precious Metals 5.7%, Northern Star, Franco-Nevada, Kinross, Endeavour. Moves roughly 2x the gold price.",
+   "ai_exposure": "Medium",
+   "ai_score": 3,
+   "ai_crash_mid": -25,
+   "ai_crash_lo": -40,
+   "ai_crash_hi": -10,
+   "other_risk_level": "High",
+   "other_risk": "Gold at a one-year low ($3,899 on 30 Oct) and fell with stocks twice this month; $113+ oil raises mining costs",
+   "overall_risk": "Very high",
+   "overall_score": 5,
+   "overall_note": "",
+   "volatility": "7",
+   "volatility_score": 7,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "47 gold and precious-metal miners, no physical gold. Top 10 (31 Aug): Barrick 7.9%, Agnico Eagle 6.4%, Newmont 6.1%, AngloGold Ashanti 5.9%, Wheaton Precious Metals 5.7%, Northern Star 4.7%, Franco-Nevada 4.7%, Kinross 4.0%, Endeavour 4.0%, Eldorado 3.9%."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +4.2%, 1 yr +25.2%, 3 yr +51.9% p.a., 5 yr +25.4% p.a. to 30 Sep; +161% in 2025. The NAV fell from about $121.5 at end-September to $111.62 on 26 Oct, so YTD is now about −4%, and it sits 26% below its 52-week high of $151.69."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Medium. Gold is a classic crisis hedge, but miners behave like leveraged equities in a liquidation; in 2008 they fell far more than gold. Gold itself is already about a quarter below its January record."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge 1.32% · 3-yr volatility 36.9%, the highest of the 28 funds",
+   "review_source_url": "https://www.blackrock.com/uk/individual/products/229333/blackrock-world-gold-d2-usd-fund",
+   "review_source_label": "BlackRock fund page",
+   "other_risk_detail": "Gold dipped below $4,000 on 23 Oct, about a quarter below its late-January record. An oil spike revived fears that rates would stay high, and leveraged investors sold to raise cash, so gold did not act as a safe haven that day. Miners amplify gold's moves. Oil at about $115 also raises diesel and power costs, a large share of mining costs, so margins are squeezed from both sides. Several holdings mine in West Africa, where governments have raised royalties and, in Barrick's case in Mali in 2025, taken control of a mine. On 30 Oct gold fell 3.3% to $3,899, a one-year low, during a tech sell-off, the second time this month it fell alongside stocks.",
+   "other_risk_sources": [
+    {
+     "url": "https://cappnotes.substack.com/p/closing-look-friday-october-30-2026",
+     "label": "Market close 30 Oct (Closing Look)"
+    },
+    {
+     "url": "https://discoveryalert.com/news/gold-price-below-4000-oil-spike-october-2026/",
+     "label": "Gold (Discovery Alert)"
+    },
+    {
+     "url": "https://fortune.com/article/price-of-oil-10-26-2026/",
+     "label": "Fortune"
+    }
+   ],
+   "card_group": "alt",
+   "card_order": 3,
+   "sources": [
+    {
+     "parser": "ishares",
+     "url": "https://www.blackrock.com/uk/individual/products/229333/blackrock-world-gold-d2-usd-fund?siteEntryPassthrough=true"
+    },
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0252968424:USD"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/blackrock-global-funds-world-gold-fund-d2-lu0252968424"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 2,
+   "provider": "BlackRock Index Selection Funds",
+   "fund": "iShares Developed Real Estate Index (IE) Inst Acc USD",
+   "asset_class": "Equity",
+   "segment": "Listed real estate",
+   "currency": "USD",
+   "isin": "IE00B89M2V73",
+   "note": "",
+   "group": "Equity",
+   "ytd_label": "+9.1%",
+   "ytd_pct": 9.1,
+   "y1_label": "+9.2%",
+   "y1_pct": 9.2,
+   "y5_label": "+0.5%",
+   "y5_pct": 0.5,
+   "returns_asof": "31 Aug",
+   "holdings": "345 listed property companies and REITs in developed markets. Top: Welltower 8.7% (healthcare property), Prologis 6.5% (warehouses), Equinix 5.2% and Digital Realty 3.4% (data centres), Simon Property 3.4% (malls), Realty Income, Public Storage. Very sensitive to interest rates.",
+   "ai_exposure": "Medium",
+   "ai_score": 3,
+   "ai_crash_mid": -22,
+   "ai_crash_lo": -30,
+   "ai_crash_hi": -15,
+   "other_risk_level": "High",
+   "other_risk": "10-yr Treasury yield above 5% and a hiking Fed raise borrowing costs and cut property values",
+   "overall_risk": "High",
+   "overall_score": 4,
+   "overall_note": "",
+   "volatility": "5",
+   "volatility_score": 5,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "345 listed property companies and REITs. Top holdings (30 Sep): Welltower 8.7%, Prologis 6.5%, Equinix 5.2%, Digital Realty 3.4%, Simon Property 3.4%, Realty Income 2.7%, Public Storage 2.5%."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +9.1%, 1 yr +9.2%, 3 yr +9.3% p.a., 5 yr +0.5% p.a. (31 Aug); −25.2% in 2022."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Medium. Equinix and Digital Realty (~9%) are data-centre landlords that would suffer if AI capex is cut. The bigger risk is interest rates: REITs fell hard in 2022 and have barely grown in five years."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge 0.23% · volatility 16.1% · yield ~3%",
+   "review_source_url": "https://www.ishares.com/gls-download/literature/fact-sheet/ishares-developed-real-estate-index-fund-ie-inst-usd-factsheet-ie00b89m2v73-gb-en-individual.pdf",
+   "review_source_label": "iShares factsheet",
+   "other_risk_detail": "REITs are among the most rate-sensitive equities. The 10-year Treasury touched 5.35% in October, US CPI is 3.7%, and markets saw roughly even odds of another Fed hike. Higher yields raise refinancing costs and push valuations down, the same mechanism behind the fund's −25% in 2022. The data-centre REITs (~9%) add AI-capex risk on top.",
+   "other_risk_sources": [
+    {
+     "url": "https://www.octagonai.co/markets/financials/interest-rates/how-high-will-the-10-year-us-treasury-yield-get-by-oct-30-2026/",
+     "label": "10-yr yield (Octagon)"
+    },
+    {
+     "url": "https://blog.orbitremit.com/us-cpi-september-2026-headline-inflation-report/",
+     "label": "US CPI (OrbitRemit)"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 8,
+   "sources": [
+    {
+     "parser": "ishares",
+     "url": "https://www.blackrock.com/uk/intermediaries/products/337972/ishares-developed-real-estate-index-fund-ie?siteEntryPassthrough=true"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 3,
+   "provider": "BlackRock Index Selection Funds",
+   "fund": "iShares Developed World Index (IE) D EUR",
+   "asset_class": "Equity",
+   "segment": "Developed world",
+   "currency": "EUR",
+   "isin": "IE00BD0NCM55",
+   "note": "",
+   "group": "Equity",
+   "ytd_label": "+15.6%",
+   "ytd_pct": 15.6,
+   "y1_label": "+19.2%",
+   "y1_pct": 19.2,
+   "y5_label": "+12.3%",
+   "y5_pct": 12.3,
+   "returns_asof": "30 Sep (EUR)",
+   "holdings": "Same portfolio as fund 4, priced in euros: about 1,250 large and mid-size companies across 23 developed countries, ~72% US, tech ~32%. Top: NVIDIA, Apple, Microsoft, Alphabet, Amazon, Meta, Broadcom.",
+   "ai_exposure": "High",
+   "ai_score": 4,
+   "ai_crash_mid": -24,
+   "ai_crash_lo": -30,
+   "ai_crash_hi": -18,
+   "other_risk_level": "Medium",
+   "other_risk": "Rich valuations meet 5%+ bond yields; euro swings change returns for EUR-based investors",
+   "overall_risk": "High",
+   "overall_score": 4,
+   "overall_note": "",
+   "volatility": "5",
+   "volatility_score": 5,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "Same portfolio as fund 4, priced in euros: MSCI World, 1,251 stocks."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +15.6%, 1 yr +19.2%, 5 yr +12.3% p.a. in EUR. It beat the USD class this year because the euro fell against the dollar."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "High. For EUR-based investors the dollar usually rises in a crash, which softens losses measured in euros."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge ~0.12%",
+   "review_source_url": "https://www.blackrock.com/sg/en/products/287649/ishares-developed-world-index-fund-ie",
+   "review_source_label": "BlackRock (EUR class)",
+   "other_risk_detail": "The same equity risks as fund 4. For a EUR-based investor, a weaker euro has flattered returns this year (EUR/USD fell 3.9% between 9 Sep and 23 Oct on French debt worries). If the euro rebounds, returns in EUR are trimmed.",
+   "other_risk_sources": [
+    {
+     "url": "https://www.vantagemarkets.co.uk/market-analysis/why-eurusd-fell-french-bond-stress-ecb-hikes-october-26-2026/",
+     "label": "Vantage (euro/France)"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 5,
+   "sources": [
+    {
+     "parser": "ishares",
+     "url": "https://www.ishares.com/ch/privatkunden/de/produkte/344413/ishares-developed-world-index-fund-ie?siteEntryPassthrough=true"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 4,
+   "provider": "BlackRock Index Selection Funds",
+   "fund": "iShares Developed World Index (IE) D Acc USD",
+   "asset_class": "Equity",
+   "segment": "Developed world",
+   "currency": "USD",
+   "isin": "IE00BD0NCN62",
+   "note": "",
+   "group": "Equity",
+   "ytd_label": "+11.8%",
+   "ytd_pct": 11.8,
+   "y1_label": "+15.2%",
+   "y1_pct": 15.2,
+   "y5_label": "+11.9%",
+   "y5_pct": 11.9,
+   "returns_asof": "30 Sep",
+   "holdings": "MSCI World: about 1,250 companies in 23 developed countries, ~72% US. Tech 32%, financials 16%, industrials 11%. Top 10 is ~28%: NVIDIA 5.8%, Apple 5.4%, Microsoft 4.0%, Alphabet 4.0%, Amazon 2.7%, Meta 1.8%, Broadcom 1.8%.",
+   "ai_exposure": "High",
+   "ai_score": 4,
+   "ai_crash_mid": -27,
+   "ai_crash_lo": -32,
+   "ai_crash_hi": -22,
+   "other_risk_level": "Medium",
+   "other_risk": "Rich valuations (P/E ~26) meet 5%+ yields and oil-driven inflation; ~72% US",
+   "overall_risk": "High",
+   "overall_score": 4,
+   "overall_note": "",
+   "volatility": "5",
+   "volatility_score": 5,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "MSCI World, 1,251 stocks. Information technology 31.8%, financials 15.7%, industrials 10.8% (30 Sep). Top 10 is about 28%: NVIDIA 5.8%, Apple 5.4%, Microsoft 4.0%, Alphabet 4.0% (two lines), Amazon 2.7%, Meta 1.8%, Broadcom 1.8%, Micron 1.3%, Tesla 1.1%."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +11.8%, 1 yr +15.2%, 3 yr +21.4% p.a., 5 yr +11.9% p.a. (30 Sep); −18.1% in 2022."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "High. P/E 25.8, and the top AI names dominate the index's gains."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge 0.12% · 3-yr volatility 11.9% · fund size ~$29.6bn",
+   "review_source_url": "https://www.blackrock.com/sg/en/products/287648/ishares-developed-world-index-fund-ie",
+   "review_source_label": "BlackRock (USD class)",
+   "other_risk_detail": "Stocks are priced for strong growth (P/E 25.8) while 10-year Treasury yields are above 5% and inflation has re-accelerated to 3.7% on oil. If the Fed keeps hiking, valuations can fall even without an AI shock. About 72% of the fund is US, so US events matter: the Fed decision on 28 Oct, the midterms on 3 Nov, and possible renewed strikes on Iran afterwards.",
+   "other_risk_sources": [
+    {
+     "url": "https://blog.orbitremit.com/us-cpi-september-2026-headline-inflation-report/",
+     "label": "US CPI (OrbitRemit)"
+    },
+    {
+     "url": "https://www.octagonai.co/markets/financials/interest-rates/how-high-will-the-10-year-us-treasury-yield-get-by-oct-30-2026/",
+     "label": "10-yr yield (Octagon)"
+    },
+    {
+     "url": "https://tradingeconomics.com/japan/stock-market/news/593330",
+     "label": "Trading Economics (Nikkei)"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 4,
+   "sources": [
+    {
+     "parser": "ishares",
+     "url": "https://www.ishares.com/ch/privatkunden/de/produkte/344413/ishares-developed-world-index-fund-ie?siteEntryPassthrough=true"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.ch/fonds/ishares-developed-world-index-fund-ie-d-ie00bd0ncn62"
+    },
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00BD0NCN62:USD"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 5,
+   "provider": "BlackRock Index Selection Funds",
+   "fund": "iShares Europe ex-UK Index (IE) D Acc EUR",
+   "asset_class": "Equity",
+   "segment": "Europe ex-UK",
+   "currency": "EUR",
+   "isin": "IE00BD0NCR01",
+   "note": "",
+   "group": "Equity",
+   "ytd_label": "+9.3%*",
+   "ytd_pct": 9.3,
+   "y1_label": "+15.9%*",
+   "y1_pct": 15.9,
+   "y5_label": "+9.4%*",
+   "y5_pct": 9.4,
+   "returns_asof": "30 Sep (EUR)",
+   "holdings": "About 330 large European companies outside the UK: France ~20%, Switzerland ~18%, Germany ~18%, Netherlands ~11%. Biggest: ASML (~5%), SAP, Nestlé, Roche, Novartis. Banks, industrials and health care dominate; tech only ~10%.",
+   "ai_exposure": "Medium-low",
+   "ai_score": 2,
+   "ai_crash_mid": -20,
+   "ai_crash_lo": -25,
+   "ai_crash_hi": -15,
+   "other_risk_level": "High",
+   "other_risk": "French debt stress (OAT 4.98%, widest spread since 2011); ECB hiking into a slowdown; energy imports",
+   "overall_risk": "Moderate",
+   "overall_score": 3,
+   "overall_note": "",
+   "volatility": "5",
+   "volatility_score": 5,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "MSCI Europe ex UK, about 330 stocks. France ~20%, Switzerland ~18%, Germany ~18%, Netherlands ~11%. Information technology is only ~10.5%, led by ASML (~5%) and SAP (~1.7%), then Roche, Nestlé and Novartis."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +9.3%, 1 yr +15.9%, 5 yr +9.4% p.a. in EUR (30 Sep, Institutional class)."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Medium-low. ASML is the main AI link; banks, health care and industrials dominate."
+    }
+   ],
+   "review_foot": "Daily dealing",
+   "review_source_url": "https://www.blackrock.com/uk/individual/products/229066/blackrock-blk-europe-ex-uk-index-inst-dist-eur-fund",
+   "review_source_label": "BlackRock (Inst class)",
+   "other_risk_detail": "France is about 20% of the fund. Its 10-year yield hit 4.98% on 21 Oct, a 24-year high, and its spread over Germany reached 157 bp, the widest since the euro crisis. The ECB has raised its deposit rate twice this year to 2.50%, while eurozone inflation rose to 3.8% in September and the October PMI fell to a four-month low. Europe imports most of its energy, so a long Hormuz closure squeezes company margins. For USD-based investors, the euro's 3.9% fall since early September is already a currency loss. On 29 Oct the euro touched a 17-month low of 1.1103, and the ECB said Lagarde will leave early, on 7 Feb 2027, ahead of France's spring presidential election.",
+   "other_risk_sources": [
+    {
+     "url": "https://www.vantagemarkets.co.uk/market-analysis/why-eurusd-fell-french-bond-stress-ecb-hikes-october-26-2026/",
+     "label": "Vantage (euro/France)"
+    },
+    {
+     "url": "https://www.muzinich.com/opinions/corporate-credit-snapshot",
+     "label": "Muzinich"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 9,
+   "sources": [
+    {
+     "parser": "ishares",
+     "url": "https://www.ishares.com/uk/professional/en/products/287056/ishares-europe-ex-uk-index-fund-ie?siteEntryPassthrough=true"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 6,
+   "provider": "BlackRock Index Selection Funds",
+   "fund": "iShares North America Index (IE) D Acc USD",
+   "asset_class": "Equity",
+   "segment": "US & Canada",
+   "currency": "USD",
+   "isin": "IE00BD575K12",
+   "note": "",
+   "group": "Equity",
+   "ytd_label": "+12.1%*",
+   "ytd_pct": 12.1,
+   "y1_label": "+15.0%*",
+   "y1_pct": 15,
+   "y5_label": "+12.7%*",
+   "y5_pct": 12.7,
+   "returns_asof": "30 Sep",
+   "holdings": "MSCI North America: about 600 large companies, ~95% US and ~4% Canada. Dominated by the AI leaders: NVIDIA, Apple, Microsoft, Amazon, Alphabet, Broadcom, Meta, Tesla. The purest US mega-cap tech exposure of the 28 funds.",
+   "ai_exposure": "Very high",
+   "ai_score": 5,
+   "ai_crash_mid": -30,
+   "ai_crash_lo": -35,
+   "ai_crash_hi": -25,
+   "other_risk_level": "Medium",
+   "other_risk": "Fed may hike again with CPI at 3.7%; 10-yr yield above 5%; record margin debt; midterms on 3 Nov",
+   "overall_risk": "Very high",
+   "overall_score": 5,
+   "overall_note": "",
+   "volatility": "5",
+   "volatility_score": 5,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "MSCI North America: about 95% US, 4% Canada. The same AI leaders as the S&P 500: NVIDIA, Apple, Microsoft, Amazon, Alphabet, Broadcom, Meta."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +12.1%, 1 yr +15.0%, 5 yr +12.7% p.a. (30 Sep, Institutional class); −19.6% in 2022."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Very high. The purest bet on US mega-cap tech of the 28 funds. In the 2000–02 dot-com bust the S&P 500 lost about 49% peak to trough."
+    }
+   ],
+   "review_foot": "Daily dealing · Inst class ongoing charge 0.17% (D class is cheaper)",
+   "review_source_url": "https://www.ishares.com/ch/individual/en/products/229091/",
+   "review_source_label": "iShares (Inst class)",
+   "other_risk_detail": "Beyond AI: September CPI rose to 3.7% (core 2.6%), and after the release markets briefly put the odds of another Fed hike at the 27–28 Oct meeting near 50%; the Fed then held on 28 Oct, but two of the 12 voters wanted a hike. After strong Q3 GDP (3.4%) and 3.6% PCE inflation, markets priced about 78% odds of a December hike on 29 Oct. The 10-year yield reached 5.35%, a 24-year high, and Pimco's CIO says 6% is possible. Margin debt is at a record. The midterm elections are on 3 Nov, with reports of possible renewed US strikes on Iran afterwards.",
+   "other_risk_sources": [
+    {
+     "url": "https://blog.orbitremit.com/us-cpi-september-2026-headline-inflation-report/",
+     "label": "US CPI (OrbitRemit)"
+    },
+    {
+     "url": "https://www.octagonai.co/markets/financials/interest-rates/how-high-will-the-10-year-us-treasury-yield-get-by-oct-30-2026/",
+     "label": "10-yr yield (Octagon)"
+    },
+    {
+     "url": "https://tradingeconomics.com/japan/stock-market/news/593330",
+     "label": "Trading Economics (Nikkei)"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 2,
+   "sources": [
+    {
+     "parser": "ishares",
+     "url": "https://www.ishares.com/ch/privatkunden/de/produkte/318951/ishares-north-america-index-fund-ie?siteEntryPassthrough=true"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.ch/fonds/ishares-north-america-index-fund-ie-d-ie00bd575k12"
+    },
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00BD575K12:USD"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 7,
+   "provider": "BlackRock Index Selection Funds",
+   "fund": "iShares Pacific Index (IE) D Acc USD",
+   "asset_class": "Equity",
+   "segment": "Pacific ex-Japan",
+   "currency": "USD",
+   "isin": "IE00BD0NCP86",
+   "note": "",
+   "group": "Equity",
+   "ytd_label": "+16.6%*",
+   "ytd_pct": 16.6,
+   "y1_label": "+16.5%*",
+   "y1_pct": 16.5,
+   "y5_label": "+7.1%*",
+   "y5_pct": 7.1,
+   "returns_asof": "31 Aug",
+   "holdings": "Australia, Hong Kong, Singapore and New Zealand. Financials 46%, materials 16%. Top: BHP 10.4%, Commonwealth Bank 8.3%, DBS 5.4%, AIA 4.3%, NAB 3.7%, Westpac 3.7%, OCBC 3.5%, ANZ 3.5%. Dividend yield ~3.3%; almost no AI.",
+   "ai_exposure": "Low",
+   "ai_score": 1,
+   "ai_crash_mid": -20,
+   "ai_crash_lo": -25,
+   "ai_crash_hi": -15,
+   "other_risk_level": "Medium",
+   "other_risk": "RBA hiked to 4.85% on 3 Nov (6–3 vote, likely the last); banks are 46%; China demand",
+   "overall_risk": "Moderate",
+   "overall_score": 3,
+   "overall_note": "",
+   "volatility": "5",
+   "volatility_score": 5,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "MSCI Pacific ex Japan: Australia, Hong Kong, Singapore, New Zealand. Financials 46%, materials 16%. Top 10 (31 Aug): BHP 10.4%, Commonwealth Bank 8.3%, DBS 5.4%, AIA 4.3%, NAB 3.7%, Westpac 3.7%, OCBC 3.5%, ANZ 3.5%."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +16.6%, 1 yr +16.5%, 5 yr +7.1% p.a. (31 Aug, Institutional class)."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Low directly, but it is a cyclical market: a global recession would hit miners and banks."
+    }
+   ],
+   "review_foot": "Daily dealing · D class ongoing charge 0.15% · volatility 14.8% · dividend yield ~3.3%",
+   "review_source_url": "https://www.ishares.com/uk/individual/en/products/229098",
+   "review_source_label": "iShares fund page",
+   "other_risk_detail": "Australia is the biggest country weight. The RBA has hiked four times this year to 4.60%, and a fifth hike on 3 Nov is near even odds after August CPI hit 4.0%. On 28 Oct, Q3 trimmed-mean inflation came in at 3.7% (forecast 3.6%) and September headline CPI at 4.3%, and Governor Bullock called inflation \"far too high\". On 3 Nov the RBA hiked to 4.85% in a 6–3 vote but dropped its explicit tightening bias. That squeezes mortgage borrowers and the big four banks that dominate the fund. BHP and Rio depend on Chinese demand: China's Q3 GDP grew 4.5%, but the CSI 300 fell for 10 straight weeks to mid-October.",
+   "other_risk_sources": [
+    {
+     "url": "https://investinglive.com/news/investinglive-asia-pacific-market-news-hawkish-rba-surprise-rbnz-hold-lift-aud-nzd/",
+     "label": "Australia CPI (investingLive)"
+    },
+    {
+     "url": "https://www.xtb.com/en/market-analysis/rba-turns-increasingly-hawkish-as-markets-reprice-november-rate-hike-expectations",
+     "label": "RBA (XTB)"
+    },
+    {
+     "url": "https://capital.com/en-gb/news/china-stocks-inch-higher-as-strong-gdp-offsets-weak-ai",
+     "label": "China GDP (Reuters via Capital.com)"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 10,
+   "sources": [
+    {
+     "parser": "ishares",
+     "url": "https://www.ishares.com/uk/professionals/en/products/307661/ishares-pacific-index-fund-ie?siteEntryPassthrough=true"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 8,
+   "provider": "BlackRock Index Selection Funds",
+   "fund": "iShares UK Index (IE) D Acc GBP",
+   "asset_class": "Equity",
+   "segment": "UK",
+   "currency": "GBP",
+   "isin": "IE00BD0NCQ93",
+   "note": "",
+   "group": "Equity",
+   "ytd_label": "+9.5%",
+   "ytd_pct": 9.5,
+   "y1_label": "+17.3%",
+   "y1_pct": 17.3,
+   "y5_label": "+12.8%",
+   "y5_pct": 12.8,
+   "returns_asof": "30 Sep (GBP)",
+   "holdings": "66 large UK companies; top 10 is 54%. HSBC 11.1%, Shell 8.9%, AstraZeneca 8.0%, Rolls-Royce 5.3%, Unilever 4.3%, BP 3.7%, BAT, Rio Tinto, GSK, Lloyds. Banks, energy, pharma, consumer staples and defence; most sales are overseas.",
+   "ai_exposure": "Low",
+   "ai_score": 1,
+   "ai_crash_mid": -15,
+   "ai_crash_lo": -20,
+   "ai_crash_hi": -10,
+   "other_risk_level": "Medium",
+   "other_risk": "Budget doubled the bank surcharge to 6%; gilts near 2007 highs; BoE may hike 5 Nov; HSBC (11%) fell 7% on 27 Oct",
+   "overall_risk": "Moderate",
+   "overall_score": 3,
+   "overall_note": "",
+   "volatility": "5",
+   "volatility_score": 5,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "MSCI UK, 66 stocks; top 10 is 54% (30 Sep): HSBC 11.1%, Shell 8.9%, AstraZeneca 8.0%, Rolls-Royce 5.3%, Unilever 4.3%, BP 3.7%, BAT 3.5%, Rio Tinto 3.3%, GSK 3.2%, Lloyds 2.7%."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +9.5%, 1 yr +17.3%, 3 yr +15.5% p.a., 5 yr +12.8% p.a. in GBP; positive in 2022 (+7.1%)."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Low. Almost no AI tech; energy, banks, pharma and defence dominate. P/E 17.8 and the lowest volatility of the equity funds (9.4%). GBP currency risk for USD-based investors."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge 0.07%",
+   "review_source_url": "https://www.blackrock.com/gls-download/literature/fact-sheet/ishares-uk-index-fund-ie-class-d-gbp-factsheet-ie00bd0ncq93-fi-en-individual.pdf",
+   "review_source_label": "iShares factsheet",
+   "other_risk_detail": "The 10-year gilt yield touched 5.53% on 8 Oct, the highest since 2007, and UK inflation rose to 3.5% in September; markets expect a Bank of England hike on 5 Nov. The 28 Oct Budget, Chancellor John Healey's first, passed without a market scare (10-year gilt about 5.3%), but it doubled the bank surcharge to 6%, a direct cost for the fund's banks (HSBC, Lloyds, Barclays, NatWest). Offsets: over four-fifths of FTSE 100 sales are overseas, and energy and defence holdings (Shell, BP, Rolls-Royce) benefit from high oil and higher defence spending. On 27 Oct HSBC, the fund's largest holding (11%), fell almost 7% after a revenue miss and stalled wealth income.",
+   "other_risk_sources": [
+    {
+     "url": "https://portfolio-adviser.com/autumn-budget-2026-gilts-steady-after-budget-broadly-consistent-with-market-expectations/",
+     "label": "UK Budget (Portfolio Adviser)"
+    },
+    {
+     "url": "https://www.vantagemarkets.com/en/market-analysis/autumn-budget-2026-gilts-pound-ftse-100-explained/",
+     "label": "Vantage (UK Budget)"
+    },
+    {
+     "url": "https://www.tradingview.com/news/te_news:593739:0-uk-gilt-yields-hold-near-multi-year-highs/",
+     "label": "Gilts (TradingView)"
+    },
+    {
+     "url": "https://investinglive.com/stocks/hsbc-shares-slide-almost-7-as-revenue-misses-and-wealth-stalls-despite-32-profit-jump/",
+     "label": "HSBC results (investingLive)"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 11,
+   "sources": [
+    {
+     "parser": "ishares",
+     "url": "https://www.ishares.com/uk/professionals/en/products/308415/ishares-uk-index-fund-ie?siteEntryPassthrough=true"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 9,
+   "provider": "BlackRock BGIF",
+   "fund": "iShares Global Government Bond Index (LU) D2 USD",
+   "asset_class": "Bonds",
+   "segment": "Global government",
+   "currency": "USD",
+   "isin": "LU1811364139",
+   "note": "",
+   "group": "Bonds",
+   "ytd_label": "≈ −2% (e)",
+   "ytd_pct": -2,
+   "y1_label": "≈ −2.8% (e)",
+   "y1_pct": -2.8,
+   "y5_label": "≈ −2.9% (index)",
+   "y5_pct": -2.9,
+   "returns_asof": "30 Sep / 21 Oct",
+   "holdings": "About 1,250 government bonds from developed countries (US, Japan, euro area, UK and others), not currency-hedged, so dollar moves change returns. Yield ~4.2%, duration ~6.4 years.",
+   "ai_exposure": "Low – may gain",
+   "ai_score": 1,
+   "ai_crash_mid": 2,
+   "ai_crash_lo": -3,
+   "ai_crash_hi": 8,
+   "other_risk_level": "High",
+   "other_risk": "Unhedged: a weak yen and euro cost USD-based investors; Japanese and French debt stress; inflation",
+   "overall_risk": "Moderate",
+   "overall_score": 3,
+   "overall_note": "",
+   "volatility": "3",
+   "volatility_score": 3,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "About 1,250 developed-market government bonds tracking the FTSE World Government Bond Index, not currency-hedged. Yield 4.2%, duration ~6.4 years (30 Sep)."
+    },
+    {
+     "label": "Returns",
+     "text": "The benchmark returned −2.7% over 1 yr and −2.9% p.a. over 5 yrs to 30 Sep. I estimate the D2 class at about −2% YTD from its NAV ($92.97 on 21 Oct vs about $95 at the start of the year)."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Mixed. Bond prices should rise, but the fund also carries yen, euro and other currency risk against the dollar."
+    }
+   ],
+   "review_foot": "Daily dealing · volatility 6.5%",
+   "review_source_url": "https://www.ishares.com/ch/professionals/en/products/297052/?switchLocale=Y",
+   "review_source_label": "iShares fund page",
+   "other_risk_detail": "The fund is not currency-hedged, so it carries the yen and euro against the dollar. Japan is one of the largest weights in world government bond indices; its 10-year yield has risen to about 3% as PM Takaichi signals deficit-funded tax cuts, while the yen trades near 158. French yields are at 24-year highs. If oil keeps inflation high, central banks keep hiking and government bonds fall again.",
+   "other_risk_sources": [
+    {
+     "url": "https://en.sedaily.com/international/2026/10/19/takaichi-signals-deficit-bonds-to-fund-japans-tax-cuts",
+     "label": "Seoul Economic Daily"
+    },
+    {
+     "url": "https://tradingeconomics.com/japan/government-bond-yield/news/592599",
+     "label": "Trading Economics (JGBs)"
+    },
+    {
+     "url": "https://www.vantagemarkets.co.uk/market-analysis/why-eurusd-fell-french-bond-stress-ecb-hikes-october-26-2026/",
+     "label": "Vantage (euro/France)"
+    }
+   ],
+   "card_group": "bond",
+   "card_order": 3,
+   "sources": [
+    {
+     "parser": "ishares",
+     "url": "https://www.blackrock.com/uk/individual/products/297052/?siteEntryPassthrough=true"
+    },
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU1811364139:USD"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/ishares-global-government-bond-index-fund-lu-d2-lu1811364139"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 10,
+   "provider": "Cash Accounts",
+   "fund": "USD Cash Account",
+   "asset_class": "Cash",
+   "segment": "Cash account",
+   "currency": "USD",
+   "isin": null,
+   "note": "Cash account, not a priced fund",
+   "group": "Cash & money market",
+   "ytd_label": "n/p",
+   "ytd_pct": null,
+   "y1_label": "n/p",
+   "y1_pct": null,
+   "y5_label": "n/p",
+   "y5_pct": null,
+   "returns_asof": "—",
+   "holdings": "US dollar cash held on deposit with a bank. No market investments; the interest rate it earns is not published.",
+   "ai_exposure": "None",
+   "ai_score": 0,
+   "ai_crash_mid": 0,
+   "ai_crash_lo": 0,
+   "ai_crash_hi": 0,
+   "other_risk_level": "Low",
+   "other_risk": "Unknown rate may trail 3.7% US inflation; depends on the bank holding the cash",
+   "overall_risk": "Very low",
+   "overall_score": 1,
+   "overall_note": "",
+   "volatility": "1",
+   "volatility_score": 1,
+   "review_details": [
+    {
+     "label": "What it is",
+     "text": "A US dollar cash account. No public data shows its interest rate."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "None. The rate it pays may be well below money market rates, and protection depends on the bank holding the cash."
+    },
+    {
+     "label": "Action",
+     "text": "Check what rate it earns. If it is much less than about 4%, fund 14 is likely the better cash option."
+    }
+   ],
+   "review_foot": "No market risk",
+   "review_source_url": "",
+   "review_source_label": "bank deposit; no public fund page",
+   "other_risk_detail": "No market risk. The main risks are a rate below inflation (US CPI 3.7%), so the money loses purchasing power, and reliance on the bank holding the cash.",
+   "other_risk_sources": [
+    {
+     "url": "https://blog.orbitremit.com/us-cpi-september-2026-headline-inflation-report/",
+     "label": "US CPI (OrbitRemit)"
+    }
+   ],
+   "card_group": "cash",
+   "card_order": 1,
+   "sources": [],
+   "price_type": "none"
+  },
+  {
+   "no": 11,
+   "provider": "GSAM JPY Liquid Reserves",
+   "fund": "Goldman Sachs Yen Liquid Reserves Instl JPY Acc",
+   "asset_class": "Money market",
+   "segment": "JPY",
+   "currency": "JPY",
+   "isin": "IE00B1VR4Y86",
+   "note": "Assumed Institutional Acc (IE00B1VR4Y86); an Instl Acc (T) class also exists",
+   "group": "Cash & money market",
+   "ytd_label": "≈ +0.3% (e)",
+   "ytd_pct": 0.3,
+   "y1_label": "+0.2%",
+   "y1_pct": 0.2,
+   "y5_label": "≈ −0.1%",
+   "y5_pct": -0.1,
+   "returns_asof": "31 Mar (JPY)",
+   "holdings": "Short-term yen deposits and Japanese Treasury bills, average maturity ~23 days. In effect yen cash: steady in yen, but its USD value rises and falls with the yen.",
+   "ai_exposure": "None",
+   "ai_score": 0,
+   "ai_crash_mid": 4,
+   "ai_crash_lo": 0,
+   "ai_crash_hi": 10,
+   "other_risk_level": "High",
+   "other_risk": "Yen near 158, close to the 160 intervention line; slow BoJ; deficit-funded tax cuts; $115 oil",
+   "overall_risk": "Moderate",
+   "overall_score": 3,
+   "overall_note": "Very low in yen",
+   "volatility": "1 JPY / 3 USD",
+   "volatility_score": 2,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "Yen T-bills and deposits with about 23 days' average maturity."
+    },
+    {
+     "label": "Returns",
+     "text": "Around zero for a decade: 1 yr +0.2%, 3 yr −0.04% p.a. (31 Mar). Yields should now be edging up with the BOJ policy rate at 1.25%."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "None in yen. For a USD-based investor it is a currency position: the yen often strengthens in global sell-offs, so it can act as a crash hedge, but it lost value for years while US rates were far above Japan's."
+    }
+   ],
+   "review_foot": "Daily dealing, T+1",
+   "review_source_url": "https://www.prescient.co.za/media/m0klih5x/mdd_ie00bhtfw194_31032026_en.pdf",
+   "review_source_label": "Goldman Sachs factsheet",
+   "other_risk_detail": "This is where the yen turmoil bites. The yen hit about 163 per dollar in late July, prompting a joint US–Japan intervention (Japan reportedly spent around $85bn) that pushed it to 155, but by mid-August most of that gain had reversed. Japan had already spent ¥11.7 trillion in April–May. It traded near 158 on 27 Oct. Pressures: the BoJ held at 1.25% on 30 Oct (8–1 vote) while US rates are near 4%, though it raised its inflation forecast and signalled more hikes; PM Takaichi said on 19 Oct she may issue deficit bonds to fund about ¥10 trillion of tax cuts, with debt at 204% of GDP; and Japan imports almost all its energy. The risk runs both ways: intervention near 160, or a carry-trade unwind in a crash, could lift the yen 5% in days. For a USD-based investor this fund is a currency bet, not cash.",
+   "other_risk_sources": [
+    {
+     "url": "https://spindepth.com/news/yen-158-intervention-warning-bank-of-japan-october-2026",
+     "label": "SpinDepth"
+    },
+    {
+     "url": "https://www.morganstanley.com/insights/articles/japanese-yen-weakens-after-us-intervention-2026",
+     "label": "Morgan Stanley"
+    },
+    {
+     "url": "https://www.tradingkey.com/news/market-movers/262239780-market-movers-usdjpy-20261026",
+     "label": "TradingKey"
+    },
+    {
+     "url": "https://en.sedaily.com/international/2026/10/19/takaichi-signals-deficit-bonds-to-fund-japans-tax-cuts",
+     "label": "Seoul Economic Daily"
+    }
+   ],
+   "card_group": "cash",
+   "card_order": 3,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B1VR4Y86:JPY"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/goldman-sachs-yen-liquid-reserves-fund-institutional-ie00b1vr4y86"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 12,
+   "provider": "GSAM Structured Investments",
+   "fund": "GS Quartix Modified Strat Bloomberg Commodity A Acc USD",
+   "asset_class": "Commodities",
+   "segment": "Index swap",
+   "currency": "USD",
+   "isin": "LU0397155895",
+   "note": "",
+   "group": "Multi-asset & alternatives",
+   "ytd_label": "≈ +27% (e)",
+   "ytd_pct": 27,
+   "y1_label": "≈ +33%**",
+   "y1_pct": 33,
+   "y5_label": "≈ +12%**",
+   "y5_pct": 12,
+   "returns_asof": "Oct",
+   "holdings": "A Goldman Sachs swap that tracks the Bloomberg Commodity Index: energy (oil, natural gas, fuels) roughly a third, plus gold and silver, industrial metals (copper, aluminium), grains, softs and livestock. Uses optimised futures rolls to try to beat the index.",
+   "ai_exposure": "Low-medium",
+   "ai_score": 2,
+   "ai_crash_mid": -15,
+   "ai_crash_lo": -25,
+   "ai_crash_hi": -5,
+   "other_risk_level": "High",
+   "other_risk": "Oil down to ~$95 (4 Nov) as the election raises pressure to end the Iran war; a signed deal could cut it further, failed talks could spike it",
+   "overall_risk": "High",
+   "overall_score": 4,
+   "overall_note": "",
+   "volatility": "6",
+   "volatility_score": 6,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "Exposure to the Bloomberg Commodity Index (energy, industrial and precious metals, grains, softs, livestock) through a total-return swap with Goldman Sachs. The strategy changes which futures contracts it rolls to try to beat the index."
+    },
+    {
+     "label": "Returns",
+     "text": "The A class is not published publicly. The R2 USD class shows 1 yr +33.2% and 5 yr +76.5% cumulative (about 12% p.a.); funds tracking the same index are up about 27% YTD to 21 Oct. The A class charges more, so its returns will be somewhat lower."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Low-medium. Commodities are driven this year by the Iran war and oil, not AI. A recession would cut demand for oil and metals, and a ceasefire would remove the war premium. Counterparty risk to Goldman Sachs adds a small extra risk."
+    }
+   ],
+   "review_foot": "Daily dealing",
+   "review_source_url": "https://www.trustnet.com/factsheets/B/usf3/gs-quartix-modified-strategy-on-the-bloomberg-commodity-index-total-return-pfl/",
+   "review_source_label": "Trustnet (R2 USD)",
+   "other_risk_detail": "Energy is the largest part of the commodity index, and Brent is about $115, up 75% in a year, because the Strait of Hormuz has been largely closed since March. Iran says it stays shut until the US accepts its conditions, while Saudi, Turkish, Pakistani and Qatari mediators were in Tehran this week. During the brief June truce, Brent fell to about $72; a deal would hit this fund hard. A recession would also cut metals demand. Exposure comes through a Goldman Sachs swap, which adds counterparty risk. On 27 Oct Iran said it was flexible on reopening the strait if the US lifts its blockade within seven days, and Brent fell 1.7%, then rose back to $115.32 on 28 Oct after the US told non-emergency staff to leave Saudi Arabia. Iran now says Hormuz could reopen within 4–5 days if the US lifts its blockade, but talks are reportedly on hold until after the 3 Nov midterms. On 30 Oct a tanker was hit by limpet mines in the strait, the first successful such strike of the war, and Brent rose 2.4%. Over the 31 Oct weekend a draft US–Iran framework was reported, with Hormuz shipping resuming within 7 days of an initial deal, and Iran's negotiators went to Doha. Nothing is agreed yet, and the US has reportedly told Gulf allies to prepare for a short, intense conflict after the 3 Nov election. On 2 Nov Brent fell 7.6% to $104.77 after Iran offered to reopen Hormuz within two days and Trump said Iran wants a deal.",
+   "other_risk_sources": [
+    {
+     "url": "https://www.aljazeera.com/news/2026/11/2/iran-pushing-accelerated-plan-for-ceasefire-talks-with-us",
+     "label": "Iran's 2-day plan (Al Jazeera, 2 Nov)"
+    },
+    {
+     "url": "https://www.tribuneindia.com/news/world/iran-us-draft-proposes-uranium-transfer-hormuz-reopening-within-7-days-report",
+     "label": "US–Iran draft framework (The Tribune)"
+    },
+    {
+     "url": "https://www.thenationalnews.com/business/markets/2026/10/30/oil-prices-set-for-sharp-monthly-rise-on-hormuz-strikes-and-us-threat-to-hit-iran/",
+     "label": "Oil and Hormuz 30 Oct (The National)"
+    },
+    {
+     "url": "https://houseofsaud.com/iran-hormuz-ceasefire-conditions-oct28/",
+     "label": "Hormuz 28 Oct (House of Saud)"
+    },
+    {
+     "url": "https://www.rigzone.com/news/wire/oil_slips_as_iran_diplomacy_picks_up-27-oct-2026-184947-article/",
+     "label": "Oil 27 Oct (Rigzone)"
+    },
+    {
+     "url": "https://finance.yahoo.com/news/oil-prices-down-almost-1-232445179.html",
+     "label": "Reuters via Yahoo"
+    },
+    {
+     "url": "https://fortune.com/article/price-of-oil-10-26-2026/",
+     "label": "Fortune"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis",
+     "label": "Hormuz crisis timeline"
+    },
+    {
+     "url": "https://www.aljazeera.com/news/2026/10/4/iran-says-strait-of-hormuz-to-remain-closed-until-us-meets-conditions",
+     "label": "Al Jazeera"
+    }
+   ],
+   "card_group": "alt",
+   "card_order": 4,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0397155895:USD"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.ch/etp/structured-investments-gsquartix-modified-strategyonthebloombergcommodityindextotalreturn-ausd-lu0397155895"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 13,
+   "provider": "HSBC Amanah",
+   "fund": "HSBC Islamic Global Equity Index IC USD",
+   "asset_class": "Equity",
+   "segment": "Shariah global",
+   "currency": "USD",
+   "isin": "LU1569385302",
+   "note": "",
+   "group": "Equity",
+   "ytd_label": "+16.2%",
+   "ytd_pct": 16.2,
+   "y1_label": "+22.7%",
+   "y1_pct": 22.7,
+   "y5_label": "+14.9%",
+   "y5_pct": 14.9,
+   "returns_asof": "30 Sep",
+   "holdings": "The 100 largest Shariah-compliant global companies: tech 59%, US 80%, no banks. Apple 8.2%, Microsoft 8.1%, Alphabet 8.0%, NVIDIA 7.9%, Amazon 5.3%, Broadcom 3.7%, Meta 3.5%, Micron, Tesla, AMD; ~52% in the top 10.",
+   "ai_exposure": "Very high",
+   "ai_score": 5,
+   "ai_crash_mid": -35,
+   "ai_crash_lo": -40,
+   "ai_crash_hi": -30,
+   "other_risk_level": "Medium",
+   "other_risk": "P/E 32.6 is most exposed to higher rates; no banks or energy to cushion; 79% US",
+   "overall_risk": "Very high",
+   "overall_score": 5,
+   "overall_note": "",
+   "volatility": "6",
+   "volatility_score": 6,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "The 100 largest Shariah-compliant companies (Dow Jones Islamic Market Titans 100). Technology 59.1%, consumer discretionary 12.3%, health care 10.8%; US 79.5%. Top 10 (30 Sep): Apple 8.2%, Microsoft 8.1%, Alphabet 8.0%, NVIDIA 7.9%, Amazon 5.3%, Broadcom 3.7%, Meta 3.5%, Micron 2.6%, Tesla 2.2%, AMD 2.2%."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +16.2%, 1 yr +22.7%, 3 yr +25.5% p.a., 5 yr +14.9% p.a. (30 Sep); −20.5% in the year to Sep 2022."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Very high, the highest of the 28 funds. Shariah screens exclude banks and heavily indebted firms, the sectors that usually cushion a tech sell-off. About half the fund sits in ten AI-linked mega-caps; P/E 32.6."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge 0.49% · 3-yr volatility 14.6%",
+   "review_source_url": "https://www.assetmanagement.hsbc.co.uk/api/v1/download/document/lu1569385302/gb/en/factsheet",
+   "review_source_label": "HSBC factsheet",
+   "other_risk_detail": "Valuation risk on top of AI: at 32.6 times earnings this is the most expensive fund of the 28 funds, so higher bond yields or another Fed hike hurt it most. Shariah screens exclude banks and most leveraged companies, so it has no financials, the sector that benefits from higher rates, and almost no energy, the sector benefiting from the oil shock. On 28 Oct Alphabet, about 8% of the fund, fell roughly 10% after hours on its first earnings miss in nearly four years, with free cash flow of −$9.1bn and long-term debt up from $46.5bn to $125.1bn to fund AI spending. It closed down 12.6% on 29 Oct, its worst day ever, and Amazon (5.3%) fell about 6% after hours on an earnings miss.",
+   "other_risk_sources": [
+    {
+     "url": "https://cappnotes.substack.com/p/closing-look-thursday-october-29",
+     "label": "Market close 29 Oct (Closing Look)"
+    },
+    {
+     "url": "https://www.fool.com/investing/2026/10/28/microsoft-and-alphabet-just-reported-earnings-putting-the-ai-boom-to-the-test/",
+     "label": "Alphabet/Microsoft results (Motley Fool)"
+    },
+    {
+     "url": "https://www.fool.com/coverage/stock-market-today/2026/10/29/stock-market-today-oct-29-amazon-falls-on-q3-earnings-report-and-capex-concerns/",
+     "label": "Amazon results (Motley Fool)"
+    },
+    {
+     "url": "https://www.octagonai.co/markets/financials/interest-rates/how-high-will-the-10-year-us-treasury-yield-get-by-oct-30-2026/",
+     "label": "10-yr yield (Octagon)"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 0,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU1569385302:USD"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.ch/fonds/hsbc-islamic-funds-hsbc-islamic-global-equity-index-fund-ic-lu1569385302"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 14,
+   "provider": "Insight Investments",
+   "fund": "Insight Liquidity Funds ILF USD Liquidity 7",
+   "asset_class": "Money market",
+   "segment": "USD",
+   "currency": "USD",
+   "isin": null,
+   "note": "No public NAV found; check with Insight or your custodian",
+   "group": "Cash & money market",
+   "ytd_label": "≈ +3.2% (e)",
+   "ytd_pct": 3.2,
+   "y1_label": "+4.3%",
+   "y1_pct": 4.3,
+   "y5_label": "+3.6%",
+   "y5_pct": 3.6,
+   "returns_asof": "31 Mar",
+   "holdings": "High-quality short-term US dollar money-market instruments: bank deposits, certificates of deposit, commercial paper, floating-rate notes and repos. Average maturity ~27 days; yield ~4%.",
+   "ai_exposure": "None",
+   "ai_score": 0,
+   "ai_crash_mid": 0,
+   "ai_crash_lo": 0,
+   "ai_crash_hi": 0,
+   "other_risk_level": "Low",
+   "other_risk": "Real return near zero with CPI at 3.7%; yield falls if the Fed cuts; run risk is a remote tail",
+   "overall_risk": "Very low",
+   "overall_score": 1,
+   "overall_note": "",
+   "volatility": "1",
+   "volatility_score": 1,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "High-quality short-term USD instruments: bank deposits, certificates of deposit, commercial paper, floating-rate notes and repos. A low-volatility NAV money market fund; average maturity about 27 days."
+    },
+    {
+     "label": "Returns",
+     "text": "1 yr +4.3%, 3 yr +5.0% p.a., 5 yr +3.6% p.a. (31 Mar); gross yield 3.8% then. After the Fed's September hike the yield should be about 4%."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "None. The tail risk is a severe banking crisis; money market rules require high daily and weekly liquidity. The best shelter of the 28 funds for USD-based investors."
+    }
+   ],
+   "review_foot": "Daily dealing, T+1",
+   "review_source_url": "https://www.insightinvestment.com/globalassets/documents/historic-factsheets/uk_ire_historic-factsheets/ilf-usd-liquidity-fund/ilf_us$_liquidity_2026_03.pdf",
+   "review_source_label": "Insight factsheet (Mar 2026)",
+   "other_risk_detail": "A yield of about 4% roughly matches US inflation (3.7%), so real gains are small. If a crash brings Fed cuts, the yield falls with them. Money market funds can face redemption pressure in a severe banking crisis (as in 2008 and March 2020); rules now require large daily and weekly liquidity buffers.",
+   "other_risk_sources": [
+    {
+     "url": "https://blog.orbitremit.com/us-cpi-september-2026-headline-inflation-report/",
+     "label": "US CPI (OrbitRemit)"
+    }
+   ],
+   "card_group": "cash",
+   "card_order": 0,
+   "sources": [],
+   "price_type": "manual"
+  },
+  {
+   "no": 15,
+   "provider": "Insight Investments EUR",
+   "fund": "Insight ILF EUR Liquidity 7",
+   "asset_class": "Money market",
+   "segment": "EUR",
+   "currency": "EUR",
+   "isin": "IE00B8FXXP57",
+   "note": "",
+   "group": "Cash & money market",
+   "ytd_label": "≈ +1.9% (e)",
+   "ytd_pct": 1.9,
+   "y1_label": "+2.2%",
+   "y1_pct": 2.2,
+   "y5_label": "+2.0%",
+   "y5_pct": 2,
+   "returns_asof": "31 May (EUR)",
+   "holdings": "The same kind of short-term money-market holdings, in euros: bank deposits, certificates of deposit, commercial paper and repos. Yield ~2.4%.",
+   "ai_exposure": "None",
+   "ai_score": 0,
+   "ai_crash_mid": 0,
+   "ai_crash_lo": 0,
+   "ai_crash_hi": 0,
+   "other_risk_level": "Medium",
+   "other_risk": "For USD-based investors: euro down 3.9% since September on French debt stress",
+   "overall_risk": "Low",
+   "overall_score": 2,
+   "overall_note": "Very low in EUR",
+   "volatility": "1",
+   "volatility_score": 1,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "Euro money market instruments; gross yield 2.40% (31 Jul)."
+    },
+    {
+     "label": "Returns",
+     "text": "1 yr +2.2%, 3 yr +3.1% p.a., 5 yr +2.0% p.a. (31 May)."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "None in EUR. For a USD-based investor it adds EUR/USD risk and earns about 1.5 points less than the USD fund."
+    }
+   ],
+   "review_foot": "Daily dealing",
+   "review_source_url": "https://www.insightinvestment.com/globalassets/documents/historic-factsheets/uk_ire_historic-factsheets/ilf-euro-liquidity-fund/ilf_eur_liquidity_2026_07.pdf",
+   "review_source_label": "Insight factsheet (Jul 2026)",
+   "other_risk_detail": "No market risk in euro terms, and euro yields have risen with two ECB hikes (deposit rate 2.50%). For a USD-based investor, EUR/USD fell from 1.165 to 1.119 between 9 Sep and 23 Oct, mainly on French bond stress; a further slide would cost more than the fund earns.",
+   "other_risk_sources": [
+    {
+     "url": "https://www.vantagemarkets.co.uk/market-analysis/why-eurusd-fell-french-bond-stress-ecb-hikes-october-26-2026/",
+     "label": "Vantage (euro/France)"
+    }
+   ],
+   "card_group": "cash",
+   "card_order": 2,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B8FXXP57:EUR"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.ch/fonds/insight-liquidity-funds-plc-ilf-liquidity-fund-class-7-ie00b8fxxp57"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 16,
+   "provider": "JPM Bank Lux SA",
+   "fund": "Fulcrum Diversified Absolute Return F USD",
+   "asset_class": "Multi-asset",
+   "segment": "Absolute return",
+   "currency": "USD",
+   "isin": "LU1551069724",
+   "note": "",
+   "group": "Multi-asset & alternatives",
+   "ytd_label": "+2.6%†",
+   "ytd_pct": 2.6,
+   "y1_label": "+9.2%†",
+   "y1_pct": 9.2,
+   "y5_label": "+5.2%†",
+   "y5_pct": 5.2,
+   "returns_asof": "12 Oct",
+   "holdings": "Three sleeves run by Fulcrum: dynamic allocation across stocks, bonds, currencies and commodities; discretionary macro trades; and diversifying strategies such as relative value. Aims for positive returns with low correlation to markets.",
+   "ai_exposure": "Low",
+   "ai_score": 1,
+   "ai_crash_mid": -2,
+   "ai_crash_lo": -8,
+   "ai_crash_hi": 5,
+   "other_risk_level": "Medium",
+   "other_risk": "Manager and model risk; macro bets can lose when rates and oil whipsaw; fees ~1%",
+   "overall_risk": "Low",
+   "overall_score": 2,
+   "overall_note": "",
+   "volatility": "3",
+   "volatility_score": 3,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "Three sleeves: dynamic allocation across stocks, bonds, commodities and currencies; discretionary macro trades; and diversifying strategies such as relative value. It aims for positive returns with low correlation to stocks and bonds."
+    },
+    {
+     "label": "Returns",
+     "text": "Figures are for FARIX, the US-listed version of the same strategy, since the UCITS F USD class does not publish them: YTD +2.6%, 1 yr +9.2%, 3 yr +8.5% p.a., 5 yr +5.2% p.a. (12 Oct). It gained 6.0% in Q1 2026 while stocks fell, then lost 2.6% in Q2."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Low; likely the best non-cash diversifier. The design is built to make money in sell-offs, though that is not guaranteed."
+    }
+   ],
+   "review_foot": "Daily dealing · fees ~0.9–1.3%, higher than index funds",
+   "review_source_url": "https://fulcrumassetfunds.com/farix-fulcrum-diversified-absolute-return/",
+   "review_source_label": "Fulcrum (FARIX)",
+   "other_risk_detail": "Returns depend on the managers' calls. Q2 2026 lost 2.6% as markets reversed sharply, and fast swings in oil, yields and currencies, all live risks now, can hurt macro strategies. Fees are well above the index funds.",
+   "other_risk_sources": [],
+   "card_group": "alt",
+   "card_order": 0,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU1551069724:USD"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/fulcrum-fulcrum-diversified-absolute-return-fund-f-lu1551069724"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 17,
+   "provider": "Legal and General ICAV",
+   "fund": "L&G Diversified USD C Acc USD",
+   "asset_class": "Multi-asset",
+   "segment": "Multi-asset",
+   "currency": "USD",
+   "isin": null,
+   "note": "No public NAV found for the C USD Acc class; check with LGIM",
+   "group": "Multi-asset & alternatives",
+   "ytd_label": "+8.1%",
+   "ytd_pct": 8.1,
+   "y1_label": "n/p",
+   "y1_pct": null,
+   "y5_label": "+5.1%",
+   "y5_pct": 5.1,
+   "returns_asof": "Oct",
+   "holdings": "A fund of index funds: ~45% global stocks and ~45% bonds, plus listed property. Sector mix: financials ~20%, real estate ~18%, tech ~16%. Targets cash (SOFR) + 3.75% a year with moderate risk.",
+   "ai_exposure": "Medium",
+   "ai_score": 3,
+   "ai_crash_mid": -13,
+   "ai_crash_lo": -18,
+   "ai_crash_hi": -8,
+   "other_risk_level": "High",
+   "other_risk": "Stocks and bonds falling together (as in 2022) if oil keeps inflation high; ~18% property",
+   "overall_risk": "Moderate",
+   "overall_score": 3,
+   "overall_note": "",
+   "volatility": "4",
+   "volatility_score": 4,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "A fund-of-funds mixing roughly 45% equities and 45% bonds plus property and other assets; target return is cash (SOFR) + 3.75% a year. Recent sector mix: financials 19.6%, real estate 17.9%, technology 16.1%."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +8.1%, 3 yr +12.0%, 5 yr +5.1% p.a. (Oct). A 1-yr figure was not available from public sources."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Medium. About half the fund is equities, so expect roughly half the fall of a global equity fund, cushioned by its bonds if yields drop."
+    }
+   ],
+   "review_foot": "Daily dealing · C class ongoing charge 0.29%",
+   "review_source_url": "https://finance.yahoo.com/quote/0P0001D25Y/",
+   "review_source_label": "Yahoo Finance (C USD Acc)",
+   "other_risk_detail": "The bond half cushions equity losses only if yields fall. With US CPI at 3.7% and 10-year yields above 5%, a repeat of 2022, when both fell together, is the main non-AI risk. Real estate (~18%) is rate-sensitive, and some of its corporate bond exposure is likely to be AI-related debt.",
+   "other_risk_sources": [
+    {
+     "url": "https://blog.orbitremit.com/us-cpi-september-2026-headline-inflation-report/",
+     "label": "US CPI (OrbitRemit)"
+    },
+    {
+     "url": "https://www.octagonai.co/markets/financials/interest-rates/how-high-will-the-10-year-us-treasury-yield-get-by-oct-30-2026/",
+     "label": "10-yr yield (Octagon)"
+    },
+    {
+     "url": "https://www.forbes.com/sites/mayrarodriguezvalladares/2026/10/22/the-half-trillion-dollar-silicon-gamble-inside-the-ai-debt-boom/",
+     "label": "AI debt (Forbes)"
+    }
+   ],
+   "card_group": "alt",
+   "card_order": 1,
+   "sources": [],
+   "price_type": "manual"
+  },
+  {
+   "no": 18,
+   "provider": "Legal and General ICAV",
+   "fund": "L&G Diversified EUR C Acc EUR",
+   "asset_class": "Multi-asset",
+   "segment": "Multi-asset",
+   "currency": "EUR",
+   "isin": "IE00BD21PZ19",
+   "note": "Price source rounds to 2 decimals",
+   "group": "Multi-asset & alternatives",
+   "ytd_label": "n/p",
+   "ytd_pct": null,
+   "y1_label": "n/p",
+   "y1_pct": null,
+   "y5_label": "n/p",
+   "y5_pct": null,
+   "returns_asof": "—",
+   "holdings": "The euro version of fund 17: a similar mix of global stocks, bonds and listed property, aimed at euro-based investors.",
+   "ai_exposure": "Medium",
+   "ai_score": 3,
+   "ai_crash_mid": -12,
+   "ai_crash_lo": -16,
+   "ai_crash_hi": -7,
+   "other_risk_level": "High",
+   "other_risk": "Same as fund 17, plus French and euro-area bond stress",
+   "overall_risk": "Moderate",
+   "overall_score": 3,
+   "overall_note": "",
+   "volatility": "4",
+   "volatility_score": 4,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "The euro version of fund 17: a similar mix of equities, bonds and property, aimed at euro investors."
+    },
+    {
+     "label": "Returns",
+     "text": "No current public figures were available; the provider can supply them on request."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Medium, similar to fund 17."
+    }
+   ],
+   "review_foot": "Daily dealing",
+   "review_source_url": "https://www.bloomberg.com/quote/LGDECEA:ID",
+   "review_source_label": "Bloomberg quote",
+   "other_risk_detail": "As for fund 17. A euro-based version is more exposed to French debt stress and ECB hikes.",
+   "other_risk_sources": [
+    {
+     "url": "https://www.vantagemarkets.co.uk/market-analysis/why-eurusd-fell-french-bond-stress-ecb-hikes-october-26-2026/",
+     "label": "Vantage (euro/France)"
+    }
+   ],
+   "card_group": "alt",
+   "card_order": 2,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00BD21PZ19:EUR"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/legal-general-icav-lg-diversified-fund-c-unh-ie00bd21pz19"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 19,
+   "provider": "Northern Trust Investment Funds plc",
+   "fund": "NT World Climate Equity Index Feeder Fund",
+   "asset_class": "Equity",
+   "segment": "Climate-tilted world",
+   "currency": "USD",
+   "isin": "IE00BNC0D102",
+   "note": "Assumed Class A USD Acc; confirm your share class",
+   "group": "Equity",
+   "ytd_label": "≈ +11% (e)",
+   "ytd_pct": 11,
+   "y1_label": "+13.4%‡",
+   "y1_pct": 13.4,
+   "y5_label": "≈ +6.4%‡",
+   "y5_pct": 6.4,
+   "returns_asof": "Oct",
+   "holdings": "A climate-tilted MSCI World tracker: similar companies to fund 4, reweighted to cut carbon exposure (less oil and gas, more tech). Tech 31.5%, financials 19.5%, health 11.5%. NVIDIA 6.8%, Apple 5.0%, Microsoft 4.6%, Amazon, Alphabet, Tesla 2.1%.",
+   "ai_exposure": "High",
+   "ai_score": 4,
+   "ai_crash_mid": -29,
+   "ai_crash_lo": -34,
+   "ai_crash_hi": -24,
+   "other_risk_level": "Medium",
+   "other_risk": "Underweight energy during an oil shock; climate-policy reversals; same rate risk as world equity",
+   "overall_risk": "High",
+   "overall_score": 4,
+   "overall_note": "",
+   "volatility": "5",
+   "volatility_score": 5,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "A climate-tilted version of MSCI World (MSCI World Climate Series A). Technology 31.5%, financials 19.5%, health care 11.5%; USD 72%. Master-fund top holdings (30 Sep): NVIDIA 6.8%, Apple 5.0%, Microsoft 4.6%, Amazon 2.8%, Alphabet 2.3%, Tesla 2.1%, Meta 2.0%, AMD 1.9%."
+    },
+    {
+     "label": "Returns",
+     "text": "The feeder's own figures are not public. The master fund's F USD class shows 1 yr +13.4% and about +6.4% p.a. over 5 yrs. YTD is likely close to MSCI World, about +11%."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "High, slightly above MSCI World because the climate tilt underweights energy and overweights Tesla and tech."
+    }
+   ],
+   "review_foot": "Daily dealing",
+   "review_source_url": "https://www.trustnet.com/factsheets/B/H2BV/northern-trust-world-green-transition-index-f-dis-usd",
+   "review_source_label": "Trustnet (master fund)",
+   "other_risk_detail": "The climate tilt underweights oil and gas just as Brent sits near $115, so the fund lags when energy leads. Policy shifts away from climate targets can hit renewable and EV holdings (Tesla 2.1%). Rate and valuation risks are the same as for fund 4.",
+   "other_risk_sources": [
+    {
+     "url": "https://fortune.com/article/price-of-oil-10-26-2026/",
+     "label": "Fortune"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 3,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00BNC0D102:USD"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.ch/fonds/nt-world-climate-equity-feeder-fund-class-a-ie00bnc0d102"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 20,
+   "provider": "Pimco",
+   "fund": "Pimco GIS Gbl Investment Grade Credit INST Acc USD",
+   "asset_class": "Bonds",
+   "segment": "Global IG corporate",
+   "currency": "USD",
+   "isin": "IE0034085260",
+   "note": "",
+   "group": "Bonds",
+   "ytd_label": "+0.5%",
+   "ytd_pct": 0.5,
+   "y1_label": "+3.0%",
+   "y1_pct": 3,
+   "y5_label": "+0.4%",
+   "y5_pct": 0.4,
+   "returns_asof": "Oct",
+   "holdings": "Actively managed investment-grade corporate bonds from many countries (banks, utilities, industrials and tech issuers), hedged to USD; ~$7bn fund. Can include AI-related company debt such as big-tech and data-centre bonds.",
+   "ai_exposure": "Low-medium",
+   "ai_score": 2,
+   "ai_crash_mid": -2,
+   "ai_crash_lo": -6,
+   "ai_crash_hi": 3,
+   "other_risk_level": "Medium",
+   "other_risk": "AI borrowing is ~10% of big IG bond indices; Oracle CDS ~308 bp; spreads widened at end-Sep",
+   "overall_risk": "Low",
+   "overall_score": 2,
+   "overall_note": "",
+   "volatility": "3",
+   "volatility_score": 3,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "An actively managed portfolio of investment-grade corporate bonds from at least three countries, hedged to USD; fund size about $7bn."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +0.5%, 1 yr +3.0%, 3 yr +6.0% p.a., 5 yr +0.4% p.a. (Oct)."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Low-medium. Big tech and AI infrastructure firms have issued heavy debt to fund data centres. In a crash credit spreads widen, offsetting part of the gain from falling Treasury yields."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge 0.49% · volatility 5.8%",
+   "review_source_url": "https://www.investing.com/funds/investment-grade-credit-fund-inst-u",
+   "review_source_label": "Investing.com",
+   "other_risk_detail": "AI is not only an equity risk. AI-related debt issuance has passed roughly $466–500bn this year and makes up about 10% of the largest long-term IG bond ETFs. Oracle's 5-year CDS more than doubled this year to about 308 bp, and Meta's and NVIDIA's hit records in October. Pimco as a firm bought $18bn of Meta's $27.3bn Hyperion data-centre bond; public data does not show whether this fund holds it. Credit spreads widened into end-September, and high oil and rate hikes add pressure.",
+   "other_risk_sources": [
+    {
+     "url": "https://www.forbes.com/sites/mayrarodriguezvalladares/2026/10/22/the-half-trillion-dollar-silicon-gamble-inside-the-ai-debt-boom/",
+     "label": "AI debt (Forbes)"
+    },
+    {
+     "url": "https://www.muzinich.com/opinions/corporate-credit-snapshot",
+     "label": "Muzinich"
+    }
+   ],
+   "card_group": "bond",
+   "card_order": 4,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE0034085260:USD"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/pimco-gis-global-investment-grade-credit-fund-institutional-ie0034085260"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 21,
+   "provider": "Pimco",
+   "fund": "Pimco Global Investment Grade Credit I EUR Acc",
+   "asset_class": "Bonds",
+   "segment": "Global IG corporate",
+   "currency": "EUR",
+   "isin": "IE0032876397",
+   "note": "EUR-hedged Institutional Acc class",
+   "group": "Bonds",
+   "ytd_label": "≈ −1% (e)",
+   "ytd_pct": -1,
+   "y1_label": "≈ +1.3% (e)",
+   "y1_pct": 1.3,
+   "y5_label": "≈ −1% (e)",
+   "y5_pct": -1,
+   "returns_asof": "estimate",
+   "holdings": "The same actively managed investment-grade corporate bond portfolio as fund 20, hedged to euros.",
+   "ai_exposure": "Low-medium",
+   "ai_score": 2,
+   "ai_crash_mid": -2,
+   "ai_crash_lo": -6,
+   "ai_crash_hi": 3,
+   "other_risk_level": "Medium",
+   "other_risk": "Same AI-debt and spread risks; French spreads at their widest since 2011",
+   "overall_risk": "Low",
+   "overall_score": 2,
+   "overall_note": "",
+   "volatility": "3",
+   "volatility_score": 3,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "The same portfolio as fund 20, hedged into euros."
+    },
+    {
+     "label": "Returns",
+     "text": "No public figure was found for this class. It should trail the USD class by the cost of hedging dollars into euros (about 1.5–2 points a year), so roughly −1% YTD."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Low-medium, as for fund 20."
+    }
+   ],
+   "review_foot": "Daily dealing",
+   "review_source_url": "https://endowus.com/investment-funds-list/pimco-gis-global-investment-grade-credit-fund-IE0034085260",
+   "review_source_label": "Endowus (fund data)",
+   "other_risk_detail": "As for fund 20, plus euro-area risks: French spreads at their widest since the euro crisis and ECB hikes.",
+   "other_risk_sources": [
+    {
+     "url": "https://www.forbes.com/sites/mayrarodriguezvalladares/2026/10/22/the-half-trillion-dollar-silicon-gamble-inside-the-ai-debt-boom/",
+     "label": "AI debt (Forbes)"
+    },
+    {
+     "url": "https://www.vantagemarkets.co.uk/market-analysis/why-eurusd-fell-french-bond-stress-ecb-hikes-october-26-2026/",
+     "label": "Vantage (euro/France)"
+    }
+   ],
+   "card_group": "bond",
+   "card_order": 5,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE0032876397:EUR"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/pimco-gis-global-investment-grade-credit-fund-institutional-ie0032876397"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 22,
+   "provider": "Robeco Institutional Asset MGT",
+   "fund": "Robeco QI Emerging Markets Active Equities I USD",
+   "asset_class": "Equity",
+   "segment": "Emerging markets",
+   "currency": "USD",
+   "isin": "LU0858455784",
+   "note": "",
+   "group": "Equity",
+   "ytd_label": "+29.0%",
+   "ytd_pct": 29,
+   "y1_label": "+42.0%",
+   "y1_pct": 42,
+   "y5_label": "+13.4%",
+   "y5_pct": 13.4,
+   "returns_asof": "31 Aug",
+   "holdings": "About 490 emerging-market stocks chosen by a quant model (value, quality, momentum). China 27%, Taiwan 21%, Korea 17%, India 11–13%. TSMC ~10%, Samsung ~6%, SK Hynix ~4%, Tencent, Alibaba, CCB, Petrobras, Vale. P/E ~14.",
+   "ai_exposure": "High",
+   "ai_score": 4,
+   "ai_crash_mid": -32,
+   "ai_crash_lo": -40,
+   "ai_crash_hi": -25,
+   "other_risk_level": "High",
+   "other_risk": "Taiwan tension (drills 12–17 Oct); China export-control draft; Asian FX stress; >$10bn Korea outflows",
+   "overall_risk": "Very high",
+   "overall_score": 5,
+   "overall_note": "",
+   "volatility": "6",
+   "volatility_score": 6,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "About 490 EM stocks picked by a quant model (value, quality, momentum). Largest: TSMC ~10%, Samsung ~6%, SK Hynix ~4%, Tencent ~2.6%, then Delta Electronics, Alibaba, China Construction Bank, Petrobras, Vale. Roughly China 27%, Taiwan 21%, Korea 17%, India 11–13%."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +29.0%, 1 yr +42.0%, 3 yr +27.3% p.a., 5 yr +13.4% p.a. (31 Aug), well ahead of its index."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "High. Taiwan and Korea chipmakers are about 20% of the fund. A cheap valuation (P/E ~14 vs ~18 for the index) and exposure to banks, energy and materials give some cushion. The 3 months to Aug returned −3.3% as the Korea crash hit."
+    }
+   ],
+   "review_foot": "Daily dealing · EM stocks are less liquid in stress",
+   "review_source_url": "https://www.robeco.com/en-int/products/funds/isin-lu0858455784/robeco-qi-emerging-markets-active-equities-i-usd",
+   "review_source_label": "Robeco fund page",
+   "other_risk_detail": "Taiwan is about 21% of the fund. China held live-fire drills across five sea areas on 12–17 Oct, coast-guard ships harassed Taiwanese vessels on 18 Oct, and Beijing drafted export curbs on about 40 technologies, including AI and chips, on 16 Oct. On 15 Oct the Taiwan dollar and won slumped as foreigners sold heavily: NT$165bn of Taiwan stocks in one day, and Korean outflows above $10bn for October. The Philippine peso passed 63 per dollar, and India and Indonesia intervened. On 30 Oct the KOSPI fell 3.5% (trading curbs triggered) and SK hynix 7.1% as the US tech sell-off spread. Korea and India import most of their oil, so $115 oil hurts.",
+   "other_risk_sources": [
+    {
+     "url": "https://theedgemalaysia.com/node/821951",
+     "label": "Asian FX (The Edge)"
+    },
+    {
+     "url": "https://tech-insider.org/taiwan-level-4-travel-warning-kalshi-odds-2026/",
+     "label": "Taiwan drills (Tech Insider)"
+    },
+    {
+     "url": "https://www.aei.org/commentary/china-taiwan-update-october-20-2026/",
+     "label": "AEI"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 6,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0858455784:USD"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.ch/fonds/robeco-qi-emerging-markets-active-equities-i-lu0858455784/nav"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 23,
+   "provider": "Schroders NE",
+   "fund": "Schroder ISF Asian Local Currency Bond C Acc NAV USD",
+   "asset_class": "Bonds",
+   "segment": "Asian local currency",
+   "currency": "USD",
+   "isin": "LU0358730231",
+   "note": "",
+   "group": "Bonds",
+   "ytd_label": "+0.3%",
+   "ytd_pct": 0.3,
+   "y1_label": "−0.9%",
+   "y1_pct": -0.9,
+   "y5_label": "+0.6%",
+   "y5_pct": 0.6,
+   "returns_asof": "31 Aug",
+   "holdings": "Government and quasi-government bonds of Asian countries in their own currencies (Indonesia, India, Korea, Singapore, Thailand, China and others), with active currency positions. Returns depend heavily on Asian currencies.",
+   "ai_exposure": "Low-medium",
+   "ai_score": 2,
+   "ai_crash_mid": -1,
+   "ai_crash_lo": -6,
+   "ai_crash_hi": 3,
+   "other_risk_level": "High",
+   "other_risk": "Asian currencies under pressure: peso past 63; RBI and BI intervening; oil-importer stress",
+   "overall_risk": "Moderate",
+   "overall_score": 3,
+   "overall_note": "",
+   "volatility": "3",
+   "volatility_score": 3,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "Asian government and quasi-government bonds in local currencies (Indonesia, India, Korea, Singapore, Thailand, China and others), with active currency positions."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD +0.3%, 1 yr −0.9%, 3 yr +1.0% p.a., 5 yr +0.6% p.a. (31 Aug). The weakest long-term performer among the bond funds."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Low-medium. Asian currencies, especially the won and Taiwan dollar, tend to weaken when chip stocks fall and money flees to the dollar, which would hurt this fund in USD terms."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge ~1.05% · volatility ~5%",
+   "review_source_url": "https://e-fundresearch.com/insights/efundinfo/LU0358730231/schroder-isf-asian-lclccy-bd-c-acc-usd",
+   "review_source_label": "e-fundresearch",
+   "other_risk_detail": "Much of the USD return comes from currencies. On 15 Oct the Philippine peso passed 63 per dollar for the first time, Indonesia's central bank intervened for the rupiah, and India's sold dollars to support the rupee. Most Asian economies import oil, and US yields above 5% pull capital out of the region. On the positive side, local yields are high, and Asian central banks have room to cut if oil falls.",
+   "other_risk_sources": [
+    {
+     "url": "https://theedgemalaysia.com/node/821951",
+     "label": "Asian FX (The Edge)"
+    }
+   ],
+   "card_group": "bond",
+   "card_order": 6,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0358730231:USD"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/schroder-international-selection-fund-asian-local-currency-bond-c-lu0358730231"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 24,
+   "provider": "Schroders NE",
+   "fund": "Schroder ISF Asian Opportunities C Acc NAV USD",
+   "asset_class": "Equity",
+   "segment": "Asia ex-Japan",
+   "currency": "USD",
+   "isin": "LU0106259988",
+   "note": "",
+   "group": "Equity",
+   "ytd_label": "≈ +24% (e)",
+   "ytd_pct": 24,
+   "y1_label": "≈ +42% (e)",
+   "y1_pct": 42,
+   "y5_label": "≈ +7% (e)",
+   "y5_pct": 7,
+   "returns_asof": "Oct",
+   "holdings": "About 50 Asia ex-Japan stocks, tech ~44%. TSMC 10.1%, Samsung 8.7%, SK hynix 7.4%, Tencent 4.5%, MediaTek 4.3%, Alibaba 3.1%, Delta 3.1%, AIA 3.0%, ASE 3.0%, Hon Hai 2.8%. About 30% in four chipmakers.",
+   "ai_exposure": "Very high",
+   "ai_score": 5,
+   "ai_crash_mid": -37,
+   "ai_crash_lo": -45,
+   "ai_crash_hi": -30,
+   "other_risk_level": "High",
+   "other_risk": "Same Taiwan, Korea and China risks as fund 22, more concentrated in chipmakers",
+   "overall_risk": "Very high",
+   "overall_score": 5,
+   "overall_note": "",
+   "volatility": "6",
+   "volatility_score": 6,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "About 50 Asia ex-Japan stocks; technology about 44%. Top holdings (31 Aug): TSMC 10.1%, Samsung 8.7%, SK hynix 7.4%, Tencent 4.5%, MediaTek 4.3%, Alibaba 3.1%, Delta Electronics 3.1%, AIA 3.0%, ASE 3.0%, Hon Hai 2.8%."
+    },
+    {
+     "label": "Returns",
+     "text": "The USD C class does not publish trailing returns on public sites. Converting the EUR B class (YTD +27.2%, 1 yr +46.3%) gives roughly YTD +24%, 1 yr +42%, 5 yr about +7% p.a. in USD. In GBP terms it returned +42.9% over 1 yr and +8.3% p.a. over 5 yrs to 31 Jul."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Very high. About 30% sits in TSMC, Samsung, SK hynix and MediaTek, the stocks that drove Korea's 40% crash in July. Memory-chip makers are the most cyclical part of the AI chain."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge 1.05% · EM stocks can gap on bad days",
+   "review_source_url": "https://www.ajbell.co.uk/market-research/FUND:5795613",
+   "review_source_label": "AJ Bell (C Acc USD)",
+   "other_risk_detail": "About 30% sits in TSMC, Samsung, SK hynix and MediaTek, so the Taiwan drills, China's draft tech export controls and the mid-October foreign selling in Taiwan and Korea hit this fund directly. It holds about 50 stocks against Robeco's ~490, so single-stock shocks matter more.",
+   "other_risk_sources": [
+    {
+     "url": "https://theedgemalaysia.com/node/821951",
+     "label": "Asian FX (The Edge)"
+    },
+    {
+     "url": "https://tech-insider.org/taiwan-level-4-travel-warning-kalshi-odds-2026/",
+     "label": "Taiwan drills (Tech Insider)"
+    },
+    {
+     "url": "https://www.aei.org/commentary/china-taiwan-update-october-20-2026/",
+     "label": "AEI"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 1,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0106259988:USD"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/schroder-international-selection-fund-asian-opportunities-c-lu0106259988"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 25,
+   "provider": "Vanguard",
+   "fund": "Vanguard Global Bond Index Hedged Acc EUR",
+   "asset_class": "Bonds",
+   "segment": "Global aggregate",
+   "currency": "EUR",
+   "isin": "IE00B18GC888",
+   "note": "",
+   "group": "Bonds",
+   "ytd_label": "≈ −1.5% (e)",
+   "ytd_pct": -1.5,
+   "y1_label": "−0.1%",
+   "y1_pct": -0.1,
+   "y5_label": "≈ −2.2%",
+   "y5_pct": -2.2,
+   "returns_asof": "early Aug (EUR)",
+   "holdings": "The same ~15,000-bond global portfolio as fund 26 (governments, agencies, companies, securitised debt), hedged to euros.",
+   "ai_exposure": "Low – may gain",
+   "ai_score": 1,
+   "ai_crash_mid": 2,
+   "ai_crash_lo": -2,
+   "ai_crash_hi": 6,
+   "other_risk_level": "Medium",
+   "other_risk": "Rates and inflation; hedging into EUR costs ~1.5 pts a year; French and Japanese debt",
+   "overall_risk": "Low",
+   "overall_score": 2,
+   "overall_note": "",
+   "volatility": "3",
+   "volatility_score": 3,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "The same portfolio as fund 26, hedged into euros."
+    },
+    {
+     "label": "Returns",
+     "text": "1 yr −0.1% and 5 yr −10.5% cumulative (about −2.2% p.a.) as of early August. The EUR class earns less than the USD class because hedging dollars into euros costs the gap between US and euro short rates, about 1.5 points a year."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Low; a moderate hedge if yields fall."
+    }
+   ],
+   "review_foot": "Daily dealing",
+   "review_source_url": "https://www.finanzen.ch/fonds/vanguard-global-bond-index-fund-ie00b18gc888",
+   "review_source_label": "finanzen.ch (EUR hedged)",
+   "other_risk_detail": "Currency-hedged, so no FX risk for EUR-based investors, but yields can rise further if oil keeps inflation high. The fund holds French and Japanese government bonds, both under fiscal stress.",
+   "other_risk_sources": [
+    {
+     "url": "https://www.vantagemarkets.co.uk/market-analysis/why-eurusd-fell-french-bond-stress-ecb-hikes-october-26-2026/",
+     "label": "Vantage (euro/France)"
+    },
+    {
+     "url": "https://tradingeconomics.com/japan/government-bond-yield/news/592599",
+     "label": "Trading Economics (JGBs)"
+    }
+   ],
+   "card_group": "bond",
+   "card_order": 2,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B18GC888:EUR"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.ch/fonds/vanguard-global-bond-index-fund-ie00b18gc888"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 26,
+   "provider": "Vanguard",
+   "fund": "Vanguard Global Bond Index Hedged Acc USD",
+   "asset_class": "Bonds",
+   "segment": "Global aggregate",
+   "currency": "USD",
+   "isin": "IE00B18GCB14",
+   "note": "",
+   "group": "Bonds",
+   "ytd_label": "≈ −0.3%",
+   "ytd_pct": -0.3,
+   "y1_label": "≈ +1.3%",
+   "y1_pct": 1.3,
+   "y5_label": "≈ −0.2%",
+   "y5_pct": -0.2,
+   "returns_asof": "31 Aug",
+   "holdings": "About 15,000 high-quality bonds: governments, agencies, companies and securitised debt. US 46%, France 6%, Germany 6%, Japan 6%, UK 5%. Average rating AA−, duration 6 years, yield ~4.8%; hedged to USD.",
+   "ai_exposure": "Low – may gain",
+   "ai_score": 1,
+   "ai_crash_mid": 2,
+   "ai_crash_lo": -2,
+   "ai_crash_hi": 6,
+   "other_risk_level": "Medium",
+   "other_risk": "CPI 3.7% and possible Fed hikes could push yields higher; Japan/France sovereign stress",
+   "overall_risk": "Low",
+   "overall_score": 2,
+   "overall_note": "",
+   "volatility": "3",
+   "volatility_score": 3,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "About 15,000 investment-grade bonds across governments, agencies, corporates and securitised debt, hedged to USD. US 45.7%, France 6.0%, Germany 5.8%, Japan 5.5%, UK 4.5%. Average quality AA−, duration 6.0 years, yield 4.8% (30 Sep)."
+    },
+    {
+     "label": "Returns",
+     "text": "The benchmark returned −0.15% YTD, +1.5% over 1 yr and −0.1% p.a. over 5 yrs to 31 Aug; the fund trails by about its 0.15% fee."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Low; a moderate hedge. Less rate-sensitive than pure Treasuries, and about a quarter is corporate credit that would lag."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge 0.15%",
+   "review_source_url": "https://www.vanguard.co.uk/professional/product/fund/bond/9136/global-bond-index-fund-usd-hedged-acc",
+   "review_source_label": "Vanguard fund page",
+   "other_risk_detail": "Hedged to USD, so no currency risk. The main risk is yields rising further: Pimco's CIO says the 10-year could reach 6% if oil-driven inflation, fiscal worries and leveraged unwinds intensify. A 4.8% starting yield covers roughly a 0.8-point rise in rates over a year before the fund loses money.",
+   "other_risk_sources": [
+    {
+     "url": "https://www.octagonai.co/markets/financials/interest-rates/how-high-will-the-10-year-us-treasury-yield-get-by-oct-30-2026/",
+     "label": "10-yr yield (Octagon)"
+    }
+   ],
+   "card_group": "bond",
+   "card_order": 1,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B18GCB14:USD"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/vanguard-global-bond-index-fund-ie00b18gcb14"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 27,
+   "provider": "Vanguard",
+   "fund": "Vanguard Japan Stock Index Institutional Acc JPY",
+   "asset_class": "Equity",
+   "segment": "Japan",
+   "currency": "JPY",
+   "isin": "IE00BGCC5F53",
+   "note": "Price shown is the Institutional Plus JPY Acc class; confirm your share class",
+   "group": "Equity",
+   "ytd_label": "≈ +10% (e)",
+   "ytd_pct": 10,
+   "y1_label": "n/p",
+   "y1_pct": null,
+   "y5_label": "n/p",
+   "y5_pct": null,
+   "returns_asof": "26 Oct (JPY)",
+   "holdings": "168 large Japanese companies (MSCI Japan). MUFG 4.7%, Toyota 3.3%, Tokyo Electron 3.1%, SMFG 3.0%, Advantest 3.0%, Hitachi 2.9%, SoftBank Group 2.8%, Recruit, Sony, Kioxia. Banks, autos and electronics; ~11% AI-linked chip names. Priced in yen.",
+   "ai_exposure": "Medium",
+   "ai_score": 3,
+   "ai_crash_mid": -26,
+   "ai_crash_lo": -32,
+   "ai_crash_hi": -20,
+   "other_risk_level": "High",
+   "other_risk": "Yen near 158 (cuts USD value); BoJ hikes; deficit-funded tax cuts; JGB yields ~3%; energy imports",
+   "overall_risk": "High",
+   "overall_score": 4,
+   "overall_note": "",
+   "volatility": "5",
+   "volatility_score": 5,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "MSCI Japan, 168 stocks. Top 10 (30 Sep): MUFG 4.7%, Toyota 3.3%, Tokyo Electron 3.1%, SMFG 3.0%, Advantest 3.0%, Hitachi 2.9%, SoftBank Group 2.8%, Recruit 2.6%, Sony 2.6%, Kioxia 2.5%. P/E 17.2."
+    },
+    {
+     "label": "Returns",
+     "text": "Vanguard's site did not show trailing returns. From published NAVs I estimate about +14% YTD to 30 Sep and about +10% to 26 Oct in yen, after a roughly 4% October drop."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Medium. Tokyo Electron, Advantest, SoftBank and Kioxia (~11%) are direct AI plays; banks and autos are not. For a USD-based investor, the yen typically strengthens in a global sell-off, which cushions losses."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge ~0.12–0.16%",
+   "review_source_url": "https://www.ch.vanguard/en/private-investor/product/fund/equity/9383/japan-stock-index-fund-jpy-acc",
+   "review_source_label": "Vanguard fund page",
+   "other_risk_detail": "Priced in yen, so for a USD-based investor the yen's slide (from about 151 when Takaichi took office a year ago to 157–163) has cut returns. Japanese stocks fell for three straight weeks to 26 Oct (Nikkei 62,189), led by Tokyo Electron and Advantest. Further BoJ hikes would lift the yen, which helps USD-based holders but hurts exporters; deficit-funded tax cuts and JGB yields near 3% unsettle both bonds and the currency. Japan imports almost all its energy.",
+   "other_risk_sources": [
+    {
+     "url": "https://www.tradingkey.com/news/market-movers/262239780-market-movers-usdjpy-20261026",
+     "label": "TradingKey"
+    },
+    {
+     "url": "https://en.sedaily.com/international/2026/10/19/takaichi-signals-deficit-bonds-to-fund-japans-tax-cuts",
+     "label": "Seoul Economic Daily"
+    },
+    {
+     "url": "https://tradingeconomics.com/japan/government-bond-yield/news/592599",
+     "label": "Trading Economics (JGBs)"
+    },
+    {
+     "url": "https://tradingeconomics.com/japan/stock-market/news/593330",
+     "label": "Trading Economics (Nikkei)"
+    }
+   ],
+   "card_group": "equity",
+   "card_order": 7,
+   "sources": [
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00BGCC5F53:JPY"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/vanguard-japan-stock-index-fund-institutional-plus-ie00bgcc5f53"
+    }
+   ],
+   "price_type": "auto"
+  },
+  {
+   "no": 28,
+   "provider": "Vanguard",
+   "fund": "Vanguard US Government Bond Index Acc USD",
+   "asset_class": "Bonds",
+   "segment": "US Treasuries",
+   "currency": "USD",
+   "isin": "IE0007471927",
+   "note": "",
+   "group": "Bonds",
+   "ytd_label": "−2.7%",
+   "ytd_pct": -2.7,
+   "y1_label": "−2.0%",
+   "y1_pct": -2,
+   "y5_label": "−1.1%",
+   "y5_pct": -1.1,
+   "returns_asof": "30 Sep",
+   "holdings": "340 US government bonds, 98.8% Treasuries, rated AA+. About 58% mature in 1–5 years; average duration 5.4 years; yield to worst ~5.1%. The most liquid bonds in the world.",
+   "ai_exposure": "Low – likely gains",
+   "ai_score": 1,
+   "ai_crash_mid": 3,
+   "ai_crash_lo": -3,
+   "ai_crash_hi": 8,
+   "other_risk_level": "Medium",
+   "other_risk": "CPI 3.7%; a December Fed hike still possible; weak auctions; Pimco says a 6% 10-yr is possible",
+   "overall_risk": "Low",
+   "overall_score": 2,
+   "overall_note": "",
+   "volatility": "3",
+   "volatility_score": 3,
+   "review_details": [
+    {
+     "label": "Holds",
+     "text": "340 US Treasury and agency bonds (98.8% Treasuries), rated AA+. Yield to worst 5.12%, average duration 5.4 years, 58% maturing in 1–5 years."
+    },
+    {
+     "label": "Returns",
+     "text": "YTD −2.7%, 1 yr −2.0%, 3 yr +3.1% p.a., 5 yr −1.1% p.a. (30 Sep); −12.9% in the year to Sep 2022."
+    },
+    {
+     "label": "AI-crash exposure",
+     "text": "Low; the clearest hedge of the 28 funds if a crash pushes the Fed to cut. A 1-point fall in yields would add roughly 5% on top of the 5% yield. It does not hedge an inflation shock."
+    }
+   ],
+   "review_foot": "Daily dealing · ongoing charge 0.12% · Treasuries are the most liquid bonds in the world",
+   "review_source_url": "https://fund-docs.vanguard.com/U.S._Government_Bond_Index_Fund_9918_USD_EN_INT_IRISH.pdf",
+   "review_source_label": "Vanguard factsheet (30 Sep)",
+   "other_risk_detail": "This fund hedges a growth crash but not an inflation shock. September CPI was 3.7%. The Fed held on 28 Oct, but two dissenters wanted a hike and Fitch expects one to 4.25% in December (markets priced about 78% odds on 29 Oct). The 10-year yield rose to 5.04% on 28 Oct, then fell back to 4.98% on 29 Oct as Big Tech sold off, and the 27 Oct 5-year auction was the 12th weak one in a row. Heavy Treasury issuance, and Japanese investors bringing money home as JGB yields rise, could also push yields up. A 5.1% starting yield is a strong cushion.",
+   "other_risk_sources": [
+    {
+     "url": "https://blog.orbitremit.com/us-cpi-september-2026-headline-inflation-report/",
+     "label": "US CPI (OrbitRemit)"
+    },
+    {
+     "url": "https://www.octagonai.co/markets/financials/interest-rates/how-high-will-the-10-year-us-treasury-yield-get-by-oct-30-2026/",
+     "label": "10-yr yield (Octagon)"
+    },
+    {
+     "url": "https://www.morganstanley.com/insights/articles/japanese-yen-weakens-after-us-intervention-2026",
+     "label": "Morgan Stanley"
+    }
+   ],
+   "card_group": "bond",
+   "card_order": 0,
+   "sources": [
+    {
+     "parser": "vanguard",
+     "url": "https://www.vanguardsouthamerica.com/en/product/fund/fixed-income/9919/vanguard-us-government-bond-index-fund-usd-acc"
+    },
+    {
+     "parser": "finanzen",
+     "url": "https://www.finanzen.at/fonds/vanguard-us-government-bond-index-fund-ie0007471927"
+    },
+    {
+     "parser": "ft",
+     "url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE0007471927:USD"
+    }
+   ],
+   "price_type": "auto"
+  }
+ ]
+}

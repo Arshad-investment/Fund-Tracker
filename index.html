@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arshad's Fund Tracker</title>
+<meta name="description" content="Latest prices, returns and risk ratings for 28 funds from 16 providers. Updated every morning.">
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<style>
+:root {
+  --bg: #f4f6f9; --panel: rgba(255,255,255,.82); --panel-solid: #ffffff; --fg: #141a22; --muted: #5d6673; --line: #dde3ea;
+  --accent: #2563c9; --accent2: #0e9f8a; --bad: #c0362c; --ok: #12805c; --warn: #a15c00; --track: #d3dae3;
+  --grid: rgba(20,40,70,.055); --glow: rgba(37,99,201,.13); --glow2: rgba(14,159,138,.09);
+  --edge1: rgba(37,99,201,.35); --edge2: rgba(14,159,138,.18); --edge3: rgba(20,40,70,.08);
+  --c1: #16a34a; --c2: #0d9488; --c3: #d39e00; --c4: #ea7a1a; --c5: #dc2f4b;
+  --mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+  --serif: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --r: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #080c12; --panel: rgba(17,23,32,.74); --panel-solid: #111720; --fg: #e6ebf2; --muted: #8b96a6; --line: #222c3a;
+          --accent: #5ea8ff; --accent2: #2dd4bf; --bad: #ff7b72; --ok: #4ade80; --warn: #f0b35a; --track: #2a3444;
+          --grid: rgba(120,160,220,.055); --glow: rgba(70,140,255,.16); --glow2: rgba(45,212,191,.08);
+          --edge1: rgba(94,168,255,.45); --edge2: rgba(45,212,191,.22); --edge3: rgba(255,255,255,.05);
+          --c1: #4ade80; --c2: #2dd4bf; --c3: #ffd166; --c4: #ff9f43; --c5: #ff5c7a; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--fg); font: 15px/1.5 var(--sans); background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 70% 45% at 15% -5%, var(--glow), transparent 65%),
+    radial-gradient(ellipse 55% 40% at 95% 10%, var(--glow2), transparent 60%),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: auto, auto, 28px 28px, 28px 28px;
+  background-attachment: fixed; min-height: 100vh; }
+/* film-grain texture and a faint circuit trace, both fixed behind the page */
+body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .06; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .5;
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 20%, transparent 75%); mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 20%, transparent 75%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='224' height='224' fill='none' stroke='%235ea8ff' stroke-opacity='.10' stroke-width='1'%3E%3Cpath d='M0 56h48l16 16h40M112 0v40l16 16v56M224 168h-56l-16-16H96M56 224v-48l-16-16V112M168 224v-32l24-24h32'/%3E%3Cg fill='%235ea8ff' fill-opacity='.16' stroke='none'%3E%3Ccircle cx='104' cy='72' r='2.5'/%3E%3Ccircle cx='128' cy='112' r='2.5'/%3E%3Ccircle cx='96' cy='152' r='2.5'/%3E%3Ccircle cx='40' cy='112' r='2.5'/%3E%3Ccircle cx='192' cy='168' r='2.5'/%3E%3C/g%3E%3C/svg%3E"); }
+.wrap { position: relative; z-index: 1; }
+.wrap { max-width: 88rem; margin: 0 auto; padding: 24px clamp(14px, 3vw, 32px) 48px; }
+h1 { font: 400 2.2rem/1.15 var(--serif); margin: 0 0 4px; letter-spacing: -.01em;
+  background: linear-gradient(100deg, var(--fg) 30%, var(--accent) 75%, var(--accent2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.kicker { display: inline-flex; align-items: center; gap: 8px; font: 500 .72rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--accent);
+  padding: 5px 10px; border: 1px solid var(--edge1); border-radius: 999px; background: var(--glow); margin-bottom: 12px; }
+.kicker i { width: 7px; height: 7px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 0 var(--ok); }
+@media (prefers-reduced-motion: no-preference) { .kicker i { animation: pulse 2.4s ease-out infinite; } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,.55); } 70% { box-shadow: 0 0 0 7px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
+h2 { font-size: 1.05rem; font-weight: 600; margin: 0 0 2px; }
+.sub, .note, .meta { color: var(--muted); }
+.sub { margin: 0 0 10px; } .note { font-size: .85rem; margin: 0 0 14px; } .meta { font-size: .85rem; margin: 6px 0 22px; max-width: 62rem; }
+.take { max-width: 62rem; margin: 0; } .take b { font-variant-numeric: tabular-nums; }
+.card, .rv-fact, .rv-callout, .rv-article, .rv-card {
+  position: relative; border: 1px solid transparent; border-radius: 12px; padding: 18px; min-width: 0;
+  background: linear-gradient(var(--panel), var(--panel)) padding-box,
+              linear-gradient(140deg, var(--edge1), var(--edge3) 38%, var(--edge3) 70%, var(--edge2)) border-box;
+  -webkit-backdrop-filter: blur(10px) saturate(1.2); backdrop-filter: blur(10px) saturate(1.2);
+  box-shadow: 0 1px 0 rgba(255,255,255,.04) inset, 0 10px 30px -18px rgba(0,0,0,.45); }
+.card::before { content: ""; position: absolute; left: 18px; right: 18px; top: -1px; height: 1px; border-radius: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), var(--accent2), transparent); opacity: .55; }
+.tiles .card { transition: transform .25s ease, box-shadow .25s ease; }
+.tiles .card:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,.05) inset, 0 16px 34px -18px var(--glow); }
+.tile-l, .rv-eyebrow { font-family: var(--mono); letter-spacing: .06em; text-transform: uppercase; font-size: .7rem !important; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: 14px; margin-bottom: 22px; }
+.tile-l, .tile-n { font-size: .82rem; color: var(--muted); }
+.tile-v { font: 400 2rem/1.2 var(--serif); font-variant-numeric: tabular-nums; margin: 4px 0; }
+.tile-v small { font: .95rem var(--sans); color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr)); gap: 14px; margin-bottom: 22px; }
+.chart { position: relative; min-height: 20rem; }
+.chart svg text { font: 11px var(--sans); fill: var(--muted); }
+.chart svg text.lbl { fill: var(--fg); }
+.tt { position: absolute; pointer-events: none; background: var(--panel); border: 1px solid var(--line); border-radius: var(--r);
+      box-shadow: 0 4px 16px rgba(0,0,0,.12); padding: 6px 10px; font-size: .8rem; max-width: 18rem; z-index: 3; }
+.tt .h { color: var(--muted); }
+.pos { color: var(--ok); } .neg { color: var(--bad); }
+.section { margin-bottom: 22px; }
+.ctrl { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+.btn, .search { font: inherit; font-size: .82rem; padding: 4px 10px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--fg); }
+.btn { cursor: pointer; } .btn[aria-pressed="true"] { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; border-color: transparent; box-shadow: 0 4px 14px -6px var(--accent); }
+.btn:hover { border-color: var(--edge1); }
+.search { flex: 1 1 12rem; max-width: 20rem; }
+.tablewrap { container-type: inline-size; max-height: 40rem; overflow: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--panel-solid); }
+table { width: 100%; border-collapse: collapse; font-size: .82rem; font-variant-numeric: tabular-nums; }
+th { position: sticky; top: 0; background: var(--panel-solid); font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; text-align: left; font-weight: 600; padding: 6px 10px; border-bottom: 1px solid var(--line); cursor: pointer; white-space: nowrap; z-index: 1; }
+th[aria-sort="ascending"]::after { content: " ▲"; } th[aria-sort="descending"]::after { content: " ▼"; }
+td { padding: 6px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tbody tr { cursor: pointer; transition: background .15s; } tbody tr:nth-child(even) { background: rgba(127,140,160,.035); } tbody tr:hover, tbody tr.sel { background: var(--glow); }
+.r { text-align: right; white-space: nowrap; } .fn { min-width: 14rem; } .m { color: var(--muted); } .prov { min-width: 9rem; } .nw { white-space: nowrap; }
+@container (max-width: 70rem) { .c2 { display: none; } }
+.chip { display: inline-block; padding: 0 6px; border-radius: var(--r); border: 1px solid var(--line); white-space: nowrap; }
+.chip.s4, .chip.s5 { border-color: var(--bad); color: var(--bad); } .chip.s3 { border-color: var(--warn); color: var(--warn); }
+.stale { color: var(--warn); font-size: .75rem; white-space: nowrap; }
+.detail { min-height: 8rem; }
+.detail h3 { font-size: 1.05rem; margin: 0; }
+.detail .k { color: var(--muted); font-size: .8rem; margin: 10px 0 0; }
+.detail p { margin: 0; } .detail a { color: inherit; }
+.hist { position: relative; margin-top: 6px; }
+details { font-size: .85rem; color: var(--muted); margin-bottom: 22px; }
+summary { cursor: pointer; color: var(--fg); }
+dl { display: grid; grid-template-columns: minmax(8rem, 14rem) 1fr; gap: 4px 16px; margin: 10px 0; }
+dt { color: var(--fg); } dd { margin: 0; }
+.err { padding: 16px; border: 1px solid var(--bad); border-radius: var(--r); color: var(--bad); }
+footer { font-size: .8rem; color: var(--muted); } footer a { color: inherit; }
+.tabs { position: sticky; top: 10px; z-index: 5; display: flex; gap: 4px; padding: 5px; margin: 0 0 24px; overflow-x: auto; scrollbar-width: none;
+  border: 1px solid transparent; border-radius: 14px;
+  background: linear-gradient(var(--panel), var(--panel)) padding-box, linear-gradient(120deg, var(--edge1), var(--edge3) 45%, var(--edge2)) border-box;
+  -webkit-backdrop-filter: blur(14px) saturate(1.3); backdrop-filter: blur(14px) saturate(1.3);
+  box-shadow: 0 12px 30px -20px rgba(0,0,0,.6), 0 1px 0 rgba(255,255,255,.05) inset; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { position: relative; flex: 0 0 auto; font: 500 .84rem/1 var(--sans); padding: 9px 14px; border: 1px solid transparent; border-radius: 10px;
+  background: none; color: var(--muted); cursor: pointer; white-space: nowrap; transition: color .2s, background .2s, border-color .2s; }
+.tab::before { content: attr(data-n); font: 500 .62rem/1 var(--mono); color: var(--accent); opacity: .65; margin-right: 7px; letter-spacing: .04em; }
+.tab:hover { color: var(--fg); background: var(--glow); }
+.tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.tab[aria-selected="true"] { color: var(--fg); border-color: var(--edge1);
+  background: linear-gradient(180deg, var(--glow), transparent 140%), var(--panel-solid);
+  box-shadow: 0 0 0 1px rgba(94,168,255,.08), 0 6px 18px -8px var(--glow), 0 1px 0 rgba(255,255,255,.07) inset; }
+.tab[aria-selected="true"]::after { content: ""; position: absolute; left: 22%; right: 22%; bottom: -1px; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2)); box-shadow: 0 0 10px var(--accent); }
+.tab[aria-selected="true"]::before { opacity: 1; }
+.ft-chart { position: relative; min-height: 20rem; } .ft-chart svg text { font: 11px var(--sans); fill: var(--muted); } .ft-chart svg text.lbl { fill: var(--fg); }
+.rv { line-height: 1.55; max-width: 72rem; }
+.rv-eyebrow { font-size: .78rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-top: 14px; }
+.rv h2.rv-title { font: 400 1.8rem/1.2 var(--serif); margin: 4px 0 10px; } .rv h2.rv-h2 { font: 400 1.3rem/1.3 var(--serif); margin: 4px 0 10px; }
+.rv h3 { font-size: 1rem; margin: 14px 0 4px; } .rv p { margin: 0 0 10px; }
+.rv-caption, .rv-note, .rv-small { font-size: .82rem; color: var(--muted); }
+.rv-meta { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: .82rem; color: var(--muted); margin-bottom: 14px; }
+.rv-facts, .rv-callouts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 14px; margin: 10px 0 14px; }
+.rv-fact b { display: block; font: 400 1.8rem var(--serif); } .rv-fact span { font-size: .82rem; color: var(--muted); }
+.rv-callout h3 { margin-top: 0; } .rv-callout p { margin: 0; font-size: .85rem; }
+.rv-callout.hot { border-left: 3px solid var(--bad); } .rv-callout.safe { border-left: 3px solid var(--ok); }
+.rv-article { margin-bottom: 14px; } .rv-article h3 { margin-top: 0; }
+.rv-hits, .rv-srcs { font-size: .82rem; color: var(--muted); margin-top: 4px; }
+.rv a { color: inherit; } .rv a.rv-fund { display: inline-block; min-width: 1.6em; text-align: center; padding: 0 4px; border: 1px solid var(--line); border-radius: var(--r); text-decoration: none; margin-right: 2px; }
+.rv-tablewrap { overflow: auto; border: 1px solid var(--line); border-radius: var(--r); margin: 10px 0 14px; } .rv-tablewrap.tall { max-height: 40rem; }
+.rv-tablewrap th { position: sticky; top: 0; cursor: default; } .rv-tablewrap td { min-width: 7rem; } .rv-tablewrap td.rv-wide { min-width: 18rem; }
+.rv dl { display: grid; grid-template-columns: minmax(7rem, 12rem) 1fr; gap: 4px 16px; margin: 0 0 14px; font-size: .85rem; } .rv dd { margin: 0; } .rv dt { color: var(--fg); }
+.rv ul, .rv ol { margin: 0 0 14px; padding-left: 1.25rem; } .rv li { margin-bottom: 4px; }
+.rv details { margin: 10px 0; color: var(--fg); font-size: inherit; } .rv details summary { font-weight: 600; }
+.rv-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 14px; margin-bottom: 22px; }
+.rv-card { scroll-margin-top: 16px; transition: box-shadow .3s; } .rv-card.rv-flash { box-shadow: 0 0 0 2px var(--fg); }
+.rv-card-h { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; } .rv-card h4 { margin: 2px 0; font-size: 1rem; }
+.rv-stats { display: flex; gap: 22px; margin: 10px 0; font-variant-numeric: tabular-nums; } .rv-stats b { display: block; }
+.rv-foot { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: .82rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 10px; }
+@media (max-width: 560px) { .rv dl { grid-template-columns: 1fr; } .rv dl dd { margin-bottom: 8px; } }
+.hist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 12px; margin-top: 6px; }
+.hist-cell { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--panel-solid); }
+.hist-top { display: flex; justify-content: space-between; align-items: baseline; }
+.hist-l { font: 500 .72rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.hist-c { font-weight: 600; font-variant-numeric: tabular-nums; }
+.hist-h { font-size: .74rem; color: var(--muted); margin-top: 2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font: .72rem var(--mono); color: var(--muted); margin: -6px 0 12px; }
+.legend i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; box-shadow: 0 0 8px currentColor; }
+.linkbtn { font: inherit; font-size: .8rem; background: none; border: 0; padding: 0; color: inherit; text-decoration: underline; cursor: pointer; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker"><i></i>Live · updated every morning</div>
+    <h1>Arshad's Fund Tracker</h1>
+    <p class="sub"><span id="s-total">—</span> funds from <span id="s-prov">—</span> providers · latest prices with returns and risk ratings</p>
+    <p class="take"><b id="s-up">—</b> of the <b id="s-priced">—</b> priced funds rose on their latest dealing day, and <b id="s-high">—</b> rate High or Very high overall risk. The AI-heavy equity funds carry the biggest estimated losses if the chip sell-off deepens; cash, money market and Treasury funds are the shelters.</p>
+    <p class="meta">Prices checked automatically every morning before 6 am; news updated by about 6 am; last check <span id="s-checked">—</span> (Manila time). NAVs are dated <span id="s-oldest">—</span> to <span id="s-newest">—</span>. Returns, holdings and risk ratings come from the fund review (returns mostly to 30 Sep 2026). Research, not personal advice.</p>
+  </header>
+
+  <div id="error"></div>
+
+  <nav class="tabs" aria-label="Pages">
+    <button class="tab ft-tab" data-n="01" data-tab="tracker" aria-selected="true">Tracker</button>
+    <button class="tab ft-tab" data-n="02" data-tab="summary" aria-selected="false">Summary</button>
+    <button class="tab ft-tab" data-n="03" data-tab="today" aria-selected="false">Today</button>
+    <button class="tab ft-tab" data-n="04" data-tab="scenario" aria-selected="false">AI-crash scenario</button>
+    <button class="tab ft-tab" data-n="05" data-tab="otherrisks" aria-selected="false">Other risks</button>
+    <button class="tab ft-tab" data-n="06" data-tab="context" aria-selected="false">Market context</button>
+    <button class="tab ft-tab" data-n="07" data-tab="fundbyfund" aria-selected="false">Fund by fund</button>
+    <button class="tab ft-tab" data-n="08" data-tab="dipbuy" aria-selected="false">Buying a dip</button>
+    <button class="tab ft-tab" data-n="09" data-tab="menu" aria-selected="false">Fund list</button>
+    <button class="tab ft-tab" data-n="10" data-tab="notes" aria-selected="false">Data notes &amp; sources</button>
+  </nav>
+
+  <section class="page ft-page" id="tracker">
+  <section class="tiles">
+    <div class="card"><div class="tile-l">Funds with a current price</div><div class="tile-v"><span id="t-priced">—</span> <small>of <span id="t-total">—</span></small></div><div class="tile-n">The rest have no public price; see the table</div></div>
+    <div class="card"><div class="tile-l">Rose on their latest dealing day</div><div class="tile-v" id="t-up">—</div><div class="tile-n"><span id="t-down">—</span> fell, the rest were flat</div></div>
+    <div class="card"><div class="tile-l">High or Very high overall risk</div><div class="tile-v" id="t-high">—</div><div class="tile-n">Combines AI exposure, other risks and volatility</div></div>
+    <div class="card"><div class="tile-l">Biggest estimated AI-crash fall</div><div class="tile-v" id="t-worst">—</div><div class="tile-n" id="t-worstname">—</div></div>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Latest daily move</h2>
+      <p class="note">Change in NAV on each fund's latest dealing day, in its own currency. Dates differ by fund.</p>
+      <div class="chart" id="moves"></div>
+    </section>
+    <section class="card">
+      <h2>Estimated move in an AI-led crash</h2>
+      <p class="note">Line: estimated range, coloured from deep loss (red) to gain (green). Dot: central estimate, coloured by overall risk.</p>
+      <div class="legend"><span><i style="background:var(--c1)"></i>Very low</span><span><i style="background:var(--c2)"></i>Low</span><span><i style="background:var(--c3)"></i>Moderate</span><span><i style="background:var(--c4)"></i>High</span><span><i style="background:var(--c5)"></i>Very high</span></div>
+      <div class="chart" id="aicrash"></div>
+    </section>
+  </div>
+
+  <section class="card section">
+    <h2>All funds</h2>
+    <p class="note">Click a column to sort, or a row to see what the fund holds, its main risks and its price history. Scroll sideways for more columns.</p>
+    <div class="ctrl">
+      <button class="btn" data-g="all" aria-pressed="true">All</button>
+      <button class="btn" data-g="Equity" aria-pressed="false">Equity</button>
+      <button class="btn" data-g="Bonds" aria-pressed="false">Bonds</button>
+      <button class="btn" data-g="Cash &amp; money market" aria-pressed="false">Cash &amp; money market</button>
+      <button class="btn" data-g="Multi-asset &amp; alternatives" aria-pressed="false">Multi-asset &amp; alternatives</button>
+      <input class="search" type="search" placeholder="Search fund, provider or ISIN" aria-label="Search funds">
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr>
+          <th data-k="no" aria-sort="ascending">#</th><th data-k="fund">Fund</th><th data-k="provider" class="c2">Provider</th>
+          <th data-k="currency">Ccy</th><th data-k="nav" class="r">Latest NAV</th><th data-k="change_pct" class="r">1 day</th>
+          <th data-k="nav_date">NAV date</th><th data-k="ytd_pct" class="r">YTD</th><th data-k="y1_pct" class="r">1 yr</th>
+          <th data-k="y5_pct" class="r c2">5 yr p.a.</th><th data-k="ai_score">AI exposure</th><th data-k="ai_crash_mid" class="r">Est. AI-crash move</th>
+          <th data-k="other_score" class="c2">Other risks</th><th data-k="overall_score">Overall risk</th><th data-k="volatility_score" class="r">Volatility 1–7</th>
+        </tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card section" id="detail-card">
+    <h2>Fund detail</h2>
+    <div class="detail" id="detail"><p class="k">Pick a fund in the table or either chart to see its holdings, risks, price history and price source.</p></div>
+  </section>
+
+  </section>
+
+  <section class="page ft-page" id="summary" hidden><div class="rv" data-section="header"></div><div class="rv" data-section="summary"></div></section>
+  <section class="page ft-page" id="today" hidden><div class="rv" data-section="today"></div></section>
+  <section class="page ft-page" id="scenario" hidden><div class="rv" data-section="scenario"></div></section>
+  <section class="page ft-page" id="otherrisks" hidden><div class="rv" data-section="otherrisks"></div></section>
+  <section class="page ft-page" id="context" hidden><div class="rv" data-section="context"></div></section>
+  <section class="page ft-page" id="fundbyfund" hidden>
+    <div class="rv" data-section="funds"></div>
+    <div class="ctrl">
+      <button class="btn ft-btn" data-cg="all" aria-pressed="true">All</button>
+      <button class="btn ft-btn" data-cg="equity" aria-pressed="false">Equity</button>
+      <button class="btn ft-btn" data-cg="bond" aria-pressed="false">Bonds</button>
+      <button class="btn ft-btn" data-cg="cash" aria-pressed="false">Cash</button>
+      <button class="btn ft-btn" data-cg="alt" aria-pressed="false">Multi-asset &amp; alternatives</button>
+    </div>
+    <div class="rv" id="cards"></div>
+  </section>
+  <section class="page ft-page" id="dipbuy" hidden><div class="rv" data-section="dipbuy"></div></section>
+  <section class="page ft-page" id="menu" hidden><div class="rv" data-section="menu"></div><div class="rv" id="menu-table"></div></section>
+  <section class="page ft-page" id="notes" hidden>
+    <div class="rv" data-section="notes"></div>
+    <div class="rv" id="src-list"></div>
+    <details open>
+    <summary>Tracker definitions and symbols</summary>
+    <dl>
+      <dt>Latest NAV</dt><dd>Net asset value per share on the date shown, read automatically from the fund company or a price-data site (linked in Fund detail). Funds price on different days, so dates differ. "Not updated" means the last check couldn't read a new price, so the previous one is shown.</dd>
+      <dt>YTD, 1 yr, 5 yr p.a.</dt><dd>Total returns from the fund review, as of the date it gives for each fund (mostly 30 Sep 2026). 5 yr is annualised.</dd>
+      <dt>AI exposure</dt><dd>How much the fund relies on AI, chip and data-centre stocks, from None to Very high.</dd>
+      <dt>Est. AI-crash move</dt><dd>The review's estimate of how far the fund could fall in a sharp AI-led sell-off; the table shows the central estimate.</dd>
+      <dt>Other risks</dt><dd>Non-AI threats in the news (rates, oil, currencies, Taiwan, French debt), rated Low, Medium or High.</dd>
+      <dt>Overall risk</dt><dd>A combined judgement of AI exposure, other risks and volatility on a five-step scale from Very low to Very high, viewed from a USD-based investor.</dd>
+      <dt>Volatility 1–7</dt><dd>An SRI-style rating of how much the price swings.</dd>
+    </dl>
+    <dl>
+      <dt>(e)</dt><dd>Estimate from published NAVs or a sister share class.</dd>
+      <dt>*</dt><dd>Institutional class of the same fund.</dd>
+      <dt>**</dt><dd>R2 USD class.</dd>
+      <dt>†</dt><dd>US-listed twin fund.</dd>
+      <dt>‡</dt><dd>Master fund the feeder invests in.</dd>
+      <dt>n/p</dt><dd>No current public figure; check with the provider.</dd>
+    </dl>
+  </details>
+    <div class="rv" data-section="footer"></div>
+  </section>
+  <footer>Research, not personal advice. Data: <a href="data/prices.json">prices.json</a> · <a href="data/history.csv">history.csv</a></footer>
+</div>
+
+<script>
+const OVL = ["", "Very low", "Low", "Moderate", "High", "Very high"];
+const LV = { Low: 1, Medium: 2, High: 3 };
+const STALE_DAYS = 7; // a NAV this many days older than the newest one is flagged
+const fmtNav = d3.format(",.2f");
+const fmtPct = (v) => (v == null ? "—" : (v > 0 ? "+" : "") + d3.format(".2f")(v) + "%");
+const fmtMid = (v) => (v == null ? "—" : (v > 0 ? "+" : "") + v + "%");
+const fmtDate = (s) => (s ? d3.utcFormat("%-d %b %Y")(new Date(s + "T00:00:00Z")) : "—");
+const sign = (v) => (v == null ? "" : v > 0 ? "pos" : v < 0 ? "neg" : "");
+const short = (s, n) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const setText = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+const state = { g: "all", q: "", k: "no", dir: 1, sel: null };
+let FUNDS = [], HISTORY = [], REVIEW = [];
+
+async function load() {
+  const bust = "?t=" + Date.now();
+  const [f, p, h, rv] = await Promise.all([
+    fetch("data/funds.json" + bust).then((r) => r.json()),
+    fetch("data/prices.json" + bust).then((r) => r.json()),
+    fetch("data/history.csv" + bust).then((r) => (r.ok ? r.text() : "")).catch(() => ""),
+    fetch("data/review.json" + bust).then((r) => (r.ok ? r.json() : [])).catch(() => []),
+  ]);
+  REVIEW = rv;
+  HISTORY = h ? d3.csvParse(h, (d) => ({ date: d.date, no: +d.no, nav: +d.nav })) : [];
+  const newest = d3.max(Object.values(p.prices), (x) => x.nav_date);
+  FUNDS = f.funds.map((x) => {
+    const pr = p.prices[String(x.no)] || {};
+    const days = pr.nav_date && newest ? (new Date(newest) - new Date(pr.nav_date)) / 864e5 : null;
+    return { ...x, ...pr, nav: pr.nav ?? null, change_pct: pr.nav != null ? pr.change_pct : null,
+      other_score: LV[x.other_risk_level], stale: pr.nav != null && (pr.ok === false || days > STALE_DAYS) };
+  });
+  summary(p);
+  drawCharts();
+  drawTable();
+  if (window.ftStart) window.ftStart();
+}
+
+function summary(p) {
+  const priced = FUNDS.filter((f) => f.nav != null);
+  const dates = priced.map((f) => f.nav_date).sort();
+  const worst = FUNDS.reduce((a, f) => (f.ai_crash_mid < a.ai_crash_mid ? f : a));
+  const s = {
+    total: FUNDS.length, prov: new Set(FUNDS.map((f) => f.provider)).size, priced: priced.length,
+    up: priced.filter((f) => f.change_pct > 0).length, down: priced.filter((f) => f.change_pct < 0).length,
+    high: FUNDS.filter((f) => f.overall_score >= 4).length,
+  };
+  [["s-total", s.total], ["t-total", s.total], ["s-prov", s.prov], ["s-priced", s.priced], ["t-priced", s.priced],
+   ["s-up", s.up], ["t-up", s.up], ["t-down", s.down], ["s-high", s.high], ["t-high", s.high],
+   ["s-oldest", fmtDate(dates[0])], ["s-newest", fmtDate(dates[dates.length - 1])],
+   ["t-worst", fmtMid(worst.ai_crash_mid)], ["t-worstname", `Fund ${worst.no}, ${worst.fund}`]].forEach(([id, v]) => setText(id, v));
+  setText("s-checked", p.updated_at ? new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Manila", day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(p.updated_at)) : "—");
+}
+
+let gradSeq = 0;
+function hbar(box, rows, opts) {
+  box.replaceChildren();
+  const W = Math.max(280, box.clientWidth || 600), bh = 14, gap = 7, top = 6, bottom = 22;
+  const H = top + bottom + rows.length * (bh + gap);
+  const svg = d3.select(box).append("svg").attr("width", "100%").attr("viewBox", `0 0 ${W} ${H}`);
+  const maxChars = Math.max(14, Math.floor((W * 0.42) / 6.2));
+  const labels = rows.map((r) => `${r.no}  ${short(r.fund, maxChars)}`);
+  const probe = svg.append("g"); let lw = 0;
+  labels.forEach((t) => { lw = Math.max(lw, probe.append("text").attr("class", "lbl").text(t).node().getComputedTextLength()); });
+  probe.remove();
+  const left = lw + 10, right = 52, nt = Math.max(2, Math.floor((W - left - right) / 70));
+  const x = d3.scaleLinear(opts.domain(rows), [left, W - right]).nice();
+  const y = (i) => top + i * (bh + gap);
+  svg.append("g").selectAll("line").data(x.ticks(nt)).join("line").attr("x1", x).attr("x2", x).attr("y1", top - 2).attr("y2", H - bottom)
+    .attr("stroke", (d) => (d === 0 ? "var(--muted)" : "var(--line)"));
+  const ax = svg.append("g").attr("transform", `translate(0,${H - bottom + 4})`).call(d3.axisBottom(x).ticks(nt).tickFormat((v) => v + "%").tickSize(0))
+    .attr("font-size", null).attr("font-family", null);
+  ax.select(".domain").remove();
+  svg.append("g").selectAll("text").data(rows).join("text").attr("class", "lbl").attr("y", (d, i) => y(i) + bh / 2).attr("dy", "0.35em").text((d, i) => labels[i]);
+  const g = svg.append("g").selectAll("g").data(rows).join("g");
+  opts.mark(g, x, y, bh);
+  const tt = el("div", "tt"); tt.hidden = true; box.append(tt);
+  g.append("rect").attr("width", W).attr("y", (d, i) => y(i) - gap / 2).attr("height", bh + gap).attr("fill", "transparent").style("cursor", "pointer")
+    .on("mousemove", (ev, d) => {
+      tt.replaceChildren(...opts.tip(d).map((t, i) => el("div", i === 0 ? "h" : "", t))); tt.hidden = false;
+      const [mx, my] = d3.pointer(ev, box);
+      tt.style.left = Math.min(Math.max(0, mx + 12), box.clientWidth - tt.offsetWidth) + "px"; tt.style.top = my + 14 + "px";
+    })
+    .on("mouseleave", () => { tt.hidden = true; })
+    .on("click", (ev, d) => (window.ftFundClick || select)(d.no));
+}
+
+function drawCharts() {
+  const moves = FUNDS.filter((r) => r.change_pct != null).sort((a, b) => b.change_pct - a.change_pct);
+  hbar(document.getElementById("moves"), moves, {
+    domain: (rs) => [Math.min(0, d3.min(rs, (r) => r.change_pct)), Math.max(0, d3.max(rs, (r) => r.change_pct))],
+    mark: (g, x, y, bh) => {
+      const id = "mv" + (++gradSeq);
+      const defs = d3.select(g.node().ownerSVGElement).insert("defs", ":first-child");
+      const lin = (name, xa, xb, stops) => { const lg = defs.append("linearGradient").attr("id", id + name).attr("gradientUnits", "userSpaceOnUse").attr("x1", xa).attr("x2", xb).attr("y1", 0).attr("y2", 0);
+        stops.forEach(([o, c]) => lg.append("stop").attr("offset", o).style("stop-color", c)); };
+      const [d0, d1] = x.domain();
+      lin("up", x(0), x(d1), [[0, "var(--accent)"], [0.55, "var(--accent2)"], [1, "var(--c1)"]]);
+      lin("dn", x(d0), x(0), [[0, "var(--c5)"], [1, "var(--c4)"]]);
+      g.append("rect").attr("x", (r) => x(Math.min(0, r.change_pct))).attr("y", (r, i) => y(i)).attr("rx", 3).attr("height", bh)
+        .attr("width", (r) => Math.max(1, Math.abs(x(r.change_pct) - x(0)))).attr("fill", (r) => `url(#${id}${r.change_pct >= 0 ? "up" : "dn"})`);
+      g.append("text").attr("x", (r) => x(Math.max(0, r.change_pct)) + 4).attr("y", (r, i) => y(i) + bh / 2).attr("dy", "0.35em").text((r) => fmtPct(r.change_pct));
+    },
+    tip: (r) => [`${r.no} · ${r.provider}`, r.fund, `NAV ${r.currency} ${fmtNav(r.nav)} on ${fmtDate(r.nav_date)}`, `1 day ${fmtPct(r.change_pct)}`],
+  });
+  window.ftAiChart(document.getElementById("aicrash"), FUNDS);
+}
+
+window.ftAiChart = (box, data) => {
+  const ai = data.slice().sort((a, b) => a.ai_crash_mid - b.ai_crash_mid || a.no - b.no);
+  hbar(box, ai, {
+    domain: (rs) => [Math.min(0, d3.min(rs, (r) => r.ai_crash_lo)), Math.max(5, d3.max(rs, (r) => r.ai_crash_hi))],
+    mark: (g, x, y, bh) => {
+      // one heat gradient across the chart: deep losses red, through orange and amber, to teal and green for gains
+      const id = "ai" + (++gradSeq);
+      const [d0, d1] = x.domain(), at = (v) => Math.min(1, Math.max(0, (v - d0) / (d1 - d0)));
+      const lg = d3.select(g.node().ownerSVGElement).insert("defs", ":first-child").append("linearGradient").attr("id", id)
+        .attr("gradientUnits", "userSpaceOnUse").attr("x1", x(d0)).attr("x2", x(d1)).attr("y1", 0).attr("y2", 0);
+      [[-38, "var(--c5)"], [-25, "var(--c4)"], [-12, "var(--c3)"], [0, "var(--c2)"], [6, "var(--c1)"]].forEach(([v, c]) => lg.append("stop").attr("offset", at(v)).style("stop-color", c));
+      const riskColor = (r) => `var(--c${Math.min(5, Math.max(1, r.overall_score))})`;
+      g.append("line").attr("x1", (r) => x(r.ai_crash_lo)).attr("x2", (r) => x(r.ai_crash_hi)).attr("y1", (r, i) => y(i) + bh / 2).attr("y2", (r, i) => y(i) + bh / 2)
+        .attr("stroke", `url(#${id})`).attr("stroke-width", 6).attr("stroke-linecap", "round").attr("opacity", 0.8);
+      g.append("circle").attr("cx", (r) => x(r.ai_crash_mid)).attr("cy", (r, i) => y(i) + bh / 2).attr("r", 9).attr("fill", riskColor).attr("opacity", 0.22);
+      g.append("circle").attr("cx", (r) => x(r.ai_crash_mid)).attr("cy", (r, i) => y(i) + bh / 2).attr("r", 4.8)
+        .attr("fill", riskColor).attr("stroke", "var(--panel-solid)").attr("stroke-width", 1.5);
+      g.append("text").attr("x", (r) => x(Math.max(r.ai_crash_hi, 0)) + 8).attr("y", (r, i) => y(i) + bh / 2).attr("dy", "0.35em")
+        .style("fill", riskColor).style("font-weight", 600).text((r) => fmtMid(r.ai_crash_mid));
+    },
+    tip: (r) => [`${r.no} · ${r.ai_exposure} AI exposure`, r.fund, `Estimate ${fmtMid(r.ai_crash_mid)} (range ${fmtMid(r.ai_crash_lo)} to ${fmtMid(r.ai_crash_hi)})`, `Overall risk: ${r.overall_risk}`],
+  });
+};
+
+function drawTable() {
+  const tb = document.getElementById("rows"), q = state.q.trim().toLowerCase();
+  const rows = FUNDS.filter((r) => state.g === "all" || r.group === state.g)
+    .filter((r) => !q || [r.fund, r.provider, r.isin || "", r.asset_class, r.segment].join(" ").toLowerCase().includes(q))
+    .sort((a, b) => {
+      const x = a[state.k], y = b[state.k];
+      if (x == null && y == null) return a.no - b.no; if (x == null) return 1; if (y == null) return -1;
+      return (typeof x === "string" ? x.localeCompare(y) : x - y) * state.dir || a.no - b.no;
+    });
+  const td = (text, cls) => el("td", cls, text);
+  const chip = (text, score) => { const c = el("td"); c.append(el("span", "chip s" + score, text)); return c; };
+  tb.replaceChildren(...rows.map((r) => {
+    const tr = el("tr", state.sel === r.no ? "sel" : "");
+    const oth = el("td", "c2"); oth.append(el("span", "chip s" + ((r.other_score || 0) + 1), r.other_risk_level));
+    const dateCell = el("td", "m nw", r.nav_date ? fmtDate(r.nav_date) : "—");
+    if (r.stale) dateCell.append(el("div", "stale", "Not updated"));
+    tr.append(td(r.no), td(r.fund, "fn"), td(r.provider, "c2 m prov"), td(r.currency),
+      td(r.nav == null ? (r.price_type === "none" ? "No NAV" : "Not found") : fmtNav(r.nav), "r"),
+      td(fmtPct(r.change_pct), "r " + sign(r.change_pct)), dateCell,
+      td(r.ytd_label, "r " + sign(r.ytd_pct)), td(r.y1_label, "r " + sign(r.y1_pct)), td(r.y5_label, "r c2 " + sign(r.y5_pct)),
+      chip(r.ai_exposure, r.ai_score), td(fmtMid(r.ai_crash_mid), "r " + sign(r.ai_crash_mid)), oth,
+      chip(r.overall_risk + (r.overall_note ? " · " + r.overall_note : ""), r.overall_score), td(r.volatility, "r"));
+    tr.addEventListener("click", () => select(r.no, true));
+    return tr;
+  }));
+}
+
+function select(no, scroll) {
+  state.sel = no; drawTable(); drawDetail();
+  if (scroll) document.getElementById("detail-card").scrollIntoView({ block: "nearest", behavior: "smooth" });
+}
+
+function drawDetail() {
+  const box = document.getElementById("detail"), r = FUNDS.find((x) => x.no === state.sel);
+  if (!r) return;
+  const p = (t, c) => el("p", c, t);
+  const navLine = r.nav == null ? (r.price_type === "none" ? "No NAV: this is a cash account." : "No public price found; check with the provider.")
+    : `NAV ${r.currency} ${fmtNav(r.nav)} on ${fmtDate(r.nav_date)} (${fmtPct(r.change_pct)} on the day)` + (r.stale ? " · not updated at the last check" : "");
+  box.replaceChildren(el("h3", "", `${r.no} · ${r.fund}`),
+    p([r.provider, r.isin, `${r.asset_class} – ${r.segment}`].filter(Boolean).join(" · "), "k"),
+    p("Latest price", "k"), p(navLine));
+  const hist = HISTORY.filter((h) => h.no === r.no).sort((a, b) => d3.ascending(a.date, b.date));
+  box.append(p("Price history", "k"));
+  const grid = el("div", "hist-grid"); box.append(grid);
+  const lastDay = hist.length ? new Date(hist[hist.length - 1].date) : null;
+  const since = (days) => hist.filter((h) => lastDay && (lastDay - new Date(h.date)) / 864e5 <= days);
+  [["1 day", hist.slice(-2), "Latest price vs the one before (funds price once a day)"], ["1 month", since(31), "Last 31 days"], ["1 year", since(366), "Last 12 months"]].forEach(([label, pts, hint]) => {
+    const cell = el("div", "hist-cell"); grid.append(cell);
+    const top = el("div", "hist-top"); top.append(el("span", "hist-l", label));
+    if (pts.length > 1) {
+      const chg = (pts[pts.length - 1].nav / pts[0].nav - 1) * 100;
+      top.append(el("span", "hist-c " + sign(chg), fmtPct(chg)));
+      cell.append(top);
+      const hb = el("div", "hist"); cell.append(hb);
+      requestAnimationFrame(() => sparkline(hb, pts, r.currency, chg));
+      cell.append(el("div", "hist-h", `${fmtDate(pts[0].date)} → ${fmtDate(pts[pts.length - 1].date)} · ${hint}`));
+    } else {
+      cell.append(top, el("div", "hist-h", r.nav == null ? "No price history for this fund" : "Not enough history yet; it builds up with each daily update"));
+    }
+  });
+  box.append(p("Returns", "k"), p(`YTD ${r.ytd_label} · 1 yr ${r.y1_label} · 5 yr p.a. ${r.y5_label} (as of ${r.returns_asof})`),
+    p("What it holds", "k"), p(r.holdings),
+    p("AI-crash exposure", "k"), p(`${r.ai_exposure}; estimated move ${fmtMid(r.ai_crash_mid)} (range ${fmtMid(r.ai_crash_lo)} to ${fmtMid(r.ai_crash_hi)})`),
+    p(`Other risks: ${r.other_risk_level}`, "k"), p(r.other_risk),
+    p("Overall risk", "k"), p(`${r.overall_risk}${r.overall_note ? " (" + r.overall_note + ")" : ""} · volatility ${r.volatility} on a 1–7 scale`));
+  if (r.note) box.append(p("Note", "k"), p(r.note));
+  const full = el("button", "linkbtn", "Open the full fund analysis"); full.addEventListener("click", () => window.ftGoFund(r.no)); const fw = p("", "k"); fw.append(full); box.append(fw);
+  if (r.source_url && /^https:\/\//.test(r.source_url)) { const a = el("a", "", "Price source"); a.href = r.source_url; a.target = "_blank"; a.rel = "noopener"; const w = p("", "k"); w.append(a); box.append(w); }
+}
+
+let sparkSeq = 0;
+function sparkline(box, hist, ccy, chg) {
+  const W = Math.max(200, box.clientWidth || 300), H = 110, m = { t: 10, r: 8, b: 20, l: 8 };
+  const col = chg >= 0 ? "var(--c1)" : "var(--c5)", id = "sp" + (++sparkSeq);
+  const x = d3.scaleUtc(d3.extent(hist, (d) => new Date(d.date)), [m.l, W - m.r]);
+  const [lo, hi] = d3.extent(hist, (d) => d.nav), pad = (hi - lo) * 0.12 || hi * 0.005;
+  const y = d3.scaleLinear([lo - pad, hi + pad], [H - m.b, m.t]);
+  const svg = d3.select(box).append("svg").attr("width", "100%").attr("viewBox", `0 0 ${W} ${H}`);
+  const gr = svg.append("defs").append("linearGradient").attr("id", id).attr("x1", 0).attr("x2", 0).attr("y1", 0).attr("y2", 1);
+  [[0, .32], [0.6, .08], [1, 0]].forEach(([o, a]) => gr.append("stop").attr("offset", o).style("stop-color", col).style("stop-opacity", a));
+  const px = (d) => x(new Date(d.date)), py = (d) => y(d.nav);
+  svg.append("path").datum(hist).attr("fill", `url(#${id})`).attr("d", d3.area(px, H - m.b, py));
+  svg.append("path").datum(hist).attr("fill", "none").attr("stroke", col).attr("stroke-width", 2).attr("stroke-linejoin", "round").attr("stroke-linecap", "round").attr("d", d3.line(px, py));
+  const last = hist[hist.length - 1];
+  svg.append("circle").attr("cx", px(last)).attr("cy", py(last)).attr("r", 3.5).attr("fill", col).attr("stroke", "var(--panel-solid)").attr("stroke-width", 1.5);
+  const ticks = hist.length <= 3 ? hist.map((d) => new Date(d.date)) : [new Date(hist[0].date), new Date(last.date)];
+  svg.append("g").attr("transform", `translate(0,${H - m.b + 4})`).call(d3.axisBottom(x).tickValues(ticks).tickSize(0).tickFormat(d3.utcFormat(hist.length > 40 ? "%b %Y" : "%-d %b")))
+    .attr("font-size", null).attr("font-family", null).call((g) => g.select(".domain").remove())
+    .selectAll("text").attr("fill", "var(--muted)").attr("font-size", 10).attr("text-anchor", (d, i, n) => (i === 0 ? "start" : i === n.length - 1 ? "end" : "middle"));
+  // hover readout
+  const dot = svg.append("circle").attr("r", 3.5).attr("fill", col).style("display", "none");
+  const lab = svg.append("text").attr("font-size", 10.5).attr("fill", "var(--fg)").attr("y", m.t + 2).style("display", "none");
+  svg.on("mousemove", (ev) => {
+    const [mx] = d3.pointer(ev); const d = hist[d3.leastIndex(hist, (h) => Math.abs(px(h) - mx))];
+    dot.style("display", null).attr("cx", px(d)).attr("cy", py(d));
+    lab.style("display", null).text(`${fmtDate(d.date)} · ${ccy} ${fmtNav(d.nav)}`).attr("x", Math.min(Math.max(m.l, px(d) - 60), W - 150));
+  }).on("mouseleave", () => { dot.style("display", "none"); lab.style("display", "none"); });
+}
+
+document.querySelectorAll(".btn[data-g]").forEach((b) => b.addEventListener("click", () => {
+  state.g = b.dataset.g; document.querySelectorAll(".btn[data-g]").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); drawTable();
+}));
+document.querySelector(".search").addEventListener("input", (e) => { state.q = e.target.value; drawTable(); });
+document.querySelectorAll("th[data-k]").forEach((th) => th.addEventListener("click", () => {
+  const k = th.dataset.k;
+  if (state.k === k) state.dir = -state.dir; else { state.k = k; state.dir = ["no", "fund", "provider", "currency", "nav_date", "ai_crash_mid"].includes(k) ? 1 : -1; }
+  document.querySelectorAll("th[data-k]").forEach((t) => t.removeAttribute("aria-sort"));
+  th.setAttribute("aria-sort", state.dir === 1 ? "ascending" : "descending"); drawTable();
+}));
+let resizeTimer; window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => FUNDS.length && !document.getElementById("tracker").hidden && drawCharts(), 150); });
+
+// Pages built from the fund review: the review's text is the "review" source, fund facts the "funds" source.
+const signCls = sign;
+const mk = el;
+const OPEN_FUND = /^#f(\d+)$/;
+const arr = (v) => { if (Array.isArray(v)) return v; if (typeof v === 'string' && /^\s*\[/.test(v)) { try { return JSON.parse(v); } catch (e) { return []; } } return []; };
+
+function runsTo(parent, runs) {
+  arr(runs).forEach((r) => {
+    let node;
+    const textNode = () => {
+      const parts = String(r.text).split('\n');
+      const frag = document.createDocumentFragment();
+      parts.forEach((t, i) => { if (i) frag.append(document.createElement('br')); frag.append(document.createTextNode(t)); });
+      return frag;
+    };
+    if (r.href && OPEN_FUND.test(r.href)) {
+      node = mk('a', 'rv-fund', r.text); node.href = r.href;
+      node.addEventListener('click', (e) => { e.preventDefault(); window.ftGoFund(+r.href.match(OPEN_FUND)[1]); });
+    } else if (r.href && /^https:\/\//.test(r.href)) {
+      node = mk('a', '', r.text); node.href = r.href; node.target = '_blank'; node.rel = 'noopener';
+    } else {
+      node = textNode();
+    }
+    if (r.cls) { const s = mk('span', r.cls); s.append(node); node = s; }
+    if (r.italic) { const s = mk('i'); s.append(node); node = s; }
+    if (r.bold) { const s = mk('b'); s.append(node); node = s; }
+    parent.append(node);
+  });
+  return parent;
+}
+
+function renderBlocks(box, blocks, hooks) {
+  let details = null, article = null, group = null, groupKind = null, table = null;
+  const target = (b) => (b.in_details && details ? details : article || box);
+  const grouped = (kind, make) => {
+    if (groupKind !== kind) { group = make(); groupKind = kind; }
+    return group;
+  };
+  blocks.forEach((b) => {
+    if (!b.in_details && b.kind !== 'details') details = null;
+    const at = target(b);
+    const keepGroup = ['meta', 'fact', 'callout', 'li', 'dt', 'thead', 'tr'].includes(b.kind);
+    if (!keepGroup) { groupKind = null; group = null; }
+    switch (b.kind) {
+      case 'details': { details = mk('details'); const s = mk('summary'); runsTo(s, b.runs); details.append(s); (article || box).append(details); break; }
+      case 'article_start': article = mk('div', 'rv-article'); box.append(article); break;
+      case 'article_end': article = null; break;
+      case 'eyebrow': at.append(runsTo(mk('div', 'rv-eyebrow'), b.runs)); break;
+      case 'h1': at.append(runsTo(mk('h2', 'rv-title'), b.runs)); break;
+      case 'h2': at.append(runsTo(mk('h2', 'rv-h2'), b.runs)); break;
+      case 'h3': at.append(runsTo(mk('h3'), b.runs)); break;
+      case 'lead': at.append(runsTo(mk('p', 'rv-lead'), b.runs)); break;
+      case 'caption': at.append(runsTo(mk('p', 'rv-caption'), b.runs)); break;
+      case 'note': at.append(runsTo(mk('p', 'rv-note'), b.runs)); break;
+      case 'p': at.append(runsTo(mk('p'), b.runs)); break;
+      case 'hits': at.append(runsTo(mk('div', 'rv-hits'), b.runs)); break;
+      case 'srcs': at.append(runsTo(mk('div', 'rv-srcs'), b.runs)); break;
+      case 'meta': grouped('meta', () => at.appendChild(mk('div', 'rv-meta'))).append(runsTo(mk('span'), b.runs)); break;
+      case 'fact': {
+        const g = grouped('fact', () => at.appendChild(mk('div', 'rv-facts')));
+        const f = mk('div', 'rv-fact'); f.append(runsTo(mk('b'), b.label), runsTo(mk('span'), b.runs)); g.append(f); break;
+      }
+      case 'callout': {
+        if (hooks.beforeCallouts && groupKind !== 'callout') hooks.beforeCallouts(at);
+        const g = grouped('callout', () => at.appendChild(mk('div', 'rv-callouts')));
+        const c = mk('div', 'rv-callout ' + (b.tone || '')); c.append(runsTo(mk('h3'), b.label), runsTo(mk('p'), b.runs)); g.append(c); break;
+      }
+      case 'li': grouped('li', () => at.appendChild(mk(b.ordered ? 'ol' : 'ul'))).append(runsTo(mk('li'), b.runs)); break;
+      case 'dt': {
+        const g = grouped('dt', () => at.appendChild(mk('dl')));
+        g.append(runsTo(mk('dt'), b.label), runsTo(mk('dd'), b.runs)); break;
+      }
+      case 'thead': case 'tr': {
+        if (groupKind !== 'thead' && groupKind !== 'tr') {
+          const wrap = at.appendChild(mk('div', 'rv-tablewrap')); table = wrap.appendChild(mk('table'));
+          table.append(mk('thead'), mk('tbody'));
+        }
+        groupKind = b.kind;
+        const tr = mk('tr');
+        arr(b.cells).forEach((c) => tr.append(runsTo(mk(b.kind === 'thead' ? 'th' : 'td'), c)));
+        table.querySelector(b.kind === 'thead' ? 'thead' : 'tbody').append(tr);
+        break;
+      }
+      case 'chart': if (hooks.chart) hooks.chart(at); break;
+      default: break; // 'group' blocks are drawn with the fund cards
+    }
+  });
+}
+
+function glance(at, funds) {
+  const wrap = at.appendChild(mk('div', 'rv-tablewrap tall'));
+  const table = wrap.appendChild(mk('table'));
+  const head = table.appendChild(mk('thead')).appendChild(mk('tr'));
+  ['#', 'Fund', 'YTD', '1 yr', '5 yr p.a.', 'Data as of', 'What it mainly holds', 'AI-crash exposure', 'Est. AI-crash move', 'Other key risks (non-AI)', 'Overall risk', 'Volatility 1–7']
+    .forEach((h) => head.append(mk('th', '', h)));
+  const body = table.appendChild(mk('tbody'));
+  funds.slice().sort((a, b) => a.no - b.no).forEach((r) => {
+    const tr = mk('tr');
+    const name = mk('td'); const a = mk('a', '', r.fund); a.href = '#f' + r.no;
+    a.addEventListener('click', (e) => { e.preventDefault(); window.ftGoFund(r.no); }); name.append(a);
+    const chip = (t, s) => { const td = mk('td'); td.append(mk('span', 'chip s' + s, t)); return td; };
+    const oth = mk('td', 'rv-small rv-wide'); oth.append(mk('span', 'chip s' + ({ Low: 2, Medium: 3, High: 4 }[r.other_risk_level] || 1), r.other_risk_level), document.createTextNode(' ' + r.other_risk));
+    tr.append(mk('td', '', r.no), name, mk('td', signCls(r.ytd_pct), r.ytd_label), mk('td', signCls(r.y1_pct), r.y1_label), mk('td', signCls(r.y5_pct), r.y5_label),
+      mk('td', 'rv-small', r.returns_asof), mk('td', 'rv-small rv-wide', r.holdings), chip(r.ai_exposure, r.ai_score), mk('td', signCls(r.ai_crash_mid), fmtMid(r.ai_crash_mid)),
+      oth, chip(r.overall_risk + (r.overall_note ? ' · ' + r.overall_note : ''), r.overall_score), mk('td', '', r.volatility));
+    body.append(tr);
+  });
+}
+
+window.drawRv = (el) => {
+  const rv = ({ status: 'ok', data: REVIEW });
+  if (!true) return;
+  const section = el.dataset.section;
+  const needsFunds = section === 'summary' || section === 'scenario';
+  const f = needsFunds ? ({ status: 'ok', data: FUNDS }) : null;
+  if (needsFunds && !true) return;
+  el.replaceChildren();
+  const blocks = rv.data.filter((b) => b.section === section).sort((a, b) => a.seq - b.seq);
+  renderBlocks(el, blocks, {
+    beforeCallouts: section === 'summary' ? (at) => { if (!el.querySelector('.rv-tablewrap')) glance(at, f.data); } : null,
+    chart: section === 'scenario' ? (at) => {
+      renderBlocks(at, rv.data.filter((b) => b.section === 'scenario_chart'), {});
+      const c = at.appendChild(mk('div', 'ft-chart'));
+      requestAnimationFrame(() => window.ftAiChart(c, f.data));
+    } : null,
+  });
+};
+
+function card(r) {
+  const c = mk('article', 'rv-card'); c.id = 'f' + r.no;
+  const h = mk('div', 'rv-card-h');
+  const left = mk('div');
+  left.append(mk('div', 'rv-small', `Fund ${r.no} · ${r.currency}`), mk('h4', '', r.fund), mk('div', 'rv-small', `${r.provider} · ${r.asset_class} – ${r.segment}`));
+  const right = mk('div', 'rv-small'); right.append(mk('div', '', 'Overall'), mk('span', 'chip s' + r.overall_score, r.overall_risk + (r.overall_note ? ' · ' + r.overall_note : '')));
+  h.append(left, right);
+  const price = mk('p', 'rv-small', r.nav == null ? (r.status === 'no NAV' ? 'No NAV: cash account' : 'Latest price: no public price found')
+    : `Latest NAV ${r.currency} ${fmtNav(r.nav)} on ${fmtDate(r.nav_date)} (${fmtPct(r.change_pct)} on the day)`);
+  const stats = mk('div', 'rv-stats');
+  [['YTD', r.ytd_label, r.ytd_pct], ['1 yr', r.y1_label, r.y1_pct], ['5 yr p.a.', r.y5_label, r.y5_pct]].forEach(([k, v, n]) => {
+    const d = mk('div'); d.append(mk('span', 'rv-small', k), mk('b', signCls(n), v)); stats.append(d);
+  });
+  const dl = mk('dl');
+  arr(r.review_details).forEach((d) => {
+    const dt = mk('dt', '', d.label);
+    if (d.label === 'AI-crash exposure') { dt.append(document.createTextNode(' ')); dt.append(mk('span', 'chip s' + Math.min(5, Math.max(1, r.ai_score)), r.ai_exposure)); }
+    dl.append(dt, mk('dd', '', d.text));
+  });
+  const odt = mk('dt', '', 'Other key risks '); odt.append(mk('span', 'chip s' + ({ Low: 2, Medium: 3, High: 4 }[r.other_risk_level] || 1), r.other_risk_level));
+  const odd = mk('dd', '', r.other_risk_detail);
+  const newsSrc = arr(r.other_risk_sources);
+  if (newsSrc.length) {
+    const news = mk('div', 'rv-srcs', 'News: ');
+    newsSrc.forEach((s, i) => {
+      if (i) news.append(document.createTextNode(' · '));
+      if (/^https:\/\//.test(s.url)) { const a = mk('a', '', s.label); a.href = s.url; a.target = '_blank'; a.rel = 'noopener'; news.append(a); } else news.append(document.createTextNode(s.label));
+    });
+    odd.append(news);
+  }
+  dl.append(odt, odd);
+  const foot = mk('div', 'rv-foot');
+  foot.append(mk('span', '', r.review_foot), mk('span', signCls(r.ai_crash_mid), `Est. AI-crash move ${fmtMid(r.ai_crash_mid)}`), mk('span', '', `Volatility ${r.volatility} of 7`));
+  if (/^https:\/\//.test(r.review_source_url || '')) { const a = mk('a', '', 'Source: ' + r.review_source_label); a.href = r.review_source_url; a.target = '_blank'; a.rel = 'noopener'; foot.append(a); }
+  c.append(h, price, stats, dl, foot);
+  return c;
+}
+
+window.drawCards = (el) => {
+  const f = ({ status: 'ok', data: FUNDS }), rv = ({ status: 'ok', data: REVIEW });
+  if (false) return;
+  el.replaceChildren();
+  const pick = window.ftCardGroup || 'all';
+  rv.data.filter((b) => b.section === 'funds' && b.kind === 'group').sort((a, b) => a.seq - b.seq).forEach((g) => {
+    if (pick !== 'all' && g.group !== pick) return;
+    const wrap = el.appendChild(mk('div'));
+    wrap.append(runsTo(mk('h3'), g.label), runsTo(mk('p', 'rv-note'), g.runs));
+    const cards = wrap.appendChild(mk('div', 'rv-cards'));
+    f.data.filter((r) => r.card_group === g.group).sort((a, b) => a.card_order - b.card_order).forEach((r) => cards.append(card(r)));
+  });
+};
+
+window.drawMenu = (el) => {
+  const f = ({ status: 'ok', data: FUNDS });
+  if (!true) return;
+  el.replaceChildren();
+  const provs = [];
+  f.data.slice().sort((a, b) => a.no - b.no).forEach((r) => {
+    let p = provs.find((x) => x.name === r.provider);
+    if (!p) { p = { name: r.provider, funds: [] }; provs.push(p); }
+    p.funds.push(r);
+  });
+  const wrap = el.appendChild(mk('div', 'rv-tablewrap'));
+  const table = wrap.appendChild(mk('table'));
+  const head = table.appendChild(mk('thead')).appendChild(mk('tr'));
+  ['Provider', 'Funds', 'Asset class', 'Currency'].forEach((t) => head.append(mk('th', '', t)));
+  const body = table.appendChild(mk('tbody'));
+  provs.forEach((p) => {
+    const tr = mk('tr');
+    const fundsTd = mk('td');
+    p.funds.forEach((r) => {
+      const d = mk('div'); const a = mk('a', '', `${r.no}  ${r.fund}`); a.href = '#f' + r.no;
+      a.addEventListener('click', (e) => { e.preventDefault(); window.ftGoFund(r.no); }); d.append(a); fundsTd.append(d);
+    });
+    const ac = mk('td', 'rv-small'); [...new Set(p.funds.map((r) => `${r.asset_class} – ${r.segment}`))].forEach((t) => ac.append(mk('div', '', t)));
+    tr.append(mk('td', '', p.name), fundsTd, ac, mk('td', '', [...new Set(p.funds.map((r) => r.currency))].join(', ')));
+    body.append(tr);
+  });
+};
+
+window.drawSrcList = (el) => {
+  const f = ({ status: 'ok', data: FUNDS });
+  if (!true) return;
+  el.replaceChildren(mk('h3', '', 'Fund sources'));
+  const ol = el.appendChild(mk('ol'));
+  f.data.slice().sort((a, b) => a.no - b.no).forEach((r) => {
+    const li = mk('li');
+    if (/^https:\/\//.test(r.review_source_url || '')) { const a = mk('a', '', r.fund); a.href = r.review_source_url; a.target = '_blank'; a.rel = 'noopener'; li.append(a); } else li.append(document.createTextNode(r.fund));
+    li.append(mk('span', 'rv-small', ` (${r.review_source_label})`));
+    if (r.source_url) { li.append(document.createTextNode(' · ')); const p = mk('a', 'rv-small', 'latest price'); p.href = r.source_url; p.target = '_blank'; p.rel = 'noopener'; li.append(p); }
+    ol.append(li);
+  });
+};
+
+// Pages
+window.ftTab = 'tracker';
+window.ftShow = (id) => {
+  document.querySelectorAll('.ft-page').forEach((s) => { s.hidden = s.id !== id; });
+  document.querySelectorAll('.ft-tab').forEach((t) => t.setAttribute('aria-selected', String(t.dataset.tab === id)));
+  const act = document.querySelector('.ft-tab[aria-selected="true"]'); const bar = act && act.parentElement;
+  if (bar) bar.scrollTo({ left: act.offsetLeft - (bar.clientWidth - act.offsetWidth) / 2, behavior: 'smooth' });
+  window.ftTab = id;
+  history.replaceState(null, '', '#' + id);
+  drawPage(id);
+};
+document.querySelectorAll('.ft-tab').forEach((t) => t.addEventListener('click', () => window.ftShow(t.dataset.tab)));
+document.querySelectorAll('.ft-btn[data-cg]').forEach((b) => b.addEventListener('click', () => {
+  window.ftCardGroup = b.dataset.cg;
+  document.querySelectorAll('.ft-btn[data-cg]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+  drawCards(document.getElementById('cards'));
+}));
+
+window.ftGoFund = (no) => {
+  window.ftCardGroup = 'all';
+  document.querySelectorAll('.ft-btn[data-cg]').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.cg === 'all')));
+  window.ftShow('fundbyfund');
+  drawCards(document.getElementById('cards'));
+  let tries = 0;
+  const go = () => {
+    const c = document.getElementById('f' + no);
+    if (c) { c.scrollIntoView({ block: 'start', behavior: 'smooth' }); c.classList.add('rv-flash'); setTimeout(() => c.classList.remove('rv-flash'), 1600); }
+    else if (tries++ < 30) setTimeout(go, 100);
+  };
+  go();
+};
+window.ftFundClick = (no) => {
+  if (window.ftTab === 'tracker') select(no, true);
+  else window.ftGoFund(no);
+};
+
+const drawn = new Set();
+function drawPage(id) {
+  if (id === 'tracker' && FUNDS.length) drawCharts();
+  if (!FUNDS.length || drawn.has(id)) return;
+  drawn.add(id);
+  document.querySelectorAll('#' + id + ' [data-section]').forEach((e) => drawRv(e));
+  if (id === 'fundbyfund') drawCards(document.getElementById('cards'));
+  if (id === 'menu') drawMenu(document.getElementById('menu-table'));
+  if (id === 'notes') drawSrcList(document.getElementById('src-list'));
+}
+window.ftStart = () => {
+  const startAt = location.hash.slice(1);
+  const startPage = startAt && document.getElementById(startAt);
+  if (startPage && startPage.classList.contains('page')) window.ftShow(startAt);
+  else if (/^f\d+$/.test(startAt)) window.ftGoFund(+startAt.slice(1));
+};
+
+load().catch((e) => {
+  const box = document.getElementById("error");
+  box.className = "err section";
+  box.textContent = "Couldn't load the fund data. If you opened index.html straight from your computer, run it through a local web server instead (see README). " + e;
+});
+</script>
+</body>
+</html>

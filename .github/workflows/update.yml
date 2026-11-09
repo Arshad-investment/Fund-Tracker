@@ -1,0 +1,69 @@
+name: Update prices and publish
+
+on:
+  schedule:
+    # 21:40 UTC = 5:40 am Manila, after the previous day's fund prices are out.
+    - cron: "40 21 * * *"
+  workflow_dispatch: # adds a "Run workflow" button in the Actions tab
+  push:
+    branches: [main]
+
+permissions:
+  contents: write # to save the new prices back to the repository
+  pages: write # to publish the website
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check the price readers
+        run: python tests/test_parsers.py
+
+      - name: Fetch latest prices
+        if: github.event_name != 'push'
+        run: |
+          pip install requests
+          python scripts/update_prices.py
+
+      - name: Fill a year of price history
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: python scripts/update_history.py
+
+      - name: Save new prices to the repository
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "price-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/prices.json data/history.csv
+          git diff --cached --quiet || git commit -m "Update prices $(date -u +%F)"
+          git push
+
+      - uses: actions/configure-pages@v5
+
+      - name: Assemble the website
+        run: |
+          mkdir -p _site/data
+          cp index.html _site/
+          cp data/funds.json data/prices.json data/history.csv data/review.json _site/data/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
