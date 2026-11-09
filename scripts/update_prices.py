@@ -6,7 +6,8 @@ Run by the GitHub Action every weekday. You can also run it yourself:
 
 How it works
 - data/funds.json lists each fund and one or more price pages ("sources").
-- For each fund it tries the sources in order and keeps the first price it can read.
+- For each fund it tries the sources in order and keeps the newest price it can read
+  (it stops early once a source has a price newer than the one already stored).
 - If every source fails, the last good price is kept and the fund is marked as
   not updated, so the website never goes blank.
 - A new NAV date is appended to data/history.csv, which builds a price history.
@@ -227,7 +228,7 @@ def update(fetcher=fetch, pause: float = 1.5) -> list[str]:
         if fund.get("price_type") != "auto":
             continue
         key, old = str(fund["no"]), prices.get(str(fund["no"]))
-        errors = []
+        errors, best = [], None
         for src in fund.get("sources", []):
             try:
                 result = PARSERS[src["parser"]](fetcher(src["url"]), fund)
@@ -237,13 +238,18 @@ def update(fetcher=fetch, pause: float = 1.5) -> list[str]:
                 continue
             finally:
                 time.sleep(pause)
+            if best is None or result["nav_date"] > best[0]["nav_date"]:
+                best = (result, src["url"])
+            if not old or result["nav_date"] != old.get("nav_date"):
+                break  # this source already has a newer price than we hold; no need to ask the others
+        if best:
+            result, url = best
             is_new = not old or result["nav_date"] != old.get("nav_date")
-            prices[key] = {**result, "source_url": src["url"], "checked_at": now, "ok": True, "error": None}
+            prices[key] = {**result, "source_url": url, "checked_at": now, "ok": True, "error": None}
             if is_new:
                 new_history.append([result["nav_date"], fund["no"], fund["isin"], result["nav"], fund["currency"]])
             report.append(f"OK    {fund['no']:>2} {fund['fund'][:48]:<48} {result['nav']:>12,.2f} {result['nav_date']}"
                           + ("" if is_new else "  (no new NAV yet)"))
-            break
         else:
             msg = "; ".join(errors) or "no sources listed"
             if old:

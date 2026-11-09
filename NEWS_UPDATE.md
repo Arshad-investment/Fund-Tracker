@@ -1,7 +1,7 @@
 # Daily news update: instructions for Claude
 
 A scheduled task runs these steps every morning so the site's news is current by about 6 am Manila.
-Prices are handled separately by the GitHub Action in `.github/workflows/update.yml` (about 5:40 am Manila).
+Prices are handled separately by the GitHub Action in `.github/workflows/update.yml` (5:40 am, 12:40 pm, 6:40 pm and 11:40 pm Manila).
 The site is live at https://arshad-investment.github.io/Fund-Tracker/. Every push to `main` republishes it automatically.
 
 ## 1. Get the repo

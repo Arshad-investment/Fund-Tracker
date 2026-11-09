@@ -2,8 +2,12 @@ name: Update prices and publish
 
 on:
   schedule:
-    # 21:40 UTC = 5:40 am Manila, after the previous day's fund prices are out.
+    # Manila times: 5:40 am (main run), 12:40 pm, 6:40 pm and 11:40 pm, so prices that funds
+    # publish late (often Friday's price on Monday) show up the same day.
     - cron: "40 21 * * *"
+    - cron: "40 4 * * *"
+    - cron: "40 10 * * *"
+    - cron: "40 15 * * *"
   workflow_dispatch: # adds a "Run workflow" button in the Actions tab
   push:
     branches: [main]

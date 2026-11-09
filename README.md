@@ -26,7 +26,7 @@ Every morning a GitHub Action fetches new prices, saves them, and republishes th
 5. **Run it once**: **Actions** tab → if asked, click **I understand my workflows, go ahead and enable them** → **Update prices and publish** → **Run workflow**.
 6. After a minute or two the run turns green. Your site is at `https://YOUR-USERNAME.github.io/fund-tracker/`. That link is in **Settings → Pages** too.
 
-From then on it updates itself every morning: prices at about 5:40 am Manila time, and the news by about 6 am (see NEWS_UPDATE.md).
+From then on it updates itself every morning: prices four times a day from 5:40 am Manila time, and the news by about 6 am (see NEWS_UPDATE.md).
 
 ## Checking on the robot
 
