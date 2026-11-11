@@ -228,13 +228,16 @@ def update(fetcher=fetch, pause: float = 1.5) -> list[str]:
         if fund.get("price_type") != "auto":
             continue
         key, old = str(fund["no"]), prices.get(str(fund["no"]))
-        errors, best = [], None
+        errors, best, seen = [], None, []
         for src in fund.get("sources", []):
             try:
                 result = PARSERS[src["parser"]](fetcher(src["url"]), fund)
+                seen.append(f"{src['parser']} {result['nav_date']}")
                 check(result, old)
             except Exception as e:  # noqa: BLE001 - any failure moves on to the next source
                 errors.append(f"{src['parser']}: {e}")
+                if not seen or not seen[-1].startswith(src["parser"]):
+                    seen.append(f"{src['parser']} error: {str(e)[:80]}")
                 continue
             finally:
                 time.sleep(pause)
@@ -249,7 +252,7 @@ def update(fetcher=fetch, pause: float = 1.5) -> list[str]:
             if is_new:
                 new_history.append([result["nav_date"], fund["no"], fund["isin"], result["nav"], fund["currency"]])
             report.append(f"OK    {fund['no']:>2} {fund['fund'][:48]:<48} {result['nav']:>12,.2f} {result['nav_date']}"
-                          + ("" if is_new else "  (no new NAV yet)"))
+                          + ("" if is_new else "  (no new NAV yet; " + ", ".join(seen) + ")"))
         else:
             msg = "; ".join(errors) or "no sources listed"
             if old:
