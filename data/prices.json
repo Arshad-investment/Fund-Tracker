@@ -1,12 +1,12 @@
 {
- "updated_at": "2026-11-11T05:30:50Z",
+ "updated_at": "2026-11-11T11:33:26Z",
  "prices": {
   "1": {
    "nav": 121.28,
    "change_pct": -2.9,
    "nav_date": "2026-11-10",
    "source_url": "https://www.blackrock.com/uk/individual/products/229333/blackrock-world-gold-d2-usd-fund?siteEntryPassthrough=true",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -15,7 +15,7 @@
    "change_pct": 1.28,
    "nav_date": "2026-11-09",
    "source_url": "https://www.blackrock.com/uk/intermediaries/products/337972/ishares-developed-real-estate-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -24,7 +24,7 @@
    "change_pct": 1.8,
    "nav_date": "2026-11-09",
    "source_url": "https://www.ishares.com/ch/privatkunden/de/produkte/344413/ishares-developed-world-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -33,7 +33,7 @@
    "change_pct": 2.25,
    "nav_date": "2026-11-09",
    "source_url": "https://www.ishares.com/ch/privatkunden/de/produkte/344413/ishares-developed-world-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -42,7 +42,7 @@
    "change_pct": 1.41,
    "nav_date": "2026-11-09",
    "source_url": "https://www.ishares.com/uk/professional/en/products/287056/ishares-europe-ex-uk-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -51,7 +51,7 @@
    "change_pct": 2.36,
    "nav_date": "2026-11-09",
    "source_url": "https://www.ishares.com/ch/privatkunden/de/produkte/318951/ishares-north-america-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -60,7 +60,7 @@
    "change_pct": -1.47,
    "nav_date": "2026-11-06",
    "source_url": "https://www.ishares.com/uk/professionals/en/products/307661/ishares-pacific-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -69,7 +69,7 @@
    "change_pct": 0.99,
    "nav_date": "2026-11-09",
    "source_url": "https://www.ishares.com/uk/professionals/en/products/308415/ishares-uk-index-fund-ie?siteEntryPassthrough=true",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -78,7 +78,7 @@
    "change_pct": -0.55,
    "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU1811364139:USD",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -87,7 +87,7 @@
    "change_pct": 0.0,
    "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B1VR4Y86:JPY",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -96,16 +96,16 @@
    "change_pct": -0.43,
    "nav_date": "2026-11-09",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0397155895:USD",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
   "13": {
-   "nav": 39.77,
-   "change_pct": 2.51,
-   "nav_date": "2026-11-09",
+   "nav": 39.76,
+   "change_pct": -0.02,
+   "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU1569385302:USD",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -114,7 +114,7 @@
    "change_pct": 0.01,
    "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B8FXXP57:EUR",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -123,7 +123,7 @@
    "change_pct": -0.23,
    "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU1551069724:USD",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -132,7 +132,7 @@
    "change_pct": 0.62,
    "nav_date": "2026-11-09",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00BD21PZ19:EUR",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -141,7 +141,7 @@
    "change_pct": 2.34,
    "nav_date": "2026-11-09",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00BNC0D102:USD",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -150,7 +150,7 @@
    "change_pct": -0.61,
    "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE0034085260:USD",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -159,16 +159,16 @@
    "change_pct": -0.57,
    "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE0032876397:EUR",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
   "22": {
-   "nav": 270.06,
-   "change_pct": 1.08,
-   "nav_date": "2026-11-09",
+   "nav": 273.84,
+   "change_pct": 1.4,
+   "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0858455784:USD",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -177,7 +177,7 @@
    "change_pct": 0.25,
    "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0358730231:USD",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -186,7 +186,7 @@
    "change_pct": 0.76,
    "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=LU0106259988:USD",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -195,7 +195,7 @@
    "change_pct": -0.42,
    "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B18GC888:EUR",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -204,7 +204,7 @@
    "change_pct": -0.42,
    "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00B18GCB14:USD",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -213,7 +213,7 @@
    "change_pct": 1.93,
    "nav_date": "2026-11-10",
    "source_url": "https://markets.ft.com/data/funds/tearsheet/summary?s=IE00BGCC5F53:JPY",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   },
@@ -222,7 +222,7 @@
    "change_pct": -0.64,
    "nav_date": "2026-11-10",
    "source_url": "https://www.vanguardsouthamerica.com/en/product/fund/fixed-income/9919/vanguard-us-government-bond-index-fund-usd-acc",
-   "checked_at": "2026-11-11T05:30:50Z",
+   "checked_at": "2026-11-11T11:33:26Z",
    "ok": true,
    "error": null
   }
