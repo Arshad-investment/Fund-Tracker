@@ -11,6 +11,28 @@ The site is live at https://arshad-investment.github.io/Fund-Tracker/. Every pus
 - Run `git pull --rebase` first. The price bot commits every morning.
 - `gh` works only with REST: always pass `-R Arshad-investment/Fund-Tracker` (and `--ref main` for `gh workflow run`).
 
+## 1b. Health check (keeps the site updating without anyone asking)
+
+Run `python3 scripts/health_check.py`. If it prints `OK`, carry on. Otherwise fix what it reports before the news:
+
+- `STALE_RUN` (the scheduled price runs have stopped or are late):
+  1. `gh api repos/Arshad-investment/Fund-Tracker/actions/workflows -q '.workflows[]|.name+" "+.state+" "+(.id|tostring)'`.
+     If the state is not `active`, re-enable it:
+     `gh api -X PUT repos/Arshad-investment/Fund-Tracker/actions/workflows/<id>/enable`.
+  2. Start a run: `gh workflow run update.yml --ref main -R Arshad-investment/Fund-Tracker`, wait for it to finish,
+     then `git pull --rebase`.
+  3. If it fails, read the log (`gh run view <id> -R Arshad-investment/Fund-Tracker --log`), fix the cause in the
+     scripts or workflow, run `python3 tests/test_parsers.py`, push, and run it again.
+- `SOURCE_FAIL` or `OLD_PRICE` for a fund: read the latest price run's log line for that fund. If every source
+  agrees on the same date, the provider simply has not published; leave it. If a source is broken (error, page
+  layout changed, URL moved), fix its parser or URL in `scripts/update_prices.py` / `data/funds.json`, add or update
+  a test, and push. FT tearsheets (`https://markets.ft.com/data/funds/tearsheet/summary?s=<ISIN>:<CCY>`) are a good
+  backup source.
+- If you cannot fix something, still publish the news, and put the problem and what Arshad would need to do
+  FIRST in your final summary, so it shows in his notification.
+
+Also run this check again after publishing the news.
+
 ## 2. See what is already covered
 
 Open `data/review.json` (a list of blocks; see "File format" below). The `today` section's first block is the
@@ -79,7 +101,7 @@ entry always stays last; drop the oldest others.
 - Do not add a "Fund it from" column to the Buying a dip tab.
 - Plain English, short sentences, units on every number, Manila times.
 - Paraphrase sources. Any quote must be under 15 words, and at most one quote per source.
-- Do not edit `index.html`, the scripts or the workflow unless something is broken.
+- Do not edit `index.html`, the scripts or the workflow unless something is broken (see the health check).
 
 ## 6. Check, publish, verify
 
