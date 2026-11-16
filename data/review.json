@@ -27,7 +27,7 @@
 "kind": "lead",
 "runs": [
 {
-"text": "Nine funds are heavily exposed to an AI-led sell-off, but AI is not the only threat. Oil lurching on every Iran headline (about $96 on 13 Nov, down from $115 in late October), a yen at almost 160 per dollar, the level that has triggered intervention, a 10-year US yield back above 5% with a December Fed hike close to certain, and rising tension around Taiwan each hit different funds. Combining all of these, 11 funds rate High or Very high overall risk. Only the money market funds and cash are close to safe in every scenario."
+"text": "Nine funds are heavily exposed to an AI-led sell-off, but AI is not the only threat. Oil lurching on every Iran headline (about $92 on 16 Nov, down from $115 in late October), a yen at almost 160 per dollar, the level that has triggered intervention, a 10-year US yield back above 5% with a December Fed hike close to certain, and rising tension around Taiwan each hit different funds. Combining all of these, 11 funds rate High or Very high overall risk. Only the money market funds and cash are close to safe in every scenario."
 }
 ],
 "in_details": false
@@ -64,7 +64,7 @@
 "kind": "meta",
 "runs": [
 {
-"text": "News updated 16 Nov 2026, 6 am Manila (markets to Fri 13 Nov close)"
+"text": "News updated 17 Nov 2026, 6 am Manila (markets to Mon 16 Nov close)"
 }
 ],
 "in_details": false
@@ -129,12 +129,12 @@
 "kind": "fact",
 "label": [
 {
-"text": "5.15%"
+"text": "−4.6%"
 }
 ],
 "runs": [
 {
-"text": "US 10-year Treasury yield at the 13 Nov close, up about 0.3 points in a week after touching 5.17%"
+"text": "Philadelphia chip index on 16 Nov, as new US curbs on Chinese access to advanced chips hit chipmakers a day before NVIDIA reports"
 }
 ],
 "in_details": false
@@ -145,12 +145,12 @@
 "kind": "fact",
 "label": [
 {
-"text": "−3.3%"
+"text": "−5.2%"
 }
 ],
 "runs": [
 {
-"text": "S&P 500 below its 6 Oct record (7,561.67 at the 13 Nov close), despite its first weekly gain in five weeks"
+"text": "S&P 500 below its 6 Oct record (about 7,415 at the 16 Nov close), back below the −5% buying level"
 }
 ],
 "in_details": false
@@ -301,7 +301,7 @@
 "seq": 21,
 "runs": [
 {
-"text": "Update · Mon 16 Nov 2026, 6 am Manila (covers the weekend and the week ahead)"
+"text": "Update · Tue 17 Nov 2026, 6 am Manila (covers Mon 16 Nov)"
 }
 ]
 },
@@ -312,7 +312,7 @@
 "seq": 22,
 "runs": [
 {
-"text": "Iran says a supertanker sank in Hormuz and its drones targeted Bahrain; NVIDIA results and Anthropic's debut make this a decisive week"
+"text": "New US chip curbs sink AI stocks a day before NVIDIA reports: the S&P 500 falls 1.9%, back more than 5% below its record; oil drops to $92"
 }
 ]
 },
@@ -323,7 +323,7 @@
 "seq": 23,
 "runs": [
 {
-"text": "A quiet weekend for markets, but not for the Gulf. On Sunday Iran's Revolutionary Guards said a supertanker carrying more than 2 million barrels of oil sank after hitting a mine in the Strait of Hormuz; there is no independent confirmation. Iran also said its drones targeted a US radar in Bahrain, and Saudi Arabia shot down Houthi missiles and drones aimed at several cities. Oil trading resumes at about 7 am Manila, after Brent closed Friday near $96. Stocks last closed with the S&P 500 3.3% below its record. This week brings NVIDIA's results, Anthropic's market debut, the Fed minutes and a Trump–Xi–Putin meeting. No fund rating changed."
+"text": "AI stocks fell hard on Monday, the day before NVIDIA's results. New US rules to stop Chinese firms renting advanced chips in overseas data centres, and pressure from Washington over NVIDIA's leadership, sent the chip index down about 4.6% and NVIDIA about 4%. The S&P 500 lost about 1.9% to roughly 7,415, more than 5% below its record, and the Nasdaq is now over 10% below its October high. Oil fell 3.6% to $92.44 as the IEA said supply now exceeds demand, even as Iran targeted Bahrain again. Japan's economy shrank in July–September. NVIDIA reports early on Wednesday, Manila time. No fund rating changed."
 }
 ]
 },
@@ -354,42 +354,34 @@
 "section": "today",
 "kind": "tr",
 "in_details": null,
-"seq": 25,
 "cells": [
 [
 {
-"text": "Iran says a supertanker sank in the strait.",
+"text": "New US chip curbs hit chipmakers worldwide.",
 "bold": true
 },
 {
-"text": " Iran's Revolutionary Guards said on Sunday that a supertanker carrying more than 2 million barrels of crude sank after striking a mine and catching fire. They said it was one of two tankers that hit mines on an \"unauthorised route\" in the southern strait, but did not name the ships, and there is no independent confirmation (AFP via RTÉ). Separately, India's shipping authorities reported an attack on a tanker in the Gulf; the UK's maritime agency said the crew were safe. The US says it has cleared mines from the main routes. Brent closed Friday near $96 a barrel, about 18.5% lower over two weeks (Gulf News)."
+"text": " On Monday the Commerce Department issued a rule to stop Chinese companies getting around US export limits by renting computing power on advanced chips in data centres abroad, plus new licence requirements for several Southeast Asian countries and Brazil (StockTitan, Yahoo Finance). The Philadelphia chip index fell about 4.6% and Intel and Micron more than 6% each (Reuters). Asia had already slid: Taiwan's market fell about 6% with TSMC down 5.7%, the KOSPI more than 3% and the Nikkei more than 2% (Yahoo Finance, AP)."
 }
 ],
 [
 {
-"text": "12",
-"href": "#f12"
+"text": "24",
+"href": "#f24"
 },
 {
 "text": " "
 },
 {
-"text": "8",
-"href": "#f8"
+"text": "22",
+"href": "#f22"
 },
 {
 "text": " "
 },
 {
-"text": "5",
-"href": "#f5"
-},
-{
-"text": " "
-},
-{
-"text": "23",
-"href": "#f23"
+"text": "7",
+"href": "#f7"
 },
 {
 "text": " "
@@ -402,93 +394,114 @@
 "text": " "
 },
 {
-"text": "22",
-"href": "#f22"
+"text": "6",
+"href": "#f6"
+},
+{
+"text": " "
+},
+{
+"text": "3",
+"href": "#f3"
+},
+{
+"text": " "
+},
+{
+"text": "4",
+"href": "#f4"
 }
 ],
 [
 {
-"text": "If confirmed, the sinking could lift oil when trading resumes on Monday morning (Manila). That helps the commodity (12) and UK (8) funds and hurts oil importers in Europe (5), Asia (23, 22) and Japan (27). With supply now above demand, a spike may fade unless shipping stops."
+"text": "The chip-heavy Asian funds (24, 22) and Pacific (7) take the hardest hit, and Japan (27) through its chip-equipment makers. The world and US funds (6, 3, 4) lose through NVIDIA and the other big chip names."
 }
 ]
-]
+],
+"seq": 25
 },
 {
 "section": "today",
 "kind": "tr",
 "in_details": null,
-"seq": 26,
 "cells": [
 [
 {
-"text": "Attacks spread across the Gulf.",
+"text": "The S&P 500 slipped back below the −5% level.",
 "bold": true
 },
 {
-"text": " Iran's Revolutionary Guards said six drones targeted a US air-defence radar at a base in Bahrain; Bahrain said its defences destroyed the attacks and asked the UN Security Council to act. Saudi Arabia intercepted Houthi ballistic missiles and drones aimed at Riyadh, Mecca, Medina and the Eastern Province. The G7 condemned Iran's attacks on its neighbours and its disruption of Hormuz shipping. Iran's parliament speaker said Tehran is ready for talks or war, and that a deal is possible if the US accepts seven Iranian conditions. A Wall Street Journal report citing US intelligence said Iran still has 1,500–2,500 missiles (Gulf News)."
+"text": " The S&P 500 closed about 1.9% lower at roughly 7,415, about 5.2% below its 6 Oct record; the Dow fell about 1.4% to roughly 51,600 and the Nasdaq about 2.5% to roughly 24,510 (late quotes on Yahoo Finance and MarketScreener differ slightly). Reuters said the Nasdaq is more than 10% below its 6 Oct high. Alphabet, Amazon and Meta fell 2.5–3.3%, and the AI cloud firms CoreWeave and Nebius 6–7.5%. Only consumer staples and healthcare rose."
 }
 ],
 [
 {
-"text": "12",
-"href": "#f12"
+"text": "6",
+"href": "#f6"
 },
 {
 "text": " "
 },
 {
-"text": "28",
-"href": "#f28"
+"text": "3",
+"href": "#f3"
 },
 {
 "text": " "
 },
 {
-"text": "26",
-"href": "#f26"
+"text": "4",
+"href": "#f4"
 },
 {
 "text": " "
 },
 {
-"text": "23",
-"href": "#f23"
+"text": "13",
+"href": "#f13"
 },
 {
 "text": " "
 },
 {
-"text": "24",
-"href": "#f24"
+"text": "19",
+"href": "#f19"
 },
 {
 "text": " "
 },
 {
-"text": "22",
-"href": "#f22"
+"text": "17",
+"href": "#f17"
+},
+{
+"text": " "
+},
+{
+"text": "18",
+"href": "#f18"
 }
 ],
 [
 {
-"text": "Wider attacks make a quick deal less likely and keep a risk premium in oil. That supports the commodity fund (12) but keeps inflation and rate worries alive for the bond funds (28, 26) and weighs on oil-importing Asia (23, 24, 22)."
+"text": "The AI-heavy equity funds (6, 3, 4, 13, 19) keep losing, and the multi-asset funds (17, 18) feel it too. The S&P 500 is back in the first buying zone of the Buying a dip tab; the −10% level is about 5.1% lower."
 }
 ]
-]
+],
+"seq": 26
 },
 {
 "section": "today",
 "kind": "tr",
 "in_details": null,
-"seq": 27,
 "cells": [
 [
 {
-"text": "Anthropic may price its IPO above the range; NVIDIA reports on Tuesday.",
+"text": "NVIDIA reports under pressure from Washington; Anthropic lists this week.",
 "bold": true
 },
 {
-"text": " Anthropic is due to set its final price on Wed 18 Nov (US time) and start trading on Nasdaq on Thu 19 Nov. The Financial Times reported last week that strong demand had the banks weighing a price above the $70–78 range, which would value it above about $1.4 trillion (BigGo, citing the FT; CoinCentral). NVIDIA reports on Tue 17 Nov after the US close, its first results since Jensen Huang's departure, and its interim CEO holds an all-hands meeting on Thursday (KuCoin)."
+"text": " NVIDIA fell about 4.2% to roughly $156, down about 13% in five days (MarketScreener). Treasury Secretary Bessent called for a \"dramatic shakeup\" and said the board must give answers within 10 days (Motley Fool). Trump said bringing Jensen Huang back \"certainly isn't a bad idea\" (Yahoo Finance). Analysts expect revenue of about $109bn, up about 90% on a year (TipRanks, Reuters). Anthropic is expected to start trading on Thursday at a valuation of about $1.4 trillion; Vanda Research estimates retail buyers could put a net $250m in on day one (Yahoo Finance)."
 }
 ],
 [
@@ -541,24 +554,94 @@
 ],
 [
 {
-"text": "A strong debut and solid NVIDIA results could steady the AI-heavy funds (6, 3, 4, 13, 19) after a rough month. Weak guidance or a flat debut would hit them, and the chip-heavy Asian funds (24, 22), hardest."
+"text": "NVIDIA's results and guidance are now the main swing factor for the AI-heavy funds (6, 3, 4, 13, 19) and the Asian chip funds (24, 22). Strong numbers could spark a rebound; a weak outlook would deepen the sell-off."
 }
 ]
-]
+],
+"seq": 27
 },
 {
 "section": "today",
 "kind": "tr",
 "in_details": null,
-"seq": 28,
 "cells": [
 [
 {
-"text": "A crowded week of Fed speakers before the minutes.",
+"text": "Oil fell despite more attacks in the Gulf.",
 "bold": true
 },
 {
-"text": " Fed Chair Kevin Warsh speaks on Monday (US time), and more than a dozen speeches by Fed officials follow, including New York Fed President Williams three times, before the minutes of the October meeting on Wednesday. US October retail sales and industrial production come on Tuesday. The Fed's target range is 3.75–4.00% (Kiplinger)."
+"text": " Brent settled 3.6% lower at $92.44 a barrel and US crude 3.2% lower at $85.72 (Bloomberg via Rigzone). The IEA expects supply of about 105 million barrels a day this quarter, 1.7 million above demand, and says Hormuz shipments are largely back to pre-war levels (RTÉ). Iran targeted Bahrain for the second time in three days, Iranian media said at least four tankers hit mines, and a third US aircraft carrier group reached the region (Rigzone, Yahoo Finance)."
+}
+],
+[
+{
+"text": "12",
+"href": "#f12"
+},
+{
+"text": " "
+},
+{
+"text": "8",
+"href": "#f8"
+},
+{
+"text": " "
+},
+{
+"text": "5",
+"href": "#f5"
+},
+{
+"text": " "
+},
+{
+"text": "23",
+"href": "#f23"
+},
+{
+"text": " "
+},
+{
+"text": "27",
+"href": "#f27"
+},
+{
+"text": " "
+},
+{
+"text": "28",
+"href": "#f28"
+},
+{
+"text": " "
+},
+{
+"text": "26",
+"href": "#f26"
+}
+],
+[
+{
+"text": "Cheaper oil hurts the commodity (12) and UK (8) funds but helps oil importers in Europe (5), Asia (23) and Japan (27). It also eases inflation fears, a small help for the bond funds (28, 26)."
+}
+]
+],
+"seq": 28
+},
+{
+"section": "today",
+"kind": "tr",
+"in_details": null,
+"cells": [
+[
+{
+"text": "Fed Chair Warsh talked up AI, not rates; Japan shrank.",
+"bold": true
+},
+{
+"text": " Warsh said AI could \"supercharge idea generation\" but did not discuss rates or last week's hot inflation (AP). Markets put the odds of a quarter-point December hike near 94% (CME via Reuters). The New York Fed's factory index fell to 7.8 from 25.5 (StockTitan), and the 10-year Treasury yield was about 5.12%, down slightly (Yahoo Finance). Japan's economy shrank at a 0.1% annual rate in July–September, and China's October data missed forecasts (TipRanks). The dollar was near 159.6 yen (AP)."
 }
 ],
 [
@@ -600,20 +683,34 @@
 {
 "text": "14",
 "href": "#f14"
+},
+{
+"text": " "
+},
+{
+"text": "27",
+"href": "#f27"
+},
+{
+"text": " "
+},
+{
+"text": "11",
+"href": "#f11"
 }
 ],
 [
 {
-"text": "Hawkish remarks or minutes would push yields higher again, a loss for the bond funds (28, 26, 25, 9) and real estate (2). Higher rates keep helping the dollar money market fund (14)."
+"text": "Slightly lower yields gave the bond funds (28, 26, 25, 9) and real estate (2) a little relief, but a December hike still looks certain, which keeps helping the dollar money market fund (14). Weak Japanese growth could slow the Bank of Japan, keeping the yen near 160 (27, 11)."
 }
 ]
-]
+],
+"seq": 29
 },
 {
 "section": "today",
 "kind": "tr",
 "in_details": null,
-"seq": 29,
 "cells": [
 [
 {
@@ -621,7 +718,7 @@
 "bold": true
 },
 {
-"text": " Japan Q3 GDP Mon 16 Nov, 7:50 am; Fed's Williams Mon 10:05 pm; Fed Chair Warsh Tue 17 Nov, 1 am; US retail sales Tue 9:30 pm and industrial production 10:15 pm; NVIDIA results Wed 18 Nov, early morning; Fed minutes Thu 19 Nov, 3 am; Trump–Xi–Putin talks in Shenzhen Thu 19 Nov (a US official says no agreement is expected); Anthropic's Nasdaq debut Thu 19 Nov, US time; Walmart and Alibaba results Thu 19 Nov, US time; Fed Governors Waller and Cook speak Fri 20 Nov, US time; US November jobs report Fri 4 Dec, 9:30 pm; Fed decision 8–9 Dec (Kiplinger, CoinCentral, Al Jazeera, Al-Monitor)."
+"text": " US retail sales Tue 17 Nov, 9:30 pm, and industrial production 10:15 pm; NVIDIA results Wed 18 Nov, early morning; Fed minutes Thu 19 Nov, 3 am; Anthropic's Nasdaq debut Thu 19 Nov, US time; Trump meets Xi during his China trip, with three-way talks including Putin reported for Thu 19 Nov in Shenzhen; Walmart and Alibaba results this week; Fed Governors Waller and Cook speak Fri 20 Nov, US time; Bessent's 10-day deadline for NVIDIA's board around 25 Nov; US November jobs report Fri 4 Dec, 9:30 pm; Fed decision 8–9 Dec (Kiplinger, Reuters, TipRanks, Al Jazeera)."
 }
 ],
 [
@@ -654,6 +751,20 @@
 "text": " "
 },
 {
+"text": "24",
+"href": "#f24"
+},
+{
+"text": " "
+},
+{
+"text": "22",
+"href": "#f22"
+},
+{
+"text": " "
+},
+{
 "text": "28",
 "href": "#f28"
 },
@@ -668,77 +779,99 @@
 "text": " "
 },
 {
-"text": "27",
-"href": "#f27"
-},
-{
-"text": " "
-},
-{
-"text": "11",
-"href": "#f11"
-},
-{
-"text": " "
-},
-{
 "text": "12",
 "href": "#f12"
 }
 ],
 [
 {
-"text": "NVIDIA's results and Anthropic's debut make this week decisive for the AI-heavy funds (6, 13, 3, 4). Hawkish Fed minutes would add pressure on the bond funds (28, 26). Weak Japanese GDP would complicate the Bank of Japan's next hike and move the yen (27, 11). The Shenzhen talks could move oil (12)."
+"text": "NVIDIA's results and Anthropic's debut decide this week for the AI-heavy funds (6, 13, 3, 4) and the Asian chip funds (24, 22). Hawkish Fed minutes would pressure the bond funds (28, 26). The China talks could move oil (12) and chip stocks."
 }
 ]
-]
+],
+"seq": 30
 },
 {
 "section": "today",
 "kind": "p",
 "in_details": null,
-"seq": 30,
+"seq": 31,
 "runs": [
 {
 "text": "Sources: "
 },
 {
-"text": "AFP via RTÉ (supertanker)",
-"href": "https://www.rte.ie/news/middle-east/2026/1115/1599293-iran-tanker-hormuz/"
+"text": "Yahoo Finance (US markets, NVIDIA, Anthropic, Iran)",
+"href": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-16-dow-sp-500-nasdaq-nvidia-oil-091631084.html"
 },
 {
 "text": " · "
 },
 {
-"text": "Gulf News (Bahrain, Houthis, G7, Iran, oil)",
-"href": "https://gulfnews.com/world/mena/middle-east-conflict-saudi-arabia-intercepts-houthi-missiles-targeting-riyadh-as-bahrain-issues-threat-alert-1.500747797"
+"text": "Reuters via MarketScreener (closes, chips, Warsh, FedWatch)",
+"href": "https://www.marketscreener.com/news/wall-street-slumps-on-ai-jitters-ahead-of-nvidia-results-anthropic-ipo-ce785edfdd8ef425"
 },
 {
 "text": " · "
 },
 {
-"text": "BigGo, citing the FT (Anthropic pricing)",
-"href": "https://finance.biggo.com/news/c3d7c432-77e7-4c65-a4dd-e4d7bad34795"
+"text": "StockTitan (chip rule, NY Fed index)",
+"href": "https://www.stocktitan.net/articles/stock-market-today-live-november-16-2026"
 },
 {
 "text": " · "
 },
 {
-"text": "CoinCentral (week ahead, Anthropic terms)",
-"href": "https://coincentral.com/the-week-ahead-nvidia-earnings-anthropic-ipo-and-fed-minutes-set-to-shake-wall-street"
+"text": "Bloomberg via Rigzone (oil settlement)",
+"href": "https://www.rigzone.com/news/oil_retreats_as_traders_weigh_supply_glut-16-nov-2026-185096-article"
 },
 {
 "text": " · "
 },
 {
-"text": "KuCoin (NVIDIA all-hands)",
-"href": "https://www.kucoin.com/news/flash/nvidia-earnings-anthropic-ipo-and-fed-minutes-to-watch-in-week-of-nov-16"
+"text": "Reuters via RTÉ (IEA, Hormuz)",
+"href": "https://www.rte.ie/news/business/2026/1116/1599343-oil-prices/"
 },
 {
 "text": " · "
 },
 {
-"text": "Kiplinger (US data, Fed speakers)",
+"text": "TipRanks (Japan GDP, China data, NVIDIA forecasts)",
+"href": "https://www.tipranks.com/news/stock-market-today-nov-16-u-s-stocks-mixed-ahead-of-nvidia-results-and-anthropic-ipo"
+},
+{
+"text": " · "
+},
+{
+"text": "Motley Fool (Bessent)",
+"href": "https://www.fool.com/investing/2026/11/16/u-s-treasury-secretary-scott-bessent-just-issued-a-blistering-warning-to-nvidia/"
+},
+{
+"text": " · "
+},
+{
+"text": "AP via Action News Jax (Warsh)",
+"href": "https://www.actionnewsjax.com/news/business/warsh-grapples-with/6ILLBESOWI76PH3WXILUAK5AS4/"
+},
+{
+"text": " · "
+},
+{
+"text": "AP via BNN Bloomberg (Asia, yen)",
+"href": "https://www.bnnbloomberg.ca/markets/nasdaq/2026/11/16/stocks-decline-on-tech-sell-off-as-concerns-over-the-nvidia-fallout-persist/"
+},
+{
+"text": " · "
+},
+{
+"text": "Reuters via GV Wire (China trip)",
+"href": "https://gvwire.com/2026/11/16/wall-street-falls-as-nvidia-jitters-cloud-sentiment-ahead-of-results/"
+},
+{
+"text": " · "
+},
+{
+"text": "Kiplinger (US data calendar)",
 "href": "https://www.kiplinger.com/investing/economy/this-weeks-economic-calendar"
 },
 {
@@ -747,18 +880,11 @@
 {
 "text": "Al Jazeera (Shenzhen summit)",
 "href": "https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china"
-},
-{
-"text": " · "
-},
-{
-"text": "Al-Monitor (summit date)",
-"href": "https://www.al-monitor.com/originals/2026/11/trump-hold-summit-xi-putin-shenzhen-thursday-ny-post-reports"
 }
 ]
 },
 {
-"seq": 31,
+"seq": 32,
 "section": "today",
 "kind": "details",
 "runs": [
@@ -768,7 +894,27 @@
 ]
 },
 {
-"seq": 32,
+"section": "today",
+"kind": "dt",
+"in_details": true,
+"label": [
+{
+"text": "16 Nov"
+}
+],
+"runs": [
+{
+"text": "Iran said a supertanker sank in Hormuz and its drones targeted Bahrain; NVIDIA results and Anthropic's debut lined up a decisive week.",
+"bold": true
+},
+{
+"text": " Over the weekend Saudi Arabia intercepted Houthi missiles and drones and the G7 condemned Iran's attacks; Brent had closed Friday near $96. No change."
+}
+],
+"seq": 33
+},
+{
+"seq": 34,
 "section": "today",
 "kind": "dt",
 "in_details": true,
@@ -805,7 +951,7 @@
 "text": " In Friday afternoon trading on 13 Nov the chip index was down about 3.7%, AMD about 10.6% and the S&P 500 about 0.5–0.8%, and the 10-year yield touched 5.17%. No change."
 }
 ],
-"seq": 33
+"seq": 35
 },
 {
 "section": "today",
@@ -825,7 +971,7 @@
 "text": " On 12 Nov NVIDIA fell as much as 14% and closed about 4.3% lower, the S&P 500 slipped 0.4% to about 7,592, and the 10-year yield rose to about 5.1%. No change."
 }
 ],
-"seq": 34
+"seq": 36
 },
 {
 "section": "today",
@@ -845,7 +991,7 @@
 "text": " On 11 Nov the chip index rose about 7% and the S&P 500 about 1.3% to roughly 7,620, with NVIDIA up about 3.5%. Brent rose about 1% to $92.5 as Iran denied talks. No change."
 }
 ],
-"seq": 35
+"seq": 37
 },
 {
 "section": "today",
@@ -865,7 +1011,7 @@
 "text": " On 10 Nov October consumer prices rose 0.4% in the month, making a December Fed hike close to fully priced. The S&P 500 slipped 0.4% to about 7,520 and NVIDIA fell 5.5–6.3% (sources differ), after Asia had rallied. No change."
 }
 ],
-"seq": 36
+"seq": 38
 },
 {
 "section": "today",
@@ -885,7 +1031,7 @@
 "text": " On 9 Nov the S&P 500 rose to 7,550 and the chip index about 7%, while NVIDIA fell 4.4% and Brent dropped to about $93–94. No change."
 }
 ],
-"seq": 37
+"seq": 39
 },
 {
 "section": "today",
@@ -905,7 +1051,7 @@
 "text": " The Nikkei opened 2% higher while the KOSPI briefly fell below 5,000 on foreign selling, then recovered to 5,113 as SK Hynix and Samsung rebounded. Brent eased to about $97. No change."
 }
 ],
-"seq": 38
+"seq": 40
 },
 {
 "section": "today",
@@ -925,10 +1071,10 @@
 "text": " On 6 Nov the chip index rose 4.2% and the S&P 500 0.3% to 7,377, but Asia had already slumped (Nikkei −6.0%, KOSPI −6.0%). US jobs beat forecasts, lifting December hike odds to about 77%, and Brent ended the week near $98. No change."
 }
 ],
-"seq": 39
+"seq": 41
 },
 {
-"seq": 40,
+"seq": 42,
 "section": "today",
 "kind": "dt",
 "in_details": true,
@@ -948,7 +1094,7 @@
 ]
 },
 {
-"seq": 41,
+"seq": 43,
 "section": "today",
 "kind": "dt",
 "label": [
@@ -968,7 +1114,7 @@
 "in_details": true
 },
 {
-"seq": 42,
+"seq": 44,
 "section": "today",
 "kind": "dt",
 "label": [
@@ -988,7 +1134,7 @@
 "in_details": true
 },
 {
-"seq": 43,
+"seq": 45,
 "section": "today",
 "kind": "dt",
 "label": [
@@ -1008,7 +1154,7 @@
 "in_details": true
 },
 {
-"seq": 44,
+"seq": 46,
 "section": "today",
 "kind": "dt",
 "label": [
@@ -1028,7 +1174,7 @@
 "in_details": true
 },
 {
-"seq": 45,
+"seq": 47,
 "section": "today",
 "kind": "dt",
 "label": [
@@ -1048,7 +1194,7 @@
 "in_details": true
 },
 {
-"seq": 46,
+"seq": 48,
 "section": "today",
 "kind": "dt",
 "label": [
@@ -1068,7 +1214,7 @@
 "in_details": true
 },
 {
-"seq": 47,
+"seq": 49,
 "section": "today",
 "kind": "dt",
 "label": [
@@ -1088,7 +1234,7 @@
 "in_details": true
 },
 {
-"seq": 48,
+"seq": 50,
 "section": "today",
 "kind": "dt",
 "label": [
@@ -1104,7 +1250,7 @@
 "in_details": true
 },
 {
-"seq": 49,
+"seq": 51,
 "section": "scenario",
 "kind": "eyebrow",
 "runs": [
@@ -1115,7 +1261,7 @@
 "in_details": false
 },
 {
-"seq": 50,
+"seq": 52,
 "section": "scenario",
 "kind": "h2",
 "runs": [
@@ -1126,7 +1272,7 @@
 "in_details": false
 },
 {
-"seq": 51,
+"seq": 53,
 "section": "scenario",
 "kind": "p",
 "runs": [
@@ -1137,13 +1283,13 @@
 "in_details": false
 },
 {
-"seq": 52,
+"seq": 54,
 "section": "scenario",
 "kind": "chart",
 "in_details": false
 },
 {
-"seq": 53,
+"seq": 55,
 "section": "scenario",
 "kind": "caption",
 "runs": [
@@ -1154,7 +1300,7 @@
 "in_details": false
 },
 {
-"seq": 54,
+"seq": 56,
 "section": "scenario",
 "kind": "p",
 "runs": [
@@ -1169,7 +1315,7 @@
 "in_details": false
 },
 {
-"seq": 55,
+"seq": 57,
 "section": "scenario",
 "kind": "p",
 "runs": [
@@ -1184,7 +1330,7 @@
 "in_details": false
 },
 {
-"seq": 56,
+"seq": 58,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1196,7 +1342,7 @@
 "in_details": false
 },
 {
-"seq": 57,
+"seq": 59,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1208,7 +1354,7 @@
 "in_details": false
 },
 {
-"seq": 58,
+"seq": 60,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1220,7 +1366,7 @@
 "in_details": false
 },
 {
-"seq": 59,
+"seq": 61,
 "section": "scenario",
 "kind": "p",
 "runs": [
@@ -1232,7 +1378,7 @@
 "in_details": false
 },
 {
-"seq": 60,
+"seq": 62,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1244,7 +1390,7 @@
 "in_details": false
 },
 {
-"seq": 61,
+"seq": 63,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1256,7 +1402,7 @@
 "in_details": false
 },
 {
-"seq": 62,
+"seq": 64,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1268,7 +1414,7 @@
 "in_details": false
 },
 {
-"seq": 63,
+"seq": 65,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1280,7 +1426,7 @@
 "in_details": false
 },
 {
-"seq": 64,
+"seq": 66,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1292,7 +1438,7 @@
 "in_details": false
 },
 {
-"seq": 65,
+"seq": 67,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1304,7 +1450,7 @@
 "in_details": false
 },
 {
-"seq": 66,
+"seq": 68,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1316,7 +1462,7 @@
 "in_details": false
 },
 {
-"seq": 67,
+"seq": 69,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1328,7 +1474,7 @@
 "in_details": false
 },
 {
-"seq": 68,
+"seq": 70,
 "section": "scenario",
 "kind": "li",
 "runs": [
@@ -1340,7 +1486,7 @@
 "in_details": false
 },
 {
-"seq": 69,
+"seq": 71,
 "section": "otherrisks",
 "kind": "eyebrow",
 "runs": [
@@ -1351,7 +1497,7 @@
 "in_details": false
 },
 {
-"seq": 70,
+"seq": 72,
 "section": "otherrisks",
 "kind": "h2",
 "runs": [
@@ -1362,7 +1508,7 @@
 "in_details": false
 },
 {
-"seq": 71,
+"seq": 73,
 "section": "otherrisks",
 "kind": "p",
 "runs": [
@@ -1380,13 +1526,13 @@
 "in_details": false
 },
 {
-"seq": 72,
+"seq": 74,
 "section": "otherrisks",
 "kind": "article_start",
 "in_details": false
 },
 {
-"seq": 73,
+"seq": 75,
 "section": "otherrisks",
 "kind": "h3",
 "runs": [
@@ -1397,18 +1543,18 @@
 "in_details": false
 },
 {
-"seq": 74,
+"seq": 76,
 "section": "otherrisks",
 "kind": "p",
 "runs": [
 {
-"text": "The yen fell to about 163 per dollar in late July, prompting a joint US–Japan intervention (Japan reportedly spent around $85bn) that pushed it to 155. By mid-August most of that gain had reversed. Japan had already spent ¥11.7 trillion defending the yen in April–May. It was near 158 on 27 Oct, and Finance Minister Katayama has warned she is ready to act again, with traders watching 160. In the week to 6 Nov the dollar traded between about 157.3 and 158.8 yen; hawkish Bank of Japan minutes and the stock rout helped the yen, but the strong US jobs report pushed the dollar back to the mid-158s. The pressures are a slow Bank of Japan (held at 1.25% on 30 Oct, though it signalled more hikes), PM Takaichi's 19 Oct signal that about ¥10 trillion of tax cuts may be funded with deficit bonds (debt is 204% of GDP), 10-year JGB yields near 3%, and an oil import bill that has only just started to ease (Brent near $98 on 6 Nov, from $115 in late October). On 12–13 Nov the dollar reached about 159.8–159.9 yen, the closest yet to 160. The move can run either way: intervention or a carry-trade unwind could lift the yen 5% in days."
+"text": "The yen fell to about 163 per dollar in late July, prompting a joint US–Japan intervention (Japan reportedly spent around $85bn) that pushed it to 155. By mid-August most of that gain had reversed. Japan had already spent ¥11.7 trillion defending the yen in April–May. It was near 158 on 27 Oct, and Finance Minister Katayama has warned she is ready to act again, with traders watching 160. In the week to 6 Nov the dollar traded between about 157.3 and 158.8 yen; hawkish Bank of Japan minutes and the stock rout helped the yen, but the strong US jobs report pushed the dollar back to the mid-158s. The pressures are a slow Bank of Japan (held at 1.25% on 30 Oct, though it signalled more hikes), PM Takaichi's 19 Oct signal that about ¥10 trillion of tax cuts may be funded with deficit bonds (debt is 204% of GDP), 10-year JGB yields near 3%, and an oil import bill that has only just started to ease (Brent near $98 on 6 Nov, from $115 in late October). On 12–13 Nov the dollar reached about 159.8–159.9 yen, the closest yet to 160. On 16 Nov it was near 159.6 after Japan reported that its economy shrank at a 0.1% annual rate in July–September. The move can run either way: intervention or a carry-trade unwind could lift the yen 5% in days."
 }
 ],
 "in_details": false
 },
 {
-"seq": 75,
+"seq": 77,
 "section": "otherrisks",
 "kind": "hits",
 "runs": [
@@ -1437,7 +1583,7 @@
 "in_details": false
 },
 {
-"seq": 76,
+"seq": 78,
 "section": "otherrisks",
 "kind": "srcs",
 "runs": [
@@ -1477,19 +1623,19 @@
 "in_details": false
 },
 {
-"seq": 77,
+"seq": 79,
 "section": "otherrisks",
 "kind": "article_end",
 "in_details": false
 },
 {
-"seq": 78,
+"seq": 80,
 "section": "otherrisks",
 "kind": "article_start",
 "in_details": false
 },
 {
-"seq": 79,
+"seq": 81,
 "section": "otherrisks",
 "kind": "h3",
 "runs": [
@@ -1500,18 +1646,18 @@
 "in_details": false
 },
 {
-"seq": 80,
+"seq": 82,
 "section": "otherrisks",
 "kind": "p",
 "runs": [
 {
-"text": "Brent settled at $115.32 on 28 Oct, about 75% higher than a year ago. After the 3 Nov US election it fell sharply, ending the week of 6 Nov at $98.32. On 10 Nov it briefly fell below $90 for the first time since August after Trump said the war was militarily effectively over. On 11 Nov Iran denied talks and said the strait stays shut until its conditions are met. On 12 Nov Trump said the US does not need a deal, and Brent rose to about $94–96. On 13 Nov the International Energy Agency said supply now exceeds demand for the first time since the war began, and Brent settled near $95.84. On 14 Nov Iran's military said three tankers struck mines in the strait and caught fire, though the US says the main routes are cleared. On 15 Nov Iran's Guards said a supertanker carrying over 2 million barrels sank after hitting a mine (not independently confirmed), and Iranian drones targeted Bahrain. Trump is due to discuss Iran with Xi and Putin on 19 Nov. Nothing is agreed, and the strait has been largely closed since March. This is a two-way risk. A deal could send oil sharply lower; Brent fell to about $72 during the brief June truce. A longer closure keeps inflation and rates high."
+"text": "Brent settled at $115.32 on 28 Oct, about 75% higher than a year ago. After the 3 Nov US election it fell sharply, ending the week of 6 Nov at $98.32. On 10 Nov it briefly fell below $90 for the first time since August after Trump said the war was militarily effectively over. On 12 Nov Trump said the US does not need a deal, and Brent rose to about $94–96. On 13 Nov the International Energy Agency said supply now exceeds demand for the first time since the war began, and Brent settled near $95.84. On 15 Nov Iran's Guards said a supertanker carrying over 2 million barrels sank after hitting a mine (not independently confirmed), and Iranian drones targeted Bahrain. On 16 Nov Brent fell 3.6% to $92.44 even as Iran targeted Bahrain again, as the IEA forecast a surplus of about 1.7 million barrels a day this quarter. Trump is due to discuss Iran with Xi and Putin on 19 Nov. Nothing is agreed, and the strait has been largely closed since March. This is a two-way risk. A deal could send oil sharply lower; Brent fell to about $72 during the brief June truce. A longer closure keeps inflation and rates high."
 }
 ],
 "in_details": false
 },
 {
-"seq": 81,
+"seq": 83,
 "section": "otherrisks",
 "kind": "hits",
 "runs": [
@@ -1568,7 +1714,7 @@
 "in_details": false
 },
 {
-"seq": 82,
+"seq": 84,
 "section": "otherrisks",
 "kind": "srcs",
 "runs": [
@@ -1608,19 +1754,19 @@
 "in_details": false
 },
 {
-"seq": 83,
+"seq": 85,
 "section": "otherrisks",
 "kind": "article_end",
 "in_details": false
 },
 {
-"seq": 84,
+"seq": 86,
 "section": "otherrisks",
 "kind": "article_start",
 "in_details": false
 },
 {
-"seq": 85,
+"seq": 87,
 "section": "otherrisks",
 "kind": "h3",
 "runs": [
@@ -1631,7 +1777,7 @@
 "in_details": false
 },
 {
-"seq": 86,
+"seq": 88,
 "section": "otherrisks",
 "kind": "p",
 "runs": [
@@ -1642,7 +1788,7 @@
 "in_details": false
 },
 {
-"seq": 87,
+"seq": 89,
 "section": "otherrisks",
 "kind": "hits",
 "runs": [
@@ -1713,7 +1859,7 @@
 "in_details": false
 },
 {
-"seq": 88,
+"seq": 90,
 "section": "otherrisks",
 "kind": "srcs",
 "runs": [
@@ -1732,19 +1878,19 @@
 "in_details": false
 },
 {
-"seq": 89,
+"seq": 91,
 "section": "otherrisks",
 "kind": "article_end",
 "in_details": false
 },
 {
-"seq": 90,
+"seq": 92,
 "section": "otherrisks",
 "kind": "article_start",
 "in_details": false
 },
 {
-"seq": 91,
+"seq": 93,
 "section": "otherrisks",
 "kind": "h3",
 "runs": [
@@ -1755,7 +1901,7 @@
 "in_details": false
 },
 {
-"seq": 92,
+"seq": 94,
 "section": "otherrisks",
 "kind": "p",
 "runs": [
@@ -1766,7 +1912,7 @@
 "in_details": false
 },
 {
-"seq": 93,
+"seq": 95,
 "section": "otherrisks",
 "kind": "hits",
 "runs": [
@@ -1823,7 +1969,7 @@
 "in_details": false
 },
 {
-"seq": 94,
+"seq": 96,
 "section": "otherrisks",
 "kind": "srcs",
 "runs": [
@@ -1842,19 +1988,19 @@
 "in_details": false
 },
 {
-"seq": 95,
+"seq": 97,
 "section": "otherrisks",
 "kind": "article_end",
 "in_details": false
 },
 {
-"seq": 96,
+"seq": 98,
 "section": "otherrisks",
 "kind": "article_start",
 "in_details": false
 },
 {
-"seq": 97,
+"seq": 99,
 "section": "otherrisks",
 "kind": "h3",
 "runs": [
@@ -1865,18 +2011,18 @@
 "in_details": false
 },
 {
-"seq": 98,
+"seq": 100,
 "section": "otherrisks",
 "kind": "p",
 "runs": [
 {
-"text": "China held live-fire drills across five sea areas on 12–17 Oct, coast-guard ships harassed Taiwanese vessels on 18 Oct, and on 16 Oct Beijing drafted export curbs on about 40 technologies, including AI and chips. On 15 Oct foreign investors sold NT$165bn of Taiwan stocks in one day, Korean outflows for October passed $10bn, the Philippine peso passed 63 per dollar for the first time, and India and Indonesia intervened to support their currencies."
+"text": "China held live-fire drills across five sea areas on 12–17 Oct, coast-guard ships harassed Taiwanese vessels on 18 Oct, and on 16 Oct Beijing drafted export curbs on about 40 technologies, including AI and chips. On 15 Oct foreign investors sold NT$165bn of Taiwan stocks in one day, Korean outflows for October passed $10bn, the Philippine peso passed 63 per dollar for the first time, and India and Indonesia intervened to support their currencies. On 16 Nov the US tightened rules on Chinese access to advanced AI chips, including through overseas data centres, and Taiwan's market fell about 6%."
 }
 ],
 "in_details": false
 },
 {
-"seq": 99,
+"seq": 101,
 "section": "otherrisks",
 "kind": "hits",
 "runs": [
@@ -1912,7 +2058,7 @@
 "in_details": false
 },
 {
-"seq": 100,
+"seq": 102,
 "section": "otherrisks",
 "kind": "srcs",
 "runs": [
@@ -1938,19 +2084,19 @@
 "in_details": false
 },
 {
-"seq": 101,
+"seq": 103,
 "section": "otherrisks",
 "kind": "article_end",
 "in_details": false
 },
 {
-"seq": 102,
+"seq": 104,
 "section": "otherrisks",
 "kind": "article_start",
 "in_details": false
 },
 {
-"seq": 103,
+"seq": 105,
 "section": "otherrisks",
 "kind": "h3",
 "runs": [
@@ -1961,7 +2107,7 @@
 "in_details": false
 },
 {
-"seq": 104,
+"seq": 106,
 "section": "otherrisks",
 "kind": "p",
 "runs": [
@@ -1972,7 +2118,7 @@
 "in_details": false
 },
 {
-"seq": 105,
+"seq": 107,
 "section": "otherrisks",
 "kind": "hits",
 "runs": [
@@ -2008,7 +2154,7 @@
 "in_details": false
 },
 {
-"seq": 106,
+"seq": 108,
 "section": "otherrisks",
 "kind": "srcs",
 "runs": [
@@ -2020,19 +2166,19 @@
 "in_details": false
 },
 {
-"seq": 107,
+"seq": 109,
 "section": "otherrisks",
 "kind": "article_end",
 "in_details": false
 },
 {
-"seq": 108,
+"seq": 110,
 "section": "otherrisks",
 "kind": "article_start",
 "in_details": false
 },
 {
-"seq": 109,
+"seq": 111,
 "section": "otherrisks",
 "kind": "h3",
 "runs": [
@@ -2043,7 +2189,7 @@
 "in_details": false
 },
 {
-"seq": 110,
+"seq": 112,
 "section": "otherrisks",
 "kind": "p",
 "runs": [
@@ -2054,7 +2200,7 @@
 "in_details": false
 },
 {
-"seq": 111,
+"seq": 113,
 "section": "otherrisks",
 "kind": "hits",
 "runs": [
@@ -2069,7 +2215,7 @@
 "in_details": false
 },
 {
-"seq": 112,
+"seq": 114,
 "section": "otherrisks",
 "kind": "srcs",
 "runs": [
@@ -2088,19 +2234,19 @@
 "in_details": false
 },
 {
-"seq": 113,
+"seq": 115,
 "section": "otherrisks",
 "kind": "article_end",
 "in_details": false
 },
 {
-"seq": 114,
+"seq": 116,
 "section": "otherrisks",
 "kind": "article_start",
 "in_details": false
 },
 {
-"seq": 115,
+"seq": 117,
 "section": "otherrisks",
 "kind": "h3",
 "runs": [
@@ -2111,7 +2257,7 @@
 "in_details": false
 },
 {
-"seq": 116,
+"seq": 118,
 "section": "otherrisks",
 "kind": "p",
 "runs": [
@@ -2122,7 +2268,7 @@
 "in_details": false
 },
 {
-"seq": 117,
+"seq": 119,
 "section": "otherrisks",
 "kind": "hits",
 "runs": [
@@ -2144,7 +2290,7 @@
 "in_details": false
 },
 {
-"seq": 118,
+"seq": 120,
 "section": "otherrisks",
 "kind": "srcs",
 "runs": [
@@ -2163,13 +2309,13 @@
 "in_details": false
 },
 {
-"seq": 119,
+"seq": 121,
 "section": "otherrisks",
 "kind": "article_end",
 "in_details": false
 },
 {
-"seq": 120,
+"seq": 122,
 "section": "otherrisks",
 "kind": "h3",
 "runs": [
@@ -2178,54 +2324,6 @@
 }
 ],
 "in_details": false
-},
-{
-"section": "otherrisks",
-"kind": "dt",
-"label": [
-{
-"text": "Within days"
-}
-],
-"runs": [
-{
-"text": "Whether Sunday's reported supertanker sinking and the attacks on Bahrain and Saudi Arabia lift oil when trading resumes (Mon 16 Nov, about 7 am); this sets the next direction for oil"
-}
-],
-"in_details": false,
-"seq": 121
-},
-{
-"section": "otherrisks",
-"kind": "dt",
-"label": [
-{
-"text": "16 Nov, 7:50 am"
-}
-],
-"runs": [
-{
-"text": "Japan's first estimate of July–September GDP"
-}
-],
-"in_details": false,
-"seq": 122
-},
-{
-"section": "otherrisks",
-"kind": "dt",
-"label": [
-{
-"text": "17 Nov, 1 am"
-}
-],
-"runs": [
-{
-"text": "Fed Chair Warsh speaks, the first of more than a dozen Fed speeches this week"
-}
-],
-"in_details": false,
-"seq": 123
 },
 {
 "section": "otherrisks",
@@ -2241,7 +2339,7 @@
 }
 ],
 "in_details": false,
-"seq": 124
+"seq": 123
 },
 {
 "section": "otherrisks",
@@ -2257,7 +2355,7 @@
 }
 ],
 "in_details": false,
-"seq": 125
+"seq": 124
 },
 {
 "section": "otherrisks",
@@ -2273,7 +2371,7 @@
 }
 ],
 "in_details": false,
-"seq": 126
+"seq": 125
 },
 {
 "section": "otherrisks",
@@ -2289,6 +2387,22 @@
 }
 ],
 "in_details": false,
+"seq": 126
+},
+{
+"section": "otherrisks",
+"kind": "dt",
+"in_details": false,
+"label": [
+{
+"text": "Around 25 Nov"
+}
+],
+"runs": [
+{
+"text": "Deadline set by Treasury Secretary Bessent for answers from NVIDIA's board, about 10 days after his 14–15 Nov remarks"
+}
+],
 "seq": 127
 },
 {
@@ -2628,7 +2742,7 @@
 "in_details": false,
 "runs": [
 {
-"text": "November so far. The 3 Nov midterms, in which Democrats won both houses of Congress, set off the sharpest AI sell-off of the year on worries about slower data-centre building. On 5 Nov the chip index fell 12%, its worst day since 2020, and the Nasdaq entered a correction. In the week to 6 Nov the S&P 500 lost 2.7% and the Nasdaq 3.4% (AP); Japan's Nikkei lost 9.3%, leaving it more than 20% below its June record (Yahoo Finance), and Korea's KOSPI 11.7% (Seoul Economic Daily). Brent fell about 16% on hopes of a US–Iran deal (CNBC), while a strong jobs report kept a December Fed hike likely (InvestmentNews). On 9 Nov Wall Street rebounded: the S&P 500 rose 2.3% and the chip index about 7%, while NVIDIA fell 4.4% on a board probe of its CEO and Brent dropped to about $93–94 (Reuters). On 10 Nov hotter October inflation (0.4% in the month) pushed the 10-year yield to about 5.01% and the S&P 500 down about 0.4%, with NVIDIA down 6.3%; Asia had rallied, with the KOSPI up 4% (AP). On 11 Nov chip stocks rebounded about 7% after CoreWeave's results, lifting the S&P 500 about 1.3% to roughly 7,620 (Reuters). On 12 Nov NVIDIA's CEO Jensen Huang resigned; NVIDIA fell as much as 14% before paring losses, the S&P 500 slipped 0.4% to about 7,592, and Brent rose after Trump said no Iran deal is needed (Kiplinger, AP). On 13 Nov chip stocks slid again (chip index about −3.4%, NVIDIA −2.0%) and the S&P 500 closed 0.4% lower at 7,561.67, but it still gained about 2.5% for the week, its first weekly gain in five; October producer prices were up 6.5% on a year, and the 10-year yield closed near 5.15% (Yahoo Finance, CappNotes). Over the weekend Iran said a supertanker sank after hitting a mine in the strait, and drone and missile attacks on Bahrain and Saudi Arabia were intercepted (AFP via RTÉ, Gulf News)."
+"text": "November so far. The 3 Nov midterms, in which Democrats won both houses of Congress, set off the sharpest AI sell-off of the year on worries about slower data-centre building. On 5 Nov the chip index fell 12%, its worst day since 2020, and the Nasdaq entered a correction. In the week to 6 Nov the S&P 500 lost 2.7% and the Nasdaq 3.4% (AP); Japan's Nikkei lost 9.3%, leaving it more than 20% below its June record (Yahoo Finance), and Korea's KOSPI 11.7% (Seoul Economic Daily). Brent fell about 16% on hopes of a US–Iran deal (CNBC), while a strong jobs report kept a December Fed hike likely (InvestmentNews). On 9 Nov Wall Street rebounded: the S&P 500 rose 2.3% and the chip index about 7%, while NVIDIA fell 4.4% on a board probe of its CEO and Brent dropped to about $93–94 (Reuters). On 10 Nov hotter October inflation (0.4% in the month) pushed the 10-year yield to about 5.01% and the S&P 500 down about 0.4%, with NVIDIA down 6.3%; Asia had rallied, with the KOSPI up 4% (AP). On 11 Nov chip stocks rebounded about 7% after CoreWeave's results, lifting the S&P 500 about 1.3% to roughly 7,620 (Reuters). On 12 Nov NVIDIA's CEO Jensen Huang resigned; NVIDIA fell as much as 14% before paring losses, the S&P 500 slipped 0.4% to about 7,592, and Brent rose after Trump said no Iran deal is needed (Kiplinger, AP). On 13 Nov chip stocks slid again (chip index about −3.4%, NVIDIA −2.0%) and the S&P 500 closed 0.4% lower at 7,561.67, but it still gained about 2.5% for the week, its first weekly gain in five; October producer prices were up 6.5% on a year, and the 10-year yield closed near 5.15% (Yahoo Finance, CappNotes). Over the weekend Iran said a supertanker sank after hitting a mine in the strait, and drone and missile attacks on Bahrain and Saudi Arabia were intercepted (AFP via RTÉ, Gulf News). On 16 Nov new US curbs on Chinese access to advanced chips sent the chip index down about 4.6% and the S&P 500 about 1.9% to roughly 7,415, more than 5% below its record, while Brent fell 3.6% to $92.44 on the IEA's surplus forecast (Reuters, Bloomberg)."
 }
 ]
 },
@@ -2693,7 +2807,7 @@
 "kind": "p",
 "runs": [
 {
-"text": "A guide to which of the 28 funds tend to be worth adding as a sell-off deepens, using the S&P 500's fall from its 7,819 record (6 Oct 2026) as the trigger, because it is the market's main gauge. The idea is to add the steadier, low-AI funds first and the high-growth, AI-heavy funds only once they are much cheaper. Purchases are funded mainly from cash and from bonds that have risen. Where we are now: the S&P 500 closed Friday (13 Nov, US time) at 7,561.67, about 3.3% below its record, after its first weekly gain in five weeks. It is still above the −5% level (~7,430), which is about 1.7% lower. The −10% level (~7,040) is about 6.9% lower."
+"text": "A guide to which of the 28 funds tend to be worth adding as a sell-off deepens, using the S&P 500's fall from its 7,819 record (6 Oct 2026) as the trigger, because it is the market's main gauge. The idea is to add the steadier, low-AI funds first and the high-growth, AI-heavy funds only once they are much cheaper. Purchases are funded mainly from cash and from bonds that have risen. Where we are now: the S&P 500 closed Monday (16 Nov, US time) at about 7,415, roughly 5.2% below its record, so it is back below the −5% level (~7,430), which it first crossed on 5 Nov. The −10% level (~7,040) is about 5.1% lower."
 }
 ],
 "in_details": false
