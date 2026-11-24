@@ -27,7 +27,7 @@
 "kind": "lead",
 "runs": [
 {
-"text": "Nine funds are heavily exposed to an AI-led sell-off, but AI is not the only threat. Oil lurching on every Iran headline (Brent about $90.5 on 23 Nov, down from $115 in late October), a yen at almost 160 per dollar, the level that has triggered intervention, a 10-year US yield near 5% (about 4.9% on 23 Nov) with a December Fed hike close to certain, and rising tension around Taiwan each hit different funds. Combining all of these, 11 funds rate High or Very high overall risk. Only the money market funds and cash are close to safe in every scenario."
+"text": "Nine funds are heavily exposed to an AI-led sell-off, but AI is not the only threat. Oil lurching on every Iran headline (Brent about $89 on 24 Nov, near three-month lows, down from $115 in late October), a yen at almost 160 per dollar, the level that has triggered intervention, a 10-year US yield near 5% (about 4.90% on 24 Nov) with a December Fed hike close to certain, and rising tension around Taiwan each hit different funds. Combining all of these, 11 funds rate High or Very high overall risk. Only the money market funds and cash are close to safe in every scenario."
 }
 ],
 "in_details": false
@@ -64,7 +64,7 @@
 "kind": "meta",
 "runs": [
 {
-"text": "News updated 24 Nov 2026, 6 am Manila (markets to Mon 23 Nov close)"
+"text": "News updated 25 Nov 2026, 6 am Manila (markets to Tue 24 Nov close)"
 }
 ],
 "in_details": false
@@ -129,12 +129,12 @@
 "kind": "fact",
 "label": [
 {
-"text": "−7.2%"
+"text": "−8.2%"
 }
 ],
 "runs": [
 {
-"text": "S&P 500 below its 6 Oct record after a 5.0% jump on 23 Nov (about 7,258), its best day since April 2025"
+"text": "S&P 500 below its 6 Oct record late on 24 Nov (about 7,175), as AI stocks slid again a day after a 4.7% jump"
 }
 ],
 "in_details": false
@@ -145,12 +145,12 @@
 "kind": "fact",
 "label": [
 {
-"text": "+33%"
+"text": "−7–8%"
 }
 ],
 "runs": [
 {
-"text": "NVIDIA's gain on 23 Nov after its board reinstated Jensen Huang as CEO; the Nasdaq rose 6.9%"
+"text": "NVIDIA's fall on 24 Nov, after a 31.5% gain on Huang's return; Anthropic fell below its $83 IPO price"
 }
 ],
 "in_details": false
@@ -300,7 +300,7 @@
 "in_details": false,
 "runs": [
 {
-"text": "Update · Tue 24 Nov 2026, 6 am Manila (covers Mon 23 Nov)"
+"text": "Update · Wed 25 Nov 2026, 6 am Manila (covers Tue 24 Nov)"
 }
 ],
 "seq": 21
@@ -311,7 +311,7 @@
 "in_details": false,
 "runs": [
 {
-"text": "Jensen Huang returns to NVIDIA and Wall Street has its best day since April 2025"
+"text": "The NVIDIA rally fades as AI stocks slide again, but the rest of Wall Street rises"
 }
 ],
 "seq": 22
@@ -322,7 +322,7 @@
 "in_details": false,
 "runs": [
 {
-"text": "NVIDIA reinstated Jensen Huang as chief executive on Monday, and Wall Street had its best day since April 2025. NVIDIA jumped about 33%, the Nasdaq 6.9% and the S&P 500 5.0%, recovering more than half of last week's fall. The S&P 500 is now about 7.2% below its record, back above the −10% line. Gold rose about 4% and the VIX fear gauge fell sharply. Oil slipped to a two-week low despite weekend attacks in the Gulf, while weak French data pushed the euro to its lowest level of 2026. A December Fed hike is still almost fully priced, and Wednesday night's inflation data are the next test. No fund rating changed."
+"text": "The NVIDIA relief rally faded on Tuesday. NVIDIA fell about 7–8%, giving back part of Monday's 31.5% jump, chip stocks fell about 9% and Anthropic dropped below its $83 IPO price. Late in the session the Nasdaq was down about 2% and the S&P 500 about 0.9%, leaving it about 8.2% below its record, while the Dow rose about 0.6% as healthcare and consumer stocks gained and US consumer confidence hit a near two-year high. The 10-year yield eased to 4.90%, gold fell about 2% and oil stayed near three-month lows. A December Fed hike is fully priced before tonight's inflation data. No fund rating changed."
 }
 ],
 "seq": 23
@@ -357,11 +357,11 @@
 "cells": [
 [
 {
-"text": "Huang is back at NVIDIA.",
+"text": "The AI rally fades.",
 "bold": true
 },
 {
-"text": " NVIDIA's board reinstated Jensen Huang as CEO on Monday 23 Nov, less than two weeks after he resigned. The board said it had received input from senior US government officials and is confident his return poses no national security risk; its own investigation continues. NVIDIA closed about 33% higher (TipRanks), CoreWeave was up about 24% during the day (AP) and the chip index (SOX) about 13% at midday (Reuters)."
+"text": " NVIDIA fell about 7–8% on Tuesday 24 Nov (AP, Reuters, both during the session), a day after a 31.5% jump. The chip index (SOX) was down about 9.2% and Anthropic about 13% at roughly $76, below its $83 IPO price (Reuters). Micron and AMD fell about 11% (BigGo, midday) and CoreWeave about 12% (AP). An Axios report that some unreleased AI models may be too powerful to release added to the selling, and Huang reportedly apologised to staff (Bloomberg). His Senate Banking Committee hearing is confirmed for 3 Dec (Yahoo Finance)."
 }
 ],
 [
@@ -396,25 +396,11 @@
 {
 "text": "19",
 "href": "#f19"
-},
-{
-"text": " "
-},
-{
-"text": "3",
-"href": "#f3"
-},
-{
-"text": " "
-},
-{
-"text": "4",
-"href": "#f4"
 }
 ],
 [
 {
-"text": "A big relief rally for the AI-heavy funds (13, 24, 6, 22, 19) and the Developed World funds (3, 4). One day does not end the risk: NVIDIA alone now moves the S&P 500 more than almost any other stock, and the board's probe and a requested Senate hearing on 3 Dec are still ahead."
+"text": "Monday's bounce in the AI-heavy funds (13, 24, 6, 22, 19) was partly reversed within a day. Swings of this size show the AI trade is still fragile, and the NVIDIA governance questions are not settled."
 }
 ]
 ],
@@ -427,11 +413,11 @@
 "cells": [
 [
 {
-"text": "Best day since April 2025.",
+"text": "The rest of the market rose.",
 "bold": true
 },
 {
-"text": " The S&P 500 rose 5.0% to about 7,258, the Dow 1,556 points (3.2%) and the Nasdaq 6.9% (TipRanks, closing moves). At midday the VIX was about 27, down about 24%, gold was up about 4.2% at roughly $3,663 an ounce and the 10-year Treasury yield about 4.94% (Yahoo Finance). CrowdStrike agreed to buy Zscaler in an all-stock deal valuing it at about $43.9bn."
+"text": " At 3:30 pm New York time the Dow was up about 0.6% at 49,896, the S&P 500 down about 0.85% at 7,175 and the Nasdaq down about 2.0% at 23,612 (Yahoo Finance; final closes were not yet published when this was written). Healthcare, consumer staples and utilities gained (Reuters). The Conference Board's consumer confidence index rose to its highest in nearly two years (Reuters, Bloomberg). US closing figures for Monday were 4.7% for the S&P 500, 6.5% for the Nasdaq and 3.0% for the Dow (TipRanks)."
 }
 ],
 [
@@ -450,8 +436,15 @@
 "text": " "
 },
 {
-"text": "6",
-"href": "#f6"
+"text": "8",
+"href": "#f8"
+},
+{
+"text": " "
+},
+{
+"text": "2",
+"href": "#f2"
 },
 {
 "text": " "
@@ -459,25 +452,11 @@
 {
 "text": "17",
 "href": "#f17"
-},
-{
-"text": " "
-},
-{
-"text": "1",
-"href": "#f1"
-},
-{
-"text": " "
-},
-{
-"text": "28",
-"href": "#f28"
 }
 ],
 [
 {
-"text": "The S&P 500 is about 7.2% below its 7,819 record, back above the −10% level (~7,040) after one day below it. Gold miners (1) bounced with gold. Bond funds (28) gave back a little, as yields edged up when investors returned to shares."
+"text": "The S&P 500 is about 8.2% below its 7,819 record, between the −5% (~7,430) and −10% (~7,040) levels and about 1.9% above the latter. Broad and lower-AI funds (4, 3, 8, 17) held up better than the Nasdaq."
 }
 ]
 ],
@@ -490,11 +469,109 @@
 "cells": [
 [
 {
-"text": "Oil slips despite Gulf attacks.",
+"text": "Yields ease; tariffs return.",
 "bold": true
 },
 {
-"text": " Brent fell about 2.2% to $90.55 by mid-afternoon in London, after touching $89.48, a two-week low; US crude hit its lowest since 27 Aug (Reuters). Supplies from the Middle East are rising and Libya's Sharara pipeline has restarted. Over the weekend the Houthis claimed an attack on a Saudi refinery (unconfirmed) and Bahrain said an Iranian attack hit an industrial site. JPMorgan expects oil futures in the high $70s in the first half of 2027."
+"text": " The 10-year Treasury yield fell about 4 basis points to 4.90% (Bloomberg). Traders fully price a quarter-point Fed hike in December, with a slim chance of a half point (CME FedWatch via Reuters). The US is set to raise tariffs on China, the EU and more than a dozen other economies, though not above levels agreed in trade deals (Bloomberg). The euro rose 0.6% to $1.0966, the dollar was about 159.3 yen, and gold fell 2.2% to about $3,556 an ounce (Bloomberg)."
+}
+],
+[
+{
+"text": "28",
+"href": "#f28"
+},
+{
+"text": " "
+},
+{
+"text": "9",
+"href": "#f9"
+},
+{
+"text": " "
+},
+{
+"text": "25",
+"href": "#f25"
+},
+{
+"text": " "
+},
+{
+"text": "26",
+"href": "#f26"
+},
+{
+"text": " "
+},
+{
+"text": "20",
+"href": "#f20"
+},
+{
+"text": " "
+},
+{
+"text": "5",
+"href": "#f5"
+},
+{
+"text": " "
+},
+{
+"text": "15",
+"href": "#f15"
+},
+{
+"text": " "
+},
+{
+"text": "18",
+"href": "#f18"
+},
+{
+"text": " "
+},
+{
+"text": "11",
+"href": "#f11"
+},
+{
+"text": " "
+},
+{
+"text": "27",
+"href": "#f27"
+},
+{
+"text": " "
+},
+{
+"text": "1",
+"href": "#f1"
+}
+],
+[
+{
+"text": "Bond funds (28, 9, 25, 26, 20) gained a little as yields fell. The euro funds (5, 15, 18) got some relief for USD-based investors. The yen funds (11, 27) are still near the 160 intervention line, and gold miners (1) fell with gold."
+}
+]
+],
+"seq": 27
+},
+{
+"section": "today",
+"kind": "tr",
+"in_details": false,
+"cells": [
+[
+{
+"text": "Oil near three-month lows.",
+"bold": true
+},
+{
+"text": " January Brent was about $89.1 at 4 pm London time, after settling at $89.37 on Monday (FinanceFeeds); US crude later rose about 2% to $81.89 (Bloomberg), so sources differ on the day's direction. Deutsche Bank estimates an oversupply of about 1.7 million barrels a day in October. The Wall Street Journal reported a US probe into cyberattacks on up to 50 tankers, with Iran the main suspect, though an official said no evidence of Iranian involvement had been found (Cornerstone Futures). Iran also claimed more tankers hit mines in Hormuz (unconfirmed)."
 }
 ],
 [
@@ -533,98 +610,7 @@
 ],
 [
 {
-"text": "Markets are shrugging off the attacks and focusing on a coming surplus. Lower oil weighs on the commodity fund (12) and the UK fund's energy shares (8), but helps oil-importing Asia and Japan (22, 23, 27)."
-}
-]
-],
-"seq": 27
-},
-{
-"section": "today",
-"kind": "tr",
-"in_details": false,
-"cells": [
-[
-{
-"text": "Euro at a 2026 low; Fed hike still priced.",
-"bold": true
-},
-{
-"text": " France's flash composite PMI fell to 46.2 in November, against 47.8 expected, and the euro dropped to about $1.0884, its lowest this year; markets put about 91% odds on an ECB hike on 17 Dec (TradingNews). CME FedWatch showed about 98% odds of a quarter-point Fed hike in December at midday (Reuters); bets on a half point have faded (CoinDesk). The dollar was near 159.3 yen (AFP)."
-}
-],
-[
-{
-"text": "5",
-"href": "#f5"
-},
-{
-"text": " "
-},
-{
-"text": "15",
-"href": "#f15"
-},
-{
-"text": " "
-},
-{
-"text": "18",
-"href": "#f18"
-},
-{
-"text": " "
-},
-{
-"text": "21",
-"href": "#f21"
-},
-{
-"text": " "
-},
-{
-"text": "25",
-"href": "#f25"
-},
-{
-"text": " "
-},
-{
-"text": "3",
-"href": "#f3"
-},
-{
-"text": " "
-},
-{
-"text": "11",
-"href": "#f11"
-},
-{
-"text": " "
-},
-{
-"text": "27",
-"href": "#f27"
-},
-{
-"text": " "
-},
-{
-"text": "14",
-"href": "#f14"
-},
-{
-"text": " "
-},
-{
-"text": "28",
-"href": "#f28"
-}
-],
-[
-{
-"text": "Pressure stays on the euro funds (5, 15, 18, 21, 25) for USD-based investors, and S&P reviews France's credit rating on Friday. The yen funds (11, 27) stay close to the 160 intervention zone. Cash and money market funds (14) keep earning more while a Fed hike is priced, which holds back bond funds (28)."
+"text": "Markets are pricing a supply surplus rather than Gulf attacks. That weighs on the commodity fund (12) and helps oil importers in Asia and Japan (22, 23, 27). OPEC+ on Sunday could change the picture."
 }
 ]
 ],
@@ -641,7 +627,7 @@
 "bold": true
 },
 {
-"text": " Wed 25 Nov, 9:30 pm: US October inflation (PCE) and other data, with the Fed's Beige Book later. Thu 26 Nov: US markets closed for Thanksgiving; Fri 27 Nov they close early, at 2 am Saturday Manila time. Fri 27 Nov: S&P Global reviews France's A+ rating. Sun 29 Nov: OPEC+ meets on 2027 output. 3 Dec, US time: Huang asked to testify to the Senate Banking Committee. 8–9 Dec, US time: Fed decision. 17 Dec: ECB decision."
+"text": " Wed 25 Nov, 9:30 pm: US October inflation (PCE), third-quarter GDP, jobless claims and durable goods; the Fed's Beige Book follows at 3 am Thursday. Thu 26 Nov: US markets closed for Thanksgiving; Fri 27 Nov they close early, at 2 am Saturday Manila time. Fri 27 Nov: S&P Global reviews France's A+ rating. Sun 29 Nov: OPEC+ meets on 2027 output. 3 Dec, US time: Huang testifies to the Senate Banking Committee. 4 Dec, 9:30 pm: US jobs report. 8–9 Dec, US time: Fed decision. 17 Dec: ECB decision."
 }
 ],
 [
@@ -701,7 +687,7 @@
 ],
 [
 {
-"text": "Wednesday's inflation data matter most: a hot reading would cement a December Fed hike and pressure the bond funds (28, 9). OPEC+ steers the commodity fund (12), and the France rating review the Europe fund (5)."
+"text": "Tonight's inflation data matter most: a hot reading could revive talk of a half-point Fed hike and pressure the bond funds (28, 9). OPEC+ steers the commodity fund (12), and the France review the Europe fund (5)."
 }
 ]
 ],
@@ -716,64 +702,64 @@
 "text": "Sources: "
 },
 {
-"text": "TipRanks (closing moves)",
-"href": "https://www.tipranks.com/news/nasdaq-closes-7-higher-after-jensen-huang-returns-as-nvidias-ceo"
+"text": "Yahoo Finance (late-session index levels, Micron)",
+"href": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
 },
 {
 "text": " · "
 },
 {
-"text": "Yahoo Finance (board statement, VIX, gold, yields)",
-"href": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html"
+"text": "Reuters via Lufkin Daily News (chip index, Anthropic, Fed odds, confidence)",
+"href": "https://lufkindailynews.com/news_reuters/business/nasdaq-s-p-500-fall-as-nvidia-driven-ai-rally-unwinds/article_caca3c2b-1122-5823-9cf9-d9532328a2f3.html"
 },
 {
 "text": " · "
 },
 {
-"text": "Reuters via Lufkin Daily News (chip index, Fed odds, Zscaler)",
-"href": "https://lufkindailynews.com/news_reuters/business/wall-street-roars-back-as-nvidia-reinstates-jensen-huang-as-ceo/article_e6d9ac41-7498-5fb0-ad1e-4379284b6679.html"
+"text": "Bloomberg via Swissinfo (yields, currencies, gold, tariffs, oil)",
+"href": "https://www.swissinfo.ch/eng/nasdaq-100-sinks-as-ai-rout-fuels-gains-in-bonds:-markets-wrap/92426361"
 },
 {
 "text": " · "
 },
 {
-"text": "AP via Spectrum News (CoreWeave, NVIDIA's weight)",
-"href": "https://spectrumlocalnews.com/us/snplus/business/2026/11/23/u-s--stocks-soar-after-jensen-huang-returns-to-nvidia"
+"text": "AP via Korea Times (NVIDIA, CoreWeave)",
+"href": "https://www.koreatimes.co.kr/world/20261125/nvidia-anthropic-and-other-ai-stocks-get-back-to-tumbling-and-drag-the-us-market-lower"
 },
 {
 "text": " · "
 },
 {
-"text": "Reuters via Business Recorder (oil)",
-"href": "https://www.brecorder.com/news/40450306/oil-falls-on-increased-middle-east-flows-libyan-pipeline-restart"
+"text": "TipRanks (Monday's closing moves)",
+"href": "https://www.tipranks.com/news/u-s-tech-stocks-fall-as-nvidia-shares-slip-after-mondays-spike"
 },
 {
 "text": " · "
 },
 {
-"text": "Cornerstone Futures (weekend attacks)",
-"href": "https://www.cornerstonefuturesllc.com/post/morning-highlights-oil-falls-despite-weekend-attacks-on-shipping-a-saudi-refinery-and-bahrain-as-f"
+"text": "Yahoo Finance (Senate hearing)",
+"href": "https://finance.yahoo.com/markets/stocks/live/nvidia-live-updates-nvidia-stock-falls-as-exuberance-fades-after-jensen-huangs-return-as-ceo-142100906.html"
 },
 {
 "text": " · "
 },
 {
-"text": "TradingNews (euro, France PMI, ECB)",
-"href": "https://www.tradingnews.com/news/eur-usd-breaks-to-2026-low-at-10884-as-france-pmi-sinks-to-462-11100-usd-target"
+"text": "BigGo Finance (Micron, AMD)",
+"href": "https://finance.biggo.com/news/ab6457b2-1d9f-4a77-8d76-326eeca92d1d"
 },
 {
 "text": " · "
 },
 {
-"text": "CoinDesk (half-point bets)",
-"href": "https://www.coindesk.com/markets/2026/11/23/market-rout-kills-50-basis-points-december-fed-rate-hike-bets"
+"text": "FinanceFeeds (Brent, OPEC+)",
+"href": "https://financefeeds.com/brent-crude-oil-price-89-08-tuesday-24-percent-monthly-slide-opec-plus-29-november-bull-92-bear-86/"
 },
 {
 "text": " · "
 },
 {
-"text": "AFP via 24NewsHD (yen)",
-"href": "https://www.24newshd.tv/24-Nov-2026/stocks-climb-huang-s-stunning-return-nvidia-lifts-optimism"
+"text": "Cornerstone Futures (oversupply, tanker cyberattacks)",
+"href": "https://www.cornerstonefuturesllc.com/post/morning-highlights-oil-at-three-month-lows-as-surplus-signs-build-us-probes-cyberattacks-on-up-to"
 }
 ],
 "seq": 30
@@ -794,6 +780,26 @@
 "in_details": true,
 "label": [
 {
+"text": "24 Nov"
+}
+],
+"runs": [
+{
+"text": "Jensen Huang returned to NVIDIA and Wall Street had its best day since April 2025.",
+"bold": true
+},
+{
+"text": " On 23 Nov NVIDIA rose about 31.5% and the S&P 500 about 4.7% to roughly 7,237 (closing figures, revised from earlier estimates of 33% and 5.0%), while Brent fell to a two-week low and the euro hit a 2026 low. No change."
+}
+],
+"seq": 32
+},
+{
+"section": "today",
+"kind": "dt",
+"in_details": true,
+"label": [
+{
 "text": "23 Nov"
 }
 ],
@@ -806,10 +812,10 @@
 "text": " On 22 Nov Iran said two supertankers hit mines east of the strait, at least 22 attacks on shipping had been reported in November, and Wall Street had ended the previous week with the VIX at 35.89. No change."
 }
 ],
-"seq": 32
+"seq": 33
 },
 {
-"seq": 33,
+"seq": 34,
 "section": "today",
 "kind": "dt",
 "in_details": true,
@@ -846,7 +852,7 @@
 "text": " On 20 Nov the S&P 500 fell 3.7% to 6,910.39, about 11.6% below its record, with NVIDIA down 14% and gold about 4.5%; the 10-year yield fell to about 4.91% as investors sought safety. No change."
 }
 ],
-"seq": 34
+"seq": 35
 },
 {
 "section": "today",
@@ -866,7 +872,7 @@
 "text": " Gold fell about 2% to a 14-month low and Taiwan about 4.4%, while Fed Governor Waller pushed for aggressive action in December. No change."
 }
 ],
-"seq": 35
+"seq": 36
 },
 {
 "section": "today",
@@ -886,7 +892,7 @@
 "text": " On 18 Nov Fed minutes pointed to a December hike, US crude fell 3–4% on a surprise rise in stockpiles, and gold fell about 3%. No change."
 }
 ],
-"seq": 36
+"seq": 37
 },
 {
 "section": "today",
@@ -906,7 +912,7 @@
 "text": " On 17 Nov the Dow fell 1.6%, software stocks led the losses, US retail sales beat forecasts and a December Fed hike was about 95% priced. No change."
 }
 ],
-"seq": 37
+"seq": 38
 },
 {
 "section": "today",
@@ -926,7 +932,7 @@
 "text": " The chip index fell about 4.6% and Taiwan about 6%, while Brent fell 3.6% to $92.44 on the IEA's surplus forecast. No change."
 }
 ],
-"seq": 38
+"seq": 39
 },
 {
 "section": "today",
@@ -946,10 +952,10 @@
 "text": " Over the weekend Saudi Arabia intercepted Houthi missiles and drones and the G7 condemned Iran's attacks; Brent had closed Friday near $96. No change."
 }
 ],
-"seq": 39
+"seq": 40
 },
 {
-"seq": 40,
+"seq": 41,
 "section": "today",
 "kind": "dt",
 "in_details": true,
@@ -986,7 +992,7 @@
 "text": " In Friday afternoon trading on 13 Nov the chip index was down about 3.7%, AMD about 10.6% and the S&P 500 about 0.5–0.8%, and the 10-year yield touched 5.17%. No change."
 }
 ],
-"seq": 41
+"seq": 42
 },
 {
 "section": "today",
@@ -1006,7 +1012,7 @@
 "text": " On 12 Nov NVIDIA fell as much as 14% and closed about 4.3% lower, the S&P 500 slipped 0.4% to about 7,592, and the 10-year yield rose to about 5.1%. No change."
 }
 ],
-"seq": 42
+"seq": 43
 },
 {
 "section": "today",
@@ -1026,7 +1032,7 @@
 "text": " On 11 Nov the chip index rose about 7% and the S&P 500 about 1.3% to roughly 7,620, with NVIDIA up about 3.5%. Brent rose about 1% to $92.5 as Iran denied talks. No change."
 }
 ],
-"seq": 43
+"seq": 44
 },
 {
 "section": "today",
@@ -1046,7 +1052,7 @@
 "text": " On 10 Nov October consumer prices rose 0.4% in the month, making a December Fed hike close to fully priced. The S&P 500 slipped 0.4% to about 7,520 and NVIDIA fell 5.5–6.3% (sources differ), after Asia had rallied. No change."
 }
 ],
-"seq": 44
+"seq": 45
 },
 {
 "section": "today",
@@ -1066,7 +1072,7 @@
 "text": " On 9 Nov the S&P 500 rose to 7,550 and the chip index about 7%, while NVIDIA fell 4.4% and Brent dropped to about $93–94. No change."
 }
 ],
-"seq": 45
+"seq": 46
 },
 {
 "section": "today",
@@ -1086,7 +1092,7 @@
 "text": " The Nikkei opened 2% higher while the KOSPI briefly fell below 5,000 on foreign selling, then recovered to 5,113 as SK Hynix and Samsung rebounded. Brent eased to about $97. No change."
 }
 ],
-"seq": 46
+"seq": 47
 },
 {
 "section": "today",
@@ -1106,10 +1112,10 @@
 "text": " On 6 Nov the chip index rose 4.2% and the S&P 500 0.3% to 7,377, but Asia had already slumped (Nikkei −6.0%, KOSPI −6.0%). US jobs beat forecasts, lifting December hike odds to about 77%, and Brent ended the week near $98. No change."
 }
 ],
-"seq": 47
+"seq": 48
 },
 {
-"seq": 48,
+"seq": 49,
 "section": "today",
 "kind": "dt",
 "in_details": true,
@@ -1129,7 +1135,7 @@
 ]
 },
 {
-"seq": 49,
+"seq": 50,
 "section": "today",
 "kind": "dt",
 "label": [
@@ -1144,26 +1150,6 @@
 },
 {
 "text": " News reports said Democrats won both houses of Congress. The Dow rose 3.0%, its best day of 2026, and Brent fell 8.7% to $94.62. NVIDIA fell 3.2% and CoreWeave 9.9% on data-centre policy worries. No change."
-}
-],
-"in_details": true
-},
-{
-"seq": 50,
-"section": "today",
-"kind": "dt",
-"label": [
-{
-"text": "3 Nov"
-}
-],
-"runs": [
-{
-"bold": true,
-"text": "Oil fell 7.6% on Iran deal hopes, and AI stocks kept sliding."
-},
-{
-"text": " Brent fell to $104.77; US \"defensive strikes\" hit Qeshm Island. Oracle filed to raise $20bn for AI. The RBA hiked to 4.85% (6–3 vote). No change."
 }
 ],
 "in_details": true
@@ -1586,7 +1572,7 @@
 "kind": "p",
 "runs": [
 {
-"text": "Brent settled at $115.32 on 28 Oct, about 75% higher than a year ago. On 16 Nov Brent fell 3.6% to $92.44 even as Iran targeted Bahrain again, as the IEA forecast a surplus of about 1.7 million barrels a day this quarter. On 20 Nov Brent settled at $92.57, about 4% lower on the week. On 21 Nov two tankers were hit off Oman and Bahrain intercepted Iranian air attacks; on 22 Nov Iran said two supertankers hit mines east of the strait. At least 22 attacks were reported in November by 22 Nov, after more than 30 in October. On 23 Nov Brent fell about 2.2% to $90.55, a two-week low, as Middle East supplies rose and Libya's Sharara pipeline restarted, despite a Houthi claim of an attack on a Saudi refinery and an Iranian strike on Bahrain over the weekend. Traffic is about 65% below pre-war levels, and Qatari mediation has produced no deal. Nothing is agreed, and the strait has been largely closed since March. This is a two-way risk. A deal could send oil sharply lower; Brent fell to about $72 during the brief June truce. A longer closure keeps inflation and rates high."
+"text": "Brent settled at $115.32 on 28 Oct. On 16 Nov Brent fell 3.6% to $92.44 even as Iran targeted Bahrain again, as the IEA forecast a surplus of about 1.7 million barrels a day this quarter. On 20 Nov Brent settled at $92.57, about 4% lower on the week. On 21 Nov two tankers were hit off Oman and Bahrain intercepted Iranian air attacks; on 22 Nov Iran said two supertankers hit mines east of the strait. At least 22 attacks were reported in November by 22 Nov, after more than 30 in October. On 23 Nov Brent fell about 2.2% to $90.55, a two-week low, as Middle East supplies rose and Libya's Sharara pipeline restarted, despite a Houthi claim of an attack on a Saudi refinery and an Iranian strike on Bahrain over the weekend. On 24 Nov Brent hovered near $89, close to three-month lows; Deutsche Bank estimated an October oversupply of about 1.7 million barrels a day, and the US was reported to be probing cyberattacks on up to 50 tankers, with Iran the main suspect. Traffic is about 65% below pre-war levels, and Qatari mediation has produced no deal. Nothing is agreed, and the strait has been largely closed since March. This is a two-way risk. A deal could send oil sharply lower; Brent fell to about $72 during the brief June truce. A longer closure keeps inflation and rates high."
 }
 ],
 "in_details": false
@@ -2082,7 +2068,7 @@
 "kind": "p",
 "runs": [
 {
-"text": "AI-related borrowing has passed roughly $466–500bn this year and makes up about 10% of the largest long-term investment-grade bond ETFs. Oracle's 5-year CDS more than doubled to about 308 bp, Meta's and NVIDIA's hit records in October, and CoreWeave's implies a default probability above 60%. On 28 Oct Alphabet reported that its long-term debt had jumped from $46.5bn to $125.1bn in a year, alongside $12.4bn of stock sales, to pay for AI. After the 3 Nov election, analysts flagged Democrats' openness to data-centre moratoriums, and on 4 Nov AI-infrastructure names fell (NVIDIA −3.2%, CoreWeave −9.9%, Vistra −13.8%) even as the market rallied. On 5 Nov the chip index fell 12.3% and the Nasdaq entered correction, as investors priced a slower, costlier AI build-out. On 11 Nov CoreWeave said it expects about $9bn of customer prepayments over three months and plans no more expensive debt through 2027; its shares jumped more than 20% and the chip index about 7%. On 19 Nov Anthropic raised a record $81.3bn in its IPO and its shares closed 17% above the $83 offer price, but CoreWeave swung from a 10.5% gain to a loss of about 5.5% as AI stocks slid again. On 20 Nov the AI sell-off deepened: NVIDIA fell 14%, AMD 13% and Anthropic 8.5%. On 23 Nov NVIDIA reinstated Jensen Huang as CEO and AI stocks surged: NVIDIA rose about 33% and CoreWeave about 24% during the day."
+"text": "AI-related borrowing has passed roughly $466–500bn this year and makes up about 10% of the largest long-term investment-grade bond ETFs. Oracle's 5-year CDS more than doubled to about 308 bp, Meta's and NVIDIA's hit records in October, and CoreWeave's implies a default probability above 60%. On 28 Oct Alphabet reported that its long-term debt had jumped from $46.5bn to $125.1bn in a year, alongside $12.4bn of stock sales, to pay for AI. On 5 Nov the chip index fell 12.3% and the Nasdaq entered correction, as investors priced a slower, costlier AI build-out. On 19 Nov Anthropic raised a record $81.3bn in its IPO and its shares closed 17% above the $83 offer price, but CoreWeave swung from a 10.5% gain to a loss of about 5.5% as AI stocks slid again. On 20 Nov the AI sell-off deepened: NVIDIA fell 14%, AMD 13% and Anthropic 8.5%. On 23 Nov NVIDIA reinstated Jensen Huang as CEO and AI stocks surged: NVIDIA rose about 31.5% and CoreWeave about 24% during the day. On 24 Nov the rally faded: NVIDIA fell about 7–8%, CoreWeave about 12% and Anthropic about 13% to roughly $76, below its IPO price."
 }
 ],
 "in_details": false
@@ -2301,31 +2287,15 @@
 "in_details": false,
 "label": [
 {
-"text": "Around 25 Nov"
-}
-],
-"runs": [
-{
-"text": "Deadline set by Treasury Secretary Bessent for answers from NVIDIA's board; the board reinstated Huang on 23 Nov after input from senior US officials"
-}
-],
-"seq": 124
-},
-{
-"section": "otherrisks",
-"kind": "dt",
-"in_details": false,
-"label": [
-{
 "text": "25 Nov, 9:30 pm"
 }
 ],
 "runs": [
 {
-"text": "US October inflation (PCE), third-quarter GDP, jobless claims and durable goods, followed by the Fed's Beige Book"
+"text": "US October inflation (PCE), third-quarter GDP, jobless claims and durable goods; the Fed's Beige Book follows at 3 am on 26 Nov"
 }
 ],
-"seq": 125
+"seq": 124
 },
 {
 "section": "otherrisks",
@@ -2341,7 +2311,7 @@
 "text": "US markets closed for Thanksgiving on 26 Nov; early close on 27 Nov (2 am Sat 28 Nov, Manila)"
 }
 ],
-"seq": 126
+"seq": 125
 },
 {
 "section": "otherrisks",
@@ -2357,7 +2327,7 @@
 "text": "S&P Global reviews France's A+ credit rating"
 }
 ],
-"seq": 127
+"seq": 126
 },
 {
 "section": "otherrisks",
@@ -2373,7 +2343,7 @@
 "text": "OPEC+ ministers meet on 2027 oil output"
 }
 ],
-"seq": 128
+"seq": 127
 },
 {
 "section": "otherrisks",
@@ -2386,10 +2356,10 @@
 ],
 "runs": [
 {
-"text": "Jensen Huang asked to testify to the Senate Banking Committee about NVIDIA"
+"text": "Jensen Huang testifies to the Senate Banking Committee about NVIDIA (hearing confirmed on 24 Nov)"
 }
 ],
-"seq": 129
+"seq": 128
 },
 {
 "section": "otherrisks",
@@ -2405,7 +2375,7 @@
 }
 ],
 "in_details": false,
-"seq": 130
+"seq": 129
 },
 {
 "section": "otherrisks",
@@ -2417,11 +2387,11 @@
 ],
 "runs": [
 {
-"text": "Next Fed meeting; nearly all officials expected a hike in the October minutes, and on 23 Nov CME FedWatch showed about 98% odds of a quarter point"
+"text": "Next Fed meeting; nearly all officials expected a hike in the October minutes, and on 24 Nov traders fully priced a quarter point, with a slim chance of a half point (CME FedWatch)"
 }
 ],
 "in_details": false,
-"seq": 131
+"seq": 130
 },
 {
 "section": "otherrisks",
@@ -2437,10 +2407,10 @@
 "text": "ECB decision; markets put about 91% odds on a hike to 2.75% (23 Nov)"
 }
 ],
-"seq": 132
+"seq": 131
 },
 {
-"seq": 133,
+"seq": 132,
 "section": "context",
 "kind": "eyebrow",
 "runs": [
@@ -2451,7 +2421,7 @@
 "in_details": false
 },
 {
-"seq": 134,
+"seq": 133,
 "section": "context",
 "kind": "h2",
 "runs": [
@@ -2462,7 +2432,7 @@
 "in_details": false
 },
 {
-"seq": 135,
+"seq": 134,
 "section": "context",
 "kind": "p",
 "runs": [
@@ -2505,7 +2475,7 @@
 "in_details": false
 },
 {
-"seq": 136,
+"seq": 135,
 "section": "context",
 "kind": "p",
 "runs": [
@@ -2517,7 +2487,7 @@
 "in_details": false
 },
 {
-"seq": 137,
+"seq": 136,
 "section": "context",
 "kind": "li",
 "runs": [
@@ -2536,7 +2506,7 @@
 "in_details": false
 },
 {
-"seq": 138,
+"seq": 137,
 "section": "context",
 "kind": "li",
 "runs": [
@@ -2555,7 +2525,7 @@
 "in_details": false
 },
 {
-"seq": 139,
+"seq": 138,
 "section": "context",
 "kind": "li",
 "runs": [
@@ -2574,7 +2544,7 @@
 "in_details": false
 },
 {
-"seq": 140,
+"seq": 139,
 "section": "context",
 "kind": "li",
 "runs": [
@@ -2600,7 +2570,7 @@
 "in_details": false
 },
 {
-"seq": 141,
+"seq": 140,
 "section": "context",
 "kind": "p",
 "runs": [
@@ -2629,7 +2599,7 @@
 "in_details": false
 },
 {
-"seq": 142,
+"seq": 141,
 "section": "context",
 "kind": "p",
 "runs": [
@@ -2686,7 +2656,7 @@
 "in_details": false
 },
 {
-"seq": 143,
+"seq": 142,
 "section": "context",
 "kind": "p",
 "runs": [
@@ -2722,18 +2692,18 @@
 "in_details": false
 },
 {
-"seq": 144,
+"seq": 143,
 "section": "context",
 "kind": "p",
 "in_details": false,
 "runs": [
 {
-"text": "November so far. The 3 Nov midterms, in which Democrats won both houses of Congress, set off the sharpest AI sell-off of the year on worries about slower data-centre building. On 5 Nov the chip index fell 12%, its worst day since 2020, and the Nasdaq entered a correction. In the week to 6 Nov the S&P 500 lost 2.7% and the Nasdaq 3.4% (AP); Japan's Nikkei lost 9.3%, leaving it more than 20% below its June record (Yahoo Finance), and Korea's KOSPI 11.7% (Seoul Economic Daily). Brent fell about 16% on hopes of a US–Iran deal (CNBC), while a strong jobs report kept a December Fed hike likely (InvestmentNews). On 9 Nov Wall Street rebounded: the S&P 500 rose 2.3% and the chip index about 7%, while NVIDIA fell 4.4% on a board probe of its CEO and Brent dropped to about $93–94 (Reuters). On 10 Nov hotter October inflation (0.4% in the month) pushed the 10-year yield to about 5.01% and the S&P 500 down about 0.4%, with NVIDIA down 6.3%; Asia had rallied, with the KOSPI up 4% (AP). On 11 Nov chip stocks rebounded about 7% after CoreWeave's results, lifting the S&P 500 about 1.3% to roughly 7,620 (Reuters). On 12 Nov NVIDIA's CEO Jensen Huang resigned; NVIDIA fell as much as 14% before paring losses, the S&P 500 slipped 0.4% to about 7,592, and Brent rose after Trump said no Iran deal is needed (Kiplinger, AP). On 13 Nov chip stocks slid again (chip index about −3.4%, NVIDIA −2.0%) and the S&P 500 closed 0.4% lower at 7,561.67, but it still gained about 2.5% for the week, its first weekly gain in five; October producer prices were up 6.5% on a year, and the 10-year yield closed near 5.15% (Yahoo Finance, CappNotes). Over the weekend Iran said a supertanker sank after hitting a mine in the strait, and drone and missile attacks on Bahrain and Saudi Arabia were intercepted (AFP via RTÉ, Gulf News). On 16 Nov new US curbs on Chinese access to advanced chips sent the chip index down about 4.6% and the S&P 500 about 1.9% to roughly 7,415, more than 5% below its record, while Brent fell 3.6% to $92.44 on the IEA's surplus forecast (Reuters, Bloomberg). On 17 Nov stocks fell again before NVIDIA's results: the S&P 500 lost 1.2% to about 7,327, about 6.3% below its record, and Korea's KOSPI closed below 5,000 for the first time since February (Reuters, AP). On 18 Nov NVIDIA's revenue beat forecasts at $115.8bn, but its shares fell about 3%; the S&P 500 slipped about 0.3% for a fifth straight fall while the Dow lost about 1.2%, and US crude fell 3–4% and gold about 3% (Wealth Professional, Yahoo Finance, Bloomberg). On 19 Nov Anthropic's record $81.3bn IPO opened 34% above its $83 price and closed up 17%, but an early rally faded and the S&P 500 fell 2.0% to 7,175.83, a sixth straight loss and 8.2% below its record, while gold fell to a 14-month low (Yahoo Finance, AP). On 20 Nov the S&P 500 fell 3.7% to 6,910.39, a seventh straight loss, and closed in a correction about 11.6% below its record; the Nasdaq lost 5.3% and turned negative for 2026, NVIDIA fell 14%, and gold fell about 4.5% (Yahoo Finance, CBS News). In the week to 20 Nov the S&P 500 fell 8.6%, the Nasdaq 10.0% and the Dow 8.0%, while the 10-year yield fell to 4.92% (The Closing Print). On 21 Nov Iran stepped up attacks on tankers near Hormuz and on Bahrain (AP, Gulf News). On 22 Nov Iran said two supertankers hit mines east of the strait, and at least 22 attacks on shipping had been reported in November (Middle East Eye, SSBCrack). On 23 Nov NVIDIA reinstated Jensen Huang as CEO; NVIDIA rose about 33%, the S&P 500 5.0% and the Nasdaq 6.9%, the best day for US stocks since April 2025, while Brent fell to a two-week low near $90.5 and the euro hit a 2026 low (TipRanks, Reuters, TradingNews)."
+"text": "November so far. The 3 Nov midterms, in which Democrats won both houses of Congress, set off the sharpest AI sell-off of the year on worries about slower data-centre building. On 5 Nov the chip index fell 12%, its worst day since 2020, and the Nasdaq entered a correction. In the week to 6 Nov the S&P 500 lost 2.7% and the Nasdaq 3.4% (AP); Japan's Nikkei lost 9.3%, leaving it more than 20% below its June record (Yahoo Finance), and Korea's KOSPI 11.7% (Seoul Economic Daily). Brent fell about 16% on hopes of a US–Iran deal (CNBC), while a strong jobs report kept a December Fed hike likely (InvestmentNews). On 9 Nov Wall Street rebounded: the S&P 500 rose 2.3% and the chip index about 7%, while NVIDIA fell 4.4% on a board probe of its CEO and Brent dropped to about $93–94 (Reuters). On 10 Nov hotter October inflation (0.4% in the month) pushed the 10-year yield to about 5.01% and the S&P 500 down about 0.4%, with NVIDIA down 6.3%; Asia had rallied, with the KOSPI up 4% (AP). On 11 Nov chip stocks rebounded about 7% after CoreWeave's results, lifting the S&P 500 about 1.3% to roughly 7,620 (Reuters). On 12 Nov NVIDIA's CEO Jensen Huang resigned; NVIDIA fell as much as 14% before paring losses, the S&P 500 slipped 0.4% to about 7,592, and Brent rose after Trump said no Iran deal is needed (Kiplinger, AP). On 13 Nov chip stocks slid again (chip index about −3.4%, NVIDIA −2.0%) and the S&P 500 closed 0.4% lower at 7,561.67, but it still gained about 2.5% for the week, its first weekly gain in five; October producer prices were up 6.5% on a year, and the 10-year yield closed near 5.15% (Yahoo Finance, CappNotes). Over the weekend Iran said a supertanker sank after hitting a mine in the strait, and drone and missile attacks on Bahrain and Saudi Arabia were intercepted (AFP via RTÉ, Gulf News). On 16 Nov new US curbs on Chinese access to advanced chips sent the chip index down about 4.6% and the S&P 500 about 1.9% to roughly 7,415, more than 5% below its record, while Brent fell 3.6% to $92.44 on the IEA's surplus forecast (Reuters, Bloomberg). On 17 Nov stocks fell again before NVIDIA's results: the S&P 500 lost 1.2% to about 7,327, about 6.3% below its record, and Korea's KOSPI closed below 5,000 for the first time since February (Reuters, AP). On 18 Nov NVIDIA's revenue beat forecasts at $115.8bn, but its shares fell about 3%; the S&P 500 slipped about 0.3% for a fifth straight fall while the Dow lost about 1.2%, and US crude fell 3–4% and gold about 3% (Wealth Professional, Yahoo Finance, Bloomberg). On 19 Nov Anthropic's record $81.3bn IPO opened 34% above its $83 price and closed up 17%, but an early rally faded and the S&P 500 fell 2.0% to 7,175.83, a sixth straight loss and 8.2% below its record, while gold fell to a 14-month low (Yahoo Finance, AP). On 20 Nov the S&P 500 fell 3.7% to 6,910.39, a seventh straight loss, and closed in a correction about 11.6% below its record; the Nasdaq lost 5.3% and turned negative for 2026, NVIDIA fell 14%, and gold fell about 4.5% (Yahoo Finance, CBS News). In the week to 20 Nov the S&P 500 fell 8.6%, the Nasdaq 10.0% and the Dow 8.0%, while the 10-year yield fell to 4.92% (The Closing Print). On 21 Nov Iran stepped up attacks on tankers near Hormuz and on Bahrain (AP, Gulf News). On 22 Nov Iran said two supertankers hit mines east of the strait, and at least 22 attacks on shipping had been reported in November (Middle East Eye, SSBCrack). On 23 Nov NVIDIA reinstated Jensen Huang as CEO; NVIDIA rose about 31.5%, the S&P 500 about 4.7% and the Nasdaq about 6.5%, the best day for US stocks since April 2025, while Brent fell to a two-week low near $90.5 and the euro hit a 2026 low (TipRanks, Reuters, TradingNews). On 24 Nov the AI rally faded: NVIDIA fell about 7–8%, the chip index about 9% and Anthropic below its IPO price, while the Dow rose about 0.6% on strong consumer confidence; late in the session the S&P 500 was about 7,175, about 8.2% below its record, and the 10-year yield 4.90% (Reuters, Yahoo Finance, Bloomberg)."
 }
 ]
 },
 {
-"seq": 145,
+"seq": 144,
 "section": "context",
 "kind": "note",
 "runs": [
@@ -2744,7 +2714,7 @@
 "in_details": false
 },
 {
-"seq": 146,
+"seq": 145,
 "section": "funds",
 "kind": "eyebrow",
 "runs": [
@@ -2755,7 +2725,7 @@
 "in_details": false
 },
 {
-"seq": 147,
+"seq": 146,
 "section": "funds",
 "kind": "h2",
 "runs": [
@@ -2766,7 +2736,7 @@
 "in_details": false
 },
 {
-"seq": 148,
+"seq": 147,
 "section": "dipbuy",
 "kind": "eyebrow",
 "runs": [
@@ -2777,7 +2747,7 @@
 "in_details": false
 },
 {
-"seq": 149,
+"seq": 148,
 "section": "dipbuy",
 "kind": "h2",
 "runs": [
@@ -2788,18 +2758,18 @@
 "in_details": false
 },
 {
-"seq": 150,
+"seq": 149,
 "section": "dipbuy",
 "kind": "p",
 "runs": [
 {
-"text": "A guide to which of the 28 funds tend to be worth adding as a sell-off deepens, using the S&P 500's fall from its 7,819 record (6 Oct 2026) as the trigger, because it is the market's main gauge. The idea is to add the steadier, low-AI funds first and the high-growth, AI-heavy funds only once they are much cheaper. Purchases are funded mainly from cash and from bonds that have risen. Where we are now: at the close on Monday (23 Nov, US time) the S&P 500 jumped 5.0% to about 7,258, about 7.2% below its record. It has passed the −5% level (~7,430), first crossed on 5 Nov, and briefly closed below the −10% level (~7,040) on 20 Nov before climbing back above it. The −5% level is about 2.4% higher, and the −20% level (~6,255) about 14% lower."
+"text": "A guide to which of the 28 funds tend to be worth adding as a sell-off deepens, using the S&P 500's fall from its 7,819 record (6 Oct 2026) as the trigger, because it is the market's main gauge. The idea is to add the steadier, low-AI funds first and the high-growth, AI-heavy funds only once they are much cheaper. Purchases are funded mainly from cash and from bonds that have risen. Where we are now: late in Tuesday's session (24 Nov, US time) the S&P 500 was about 7,175, down about 0.85% on the day and about 8.2% below its record. It has passed the −5% level (~7,430), first crossed on 5 Nov, and briefly closed below the −10% level (~7,040) on 20 Nov before climbing back above it. The −10% level is now about 1.9% lower, and the −20% level (~6,255) about 13% lower."
 }
 ],
 "in_details": false
 },
 {
-"seq": 151,
+"seq": 150,
 "section": "dipbuy",
 "kind": "thead",
 "cells": [
@@ -2837,7 +2807,7 @@
 "in_details": false
 },
 {
-"seq": 152,
+"seq": 151,
 "section": "dipbuy",
 "kind": "tr",
 "cells": [
@@ -2898,7 +2868,7 @@
 "in_details": false
 },
 {
-"seq": 153,
+"seq": 152,
 "section": "dipbuy",
 "kind": "tr",
 "cells": [
@@ -2980,7 +2950,7 @@
 "in_details": false
 },
 {
-"seq": 154,
+"seq": 153,
 "section": "dipbuy",
 "kind": "tr",
 "cells": [
@@ -3062,7 +3032,7 @@
 "in_details": false
 },
 {
-"seq": 155,
+"seq": 154,
 "section": "dipbuy",
 "kind": "callout",
 "label": [
@@ -3079,7 +3049,7 @@
 "in_details": false
 },
 {
-"seq": 156,
+"seq": 155,
 "section": "dipbuy",
 "kind": "callout",
 "label": [
@@ -3096,7 +3066,7 @@
 "in_details": false
 },
 {
-"seq": 157,
+"seq": 156,
 "section": "dipbuy",
 "kind": "callout",
 "label": [
@@ -3120,7 +3090,7 @@
 "in_details": false
 },
 {
-"seq": 158,
+"seq": 157,
 "section": "dipbuy",
 "kind": "note",
 "runs": [
@@ -3131,7 +3101,7 @@
 "in_details": false
 },
 {
-"seq": 159,
+"seq": 158,
 "section": "menu",
 "kind": "eyebrow",
 "runs": [
@@ -3142,7 +3112,7 @@
 "in_details": false
 },
 {
-"seq": 160,
+"seq": 159,
 "section": "menu",
 "kind": "h2",
 "runs": [
@@ -3153,7 +3123,7 @@
 "in_details": false
 },
 {
-"seq": 161,
+"seq": 160,
 "section": "menu",
 "kind": "note",
 "runs": [
@@ -3164,7 +3134,7 @@
 "in_details": false
 },
 {
-"seq": 162,
+"seq": 161,
 "section": "notes",
 "kind": "eyebrow",
 "runs": [
@@ -3175,7 +3145,7 @@
 "in_details": false
 },
 {
-"seq": 163,
+"seq": 162,
 "section": "notes",
 "kind": "h2",
 "runs": [
@@ -3186,7 +3156,7 @@
 "in_details": false
 },
 {
-"seq": 164,
+"seq": 163,
 "section": "notes",
 "kind": "li",
 "runs": [
@@ -3202,7 +3172,7 @@
 "in_details": false
 },
 {
-"seq": 165,
+"seq": 164,
 "section": "notes",
 "kind": "li",
 "runs": [
@@ -3218,7 +3188,7 @@
 "in_details": false
 },
 {
-"seq": 166,
+"seq": 165,
 "section": "notes",
 "kind": "li",
 "runs": [
@@ -3234,7 +3204,7 @@
 "in_details": false
 },
 {
-"seq": 167,
+"seq": 166,
 "section": "notes",
 "kind": "li",
 "runs": [
@@ -3250,7 +3220,7 @@
 "in_details": false
 },
 {
-"seq": 168,
+"seq": 167,
 "section": "notes",
 "kind": "li",
 "runs": [
@@ -3273,7 +3243,7 @@
 "in_details": false
 },
 {
-"seq": 169,
+"seq": 168,
 "section": "notes",
 "kind": "li",
 "runs": [
@@ -3296,7 +3266,7 @@
 "in_details": false
 },
 {
-"seq": 170,
+"seq": 169,
 "section": "notes",
 "kind": "li",
 "runs": [
@@ -3308,7 +3278,7 @@
 "in_details": false
 },
 {
-"seq": 171,
+"seq": 170,
 "section": "notes",
 "kind": "h3",
 "runs": [
@@ -3319,7 +3289,7 @@
 "in_details": false
 },
 {
-"seq": 172,
+"seq": 171,
 "section": "footer",
 "kind": "p",
 "runs": [
@@ -3329,7 +3299,7 @@
 ]
 },
 {
-"seq": 173,
+"seq": 172,
 "section": "funds",
 "kind": "group",
 "group": "equity",
@@ -3345,7 +3315,7 @@
 ]
 },
 {
-"seq": 174,
+"seq": 173,
 "section": "funds",
 "kind": "group",
 "group": "bond",
@@ -3361,7 +3331,7 @@
 ]
 },
 {
-"seq": 175,
+"seq": 174,
 "section": "funds",
 "kind": "group",
 "group": "cash",
@@ -3377,7 +3347,7 @@
 ]
 },
 {
-"seq": 176,
+"seq": 175,
 "section": "funds",
 "kind": "group",
 "group": "alt",
@@ -3393,7 +3363,7 @@
 ]
 },
 {
-"seq": 177,
+"seq": 176,
 "section": "scenario_chart",
 "kind": "h3",
 "runs": [
@@ -3403,7 +3373,7 @@
 ]
 },
 {
-"seq": 178,
+"seq": 177,
 "section": "scenario_chart",
 "kind": "note",
 "runs": [
